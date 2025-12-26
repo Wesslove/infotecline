@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cybersécurité | Infotecline</title>
+  <meta name="description" content="MFA, gestion des identités Entra ID, durcissement Microsoft 365, sauvegardes, supervision et réponse aux incidents pour PME/ETI.">
+  <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/styles/styles.css" />
+    <link rel="stylesheet" href="../assets/styles/cybersecurite.css" />
+
+</head>
+<body>
+<header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo">
+            <img src="../assets/images/logo.svg" alt="logo Infotecline" />
+          </div>
+          <span>INFOTECLINE</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="infotecline-index.html">Accueil</a></li>
+            <li><a href="migration-microsoft-365.html">Migration M365</a></li>
+            <li><a href="cybersecurite.html">Cybersécurité</a></li>
+            <li><a href="power-platform.html">Automatisation</a></li>
+            <li><a href="#contact" class="cta-btn">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="burger" onclick="toggleMenu()">☰</button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <ul>
+          <li><a href="/infotecline-index.html" onclick="toggleMenu()">Accueil</a></li>
+          <li><a href="/services/migration-microsoft-365.html" onclick="toggleMenu()">Migration M365</a></li>
+          <li><a href="/services/cybersecurite.html" onclick="toggleMenu()">Cybersécurité</a></li>
+          <li><a href="/services/power-platform.html" onclick="toggleMenu()">Automatisation</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+ 
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <span class="pill">Sécurité</span>
+          <h1>Cybersécurité – Protégez vos identités, vos données et votre activité</h1>
+          <p class="hero-subtitle">MFA, gestion des identités avec Entra ID, durcissement Microsoft 365, sauvegardes, supervision et réponse aux incidents pour PME/ETI.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#offre">Voir l'offre</a>
+            <a class="btn btn-secondary" href="#audit">Audit</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Principaux risques adressés</h3>
+          <ul>
+            <li>Compromission de compte et hameçonnage</li>
+            <li>Ransomware et exfiltration de données</li>
+            <li>Erreurs de configuration M365 (partage externe, DLP)</li>
+            <li>Absence de sauvegarde hors‑tenant, RPO/RTO non définis</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="offre" class="section">
+    <h2 class="section-title">Nos blocs de sécurité</h2>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>Identités & accès</h3>
+        <ul>
+          <li>MFA & authentification sans mot de passe</li>
+          <li>Politiques d’accès conditionnel</li>
+          <li>Comptes à privilèges & PIM</li>
+          <li>Gouvernance des groupes & invités</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Durcissement M365</h3>
+        <ul>
+          <li>Baseline sécurité Exchange/SharePoint/Teams</li>
+          <li>Protection des données (DLP, étiquettes)</li>
+          <li>Gestion appareils (Intune) & conformité</li>
+          <li>Journalisation & alertes</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Sauvegarde & continuité</h3>
+        <ul>
+          <li>Backups dédiés Microsoft 365</li>
+          <li>Plans RPO/RTO & tests de restauration</li>
+          <li>Isolation logique & rétention</li>
+          <li>Runbooks de reprise</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="incident" class="section">
+    <h2 class="section-title">Réponse aux incidents (PME/ETI)</h2>
+    <div class="timeline">
+      <div class="step">
+        <div class="dot">1</div>
+        <div class="card">
+          <h3>Détection & triage</h3>
+          <p>Analyse des signaux (alertes, journaux), qualification, confinement rapide des comptes ou appareils.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="dot">2</div>
+        <div class="card">
+          <h3>Éradication & remédiation</h3>
+          <p>Réinitialisation d’identifiants, durcissement des politiques, nettoyage artefacts, restauration des données.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="dot">3</div>
+        <div class="card">
+          <h3>Retour d’expérience</h3>
+          <p>Rapport post‑incident, plan d’actions P1/P2, mise à jour des contrôles et exercices réguliers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="faq" class="section">
+    <h2 class="section-title">FAQ</h2>
+    <div class="grid cols-2">
+      <div class="card"><h3>Le MFA suffit‑il&nbsp;?</h3><p>Indispensable mais incomplet : ajoutez accès conditionnel, détection de risques et bonnes pratiques d’hygiène (MFA admins renforcé).</p></div>
+      <div class="card"><h3>Pourquoi une sauvegarde M365&nbsp;?</h3><p>Pour couvrir les scénarios suppression, ransomware, erreurs et conserver des rétentions étendues indépendantes du tenant.</p></div>
+      <div class="card"><h3>Quelles priorités en premier&nbsp;?</h3><p>Comptes à privilèges, MFA partout, durcissement des partages et revue des accès invités.</p></div>
+      <div class="card"><h3>Formez‑vous les équipes&nbsp;?</h3><p>Oui, ateliers phishing, hygiène numérique, et procédures d’escalade.</p></div>
+    </div>
+  </section>
+ 
+  <section id="diagnostic" class="card section" style="max-width:1280px; margin:0 auto">
+    <h2 class="section-title" style="margin-top:0">Diagnostic sécurité en 20 minutes</h2>
+    <p>Obtenez un score, une maturité et un plan d’actions priorisé (PDF).</p>
+    <div style="display:flex; gap:.8rem">
+      <a class="btn btn-primary" href="#questionnaire">Lancer le questionnaire</a>
+      <a class="btn btn-secondary" href="../services/migration-microsoft-365.html">Migration M365</a>
+    </div>
+  </section>
+</main>
+ 
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img src="../assets/images/logo.svg" alt="logo Infotecline" />
+            </div>
+            <span style="font-weight: 700; font-size: 1.1rem;">INFOTECLINE</span>
+          </div>
+          <small style="display: block; margin-top: 12px; color: var(--text-muted);">© <span id="year"></span> Infotecline. Tous droits réservés.</small>
+        </div>
+        <div class="footer-links">
+          <a href="#">LinkedIn</a>
+         
+        </div>
+      </div>
+    </div>
+  </footer>
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+
+ <script src="../assets/js/ift.js"></script>
+</body>
+</html>
