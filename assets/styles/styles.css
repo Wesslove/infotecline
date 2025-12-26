@@ -24,6 +24,8 @@
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 24px;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     /* Header */
@@ -148,6 +150,8 @@
       grid-template-columns: 1fr 1fr;
       gap: 60px;
       align-items: center;
+      width: 100%;
+      max-width: 100%;
     }
 
     .hero h1 {
@@ -209,12 +213,16 @@
       justify-content: center;
       align-items: center;
       position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
     }
 
     .robot {
-      width: auto;
+      width: 100%;
       max-width: 700px;
       height: auto;
+      object-fit: contain;
       animation: float 3s ease-in-out infinite;
     }
 
@@ -553,6 +561,7 @@
       .roi-grid,
       .contact-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
       }
 
       .stats {
@@ -571,6 +580,24 @@
 
       .hero {
         padding: 60px 0 40px;
+      }
+
+      .robot {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .robot-container {
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .hero-grid {
+        gap: 32px;
+      }
+
+      .container {
+        padding: 0 16px;
       }
 
       .section {
