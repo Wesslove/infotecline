@@ -8,6 +8,7 @@
   <meta name="description" content="Workflows Power Automate, apps Canvas & Model-driven, intégrations Business Central et connecteurs personnalisés pour automatiser vos processus.">
   <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="../assets/styles/styles.css" />
+  <link rel="stylesheet" href="../assets/styles/power-platform.css" />
 
 </head>
 <body>
@@ -22,7 +23,7 @@
         </div>
         <nav>
           <ul>
-            <li><a href="infotecline-index.html">Accueil</a></li>
+            <li><a href="../infotecline-index.html">Accueil</a></li>
             <li><a href="migration-microsoft-365.html">Migration M365</a></li>
             <li><a href="cybersecurite.html">Cybersécurité</a></li>
             <li><a href="power-platform.html">Automatisation</a></li>
@@ -33,10 +34,10 @@
       </div>
       <div class="mobile-menu" id="mobileMenu">
         <ul>
-          <li><a href="infotecline-index.html" onclick="toggleMenu()">Accueil</a></li>
-          <li><a href="../services/migration-microsoft-365.html" onclick="toggleMenu()">Migration M365</a></li>
-          <li><a href="../services/cybersecurite.html" onclick="toggleMenu()">Cybersécurité</a></li>
-          <li><a href="../services/power-platform.html" onclick="toggleMenu()">Automatisation</a></li>
+          <li><a href="../infotecline-index.html" onclick="toggleMenu()">Accueil</a></li>
+          <li><a href="migration-microsoft-365.html" onclick="toggleMenu()">Migration M365</a></li>
+          <li><a href="cybersecurite.html" onclick="toggleMenu()">Cybersécurité</a></li>
+          <li><a href="power-platform.html" onclick="toggleMenu()">Automatisation</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </ul>
       </div>
@@ -70,8 +71,9 @@
   </section>
  
   <section id="offre" class="section">
-    <h2 class="section-title">Ce que nous construisons</h2>
-    <div class="grid cols-3">
+    <div class="container">
+      <h2 class="section-title">Ce que nous construisons</h2>
+      <div class="grid cols-3">
       <div class="card">
         <h3>Workflows Power Automate</h3>
         <ul>
@@ -100,11 +102,13 @@
         </ul>
       </div>
     </div>
+    </div>
   </section>
  
   <section id="usecases" class="section">
-    <h2 class="section-title">Cas d’usage concrets</h2>
-    <div class="grid cols-2">
+    <div class="container">
+      <h2 class="section-title">Cas d'usage concrets</h2>
+      <div class="grid cols-2">
       <div class="card usecase">
         <h3>Demandes RH & notes de frais</h3>
         <p>Formulaires standardisés, approbations multi‑niveaux, stockage sécurisé, génération automatique de PDF, archivage.</p>
@@ -119,14 +123,16 @@
       </div>
       <div class="card usecase">
         <h3>Qualité & QHSE</h3>
-        <p>Inspections terrain offline, checklist photo/GPS, workflow de non‑conformités, plan d’actions.</p>
+        <p>Inspections terrain offline, checklist photo/GPS, workflow de non‑conformités, plan d'actions.</p>
       </div>
+    </div>
     </div>
   </section>
  
   <section id="gouvernance" class="section">
-    <h2 class="section-title">Gouvernance & sécurité</h2>
-    <div class="grid cols-3">
+    <div class="container">
+      <h2 class="section-title">Gouvernance & sécurité</h2>
+      <div class="grid cols-3">
       <div class="card">
         <h3>Environnements & ALM</h3>
         <p>Dev/TEST/Prod, solutions, pipelines, contrôle de versions et déploiements.</p>
@@ -140,14 +146,19 @@
         <p>Optimisation des licences, quotas, performances et monitoring.</p>
       </div>
     </div>
+    </div>
   </section>
  
-  <section id="demo" class="card section" style="max-width:1280px; margin:0 auto">
-    <h2 class="section-title" style="margin-top:0">Demander une démo</h2>
+  <section id="demo" class="section">
+    <div class="container">
+      <div class="card" style="max-width:1280px; margin:0 auto">
+      <h2 class="section-title" style="margin-top:0">Demander une démo</h2>
     <p>Nous préparons une démo sur votre cas d’usage avec un quick‑win sous 10 jours ouvrés.</p>
-    <div style="display:flex; gap:.8rem">
+    <div style="display:flex; gap:.8rem; flex-wrap: wrap;">
       <a class="btn btn-primary" href="#contact">Prendre un créneau</a>
       <a class="btn btn-secondary" href="migration-microsoft-365.html">Migration M365</a>
+    </div>
+      </div>
     </div>
   </section>
 </main>
