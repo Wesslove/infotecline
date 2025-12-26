@@ -4,442 +4,892 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Infotecline – Votre copilote IT pour la transformation digitale</title>
-  <meta name="description" content="Infotecline : Migration Microsoft 365, Cybersécurité, Automatisation Power Platform, formation et conseil. Un site clair, moderne et optimisé pour générer des leads." />
-  <meta name="author" content="Infotecline" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' ry='16' fill='%230b0f1a'/><text x='50' y='64' font-size='56' text-anchor='middle' fill='%234aa3ff' font-family='Arial, Helvetica, sans-serif'>IT</text></svg>">
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Infotecline – Votre copilote IT pour la transformation digitale" />
-  <meta property="og:description" content="Migration Microsoft 365, Cybersécurité, Automatisation Power Platform. Demandez votre audit gratuit." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.infotecline.fr/" />
-  <meta property="og:image" content="https://www.infotecline.fr/og-image.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="Infotecline : Migration Microsoft 365, Cybersécurité, Automatisation Power Platform, formation et conseil." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' ry='16' fill='%230a0e17'/><text x='50' y='64' font-size='56' text-anchor='middle' fill='%233b82f6' font-family='Arial, Helvetica, sans-serif'>IT</text></svg>">
   <style>
-    /* ========== Design System ========== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
     :root {
-      --bg: #0b0f1a;
-      --bg-soft: #11172a;
-      --panel: #0f1629;
-      --text: #e6e9f0;
-      --muted: #a9b3c7;
-      --primary: #4aa3ff;
-      --primary-600: #2f8cf5;
-      --accent: #7ee0ff;
-      --success: #40d589;
-      --warning: #ffcc66;
-      --danger: #ff6b6b;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 14px;
-      --radius-sm: 10px;
-      --radius-lg: 18px;
-      --maxw: 1200px;
+      --bg: #0a0e17;
+      --surface: #111827;
+      --border: rgba(59, 130, 246, 0.1);
+      --text: #f9fafb;
+      --text-muted: #9ca3af;
+      --primary: #3b82f6;
+      --primary-dark: #2563eb;
+      --accent: #60a5fa;
     }
 
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
     body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 80% -10%, rgba(74,163,255,.10), transparent), var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
       color: var(--text);
       line-height: 1.6;
       overflow-x: hidden;
     }
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { color: var(--accent); }
 
-    /* Container */
-    .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-    /* ========== Header ========== */
+    /* Header */
     header {
-      position: sticky; top: 0; z-index: 50;
-      background: linear-gradient(180deg, rgba(11,15,26,.95) 0%, rgba(11,15,26,.80) 70%, rgba(11,15,26,0) 100%);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(10, 14, 23, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
     }
+
     .nav {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 14px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
     }
-    .brand { display:flex; align-items:center; gap:10px; font-weight: 700; letter-spacing: .3px; }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+
     .logo {
-      width: 40px; height: 40px; border-radius: 10px;
-      background-color: #fff;
-      display:grid; place-items:center; box-shadow: var(--shadow);
-      color: #0b0f1a; font-weight: 900;
+      width: 36px;
+      height: 36px;
+      background: white;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
     }
+
     .logo img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
-    nav ul { list-style: none; display:flex; gap:28px; margin:0; padding:0; align-items:center; }
-    nav a { color: var(--text); font-weight:600; opacity:.9; }
-    nav a:hover { color: var(--accent); }
-    .cta { background: var(--primary); color:#06101f; padding:10px 16px; border-radius: 999px; font-weight:800; box-shadow:var(--shadow); }
-    .cta:hover{ background: var(--primary-600); }
 
-    /* Mobile nav - FIX: ajout de display:none par défaut */
-    .burger { display:none; border:1px solid rgba(255,255,255,.1); padding:8px 10px; border-radius:10px; cursor:pointer; background:transparent; color:var(--text); font-size:20px; }
-
-    .mobile-menu{ 
-      display:none; 
-      position:absolute; 
-      left:0; 
-      right:0; 
-      top:60px; 
-      background:var(--bg-soft); 
-      border-bottom:1px solid rgba(255,255,255,.06); 
-    }
-    .mobile-menu ul{ list-style:none; margin:0; padding:10px 20px 20px; }
-    .mobile-menu li{ padding:10px 0; border-bottom:1px dashed rgba(255,255,255,.08); }
-    .mobile-menu a{ color:var(--text); font-weight:600; }
-
-    @media (max-width: 768px){
-      nav ul { display:none; }
-      .burger { display:block; }
+    nav ul {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+      align-items: center;
     }
 
-    /* ========== Hero ========== */
-    .hero { padding: 80px 0 40px; }
-    .hero-grid { display:grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items:center; }
-    .eyebrow { color: var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:.15em; font-size:.88rem; }
-    h1 { font-size: clamp(2rem, 4.2vw, 3.4rem); line-height:1.15; margin: 12px 0 14px; }
-    .lead { font-size: clamp(1rem, 1.4vw, 1.2rem); color: var(--muted); max-width: 60ch; }
-    .hero-cta { display:flex; gap:14px; margin-top: 26px; }
-    .btn { background: var(--primary); color:#06101f; border:none; padding:14px 20px; border-radius:12px; font-weight:800; cursor:pointer; box-shadow: var(--shadow); transition: transform 0.2s; }
-    .btn.secondary { background: transparent; color: var(--text); outline: 1px solid rgba(255,255,255,.14); }
-    .btn:hover { transform: translateY(-1px); }
-
-    .hero-card {
-      background: radial-gradient(600px 300px at 85% 10%, rgba(74,163,255,.20), transparent), var(--panel);
-      border: 1px solid rgba(255,255,255,.06);
-      padding: 24px; border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+      font-size: 0.95rem;
     }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    .cta-btn {
+      background: var(--primary);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .cta-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .burger {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mobile-menu ul {
+      list-style: none;
+      padding: 20px 24px;
+    }
+
+    .mobile-menu li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mobile-menu a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 100px 0 80px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.1;
+      margin-bottom: 24px;
+      font-weight: 700;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Robot SVG */
+    .robot-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
     .robot {
       width: 100%;
-      aspect-ratio: 4/3;
-      background: conic-gradient(from 240deg at 70% 30%, rgba(126,224,255,.15), rgba(74,163,255,.15), transparent), radial-gradient(50% 60% at 70% 35%, rgba(74,163,255,.10), transparent);
-      border-radius: 16px; display:grid; place-items:center; position:relative;
-    }
-    .robot::before{
-      content:""; width: 180px; height: 180px; border-radius:50%;
-      background: radial-gradient(circle at 50% 40%, #7ee0ff, #4aa3ff 60%, #1c5fd9);
-      filter: blur(6px); opacity:.75;
+      max-width: 400px;
+      height: auto;
     }
 
-    /* ========== Services ========== */
-    .section { padding: 70px 0; }
-    .section h2 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); margin-top:0; }
-    .cards { display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 20px; }
-    .card { background: var(--panel); border:1px solid rgba(255,255,255,.06); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
-    .card h3 { margin: 0 0 8px; }
-    .card p { margin: 0; color: var(--muted); }
-    .chip { display:inline-flex; align-items:center; gap:8px; background: rgba(74,163,255,.12); color:#cfe6ff; padding:6px 10px; border-radius:999px; font-weight:700; font-size:.85rem; }
+    /* Services */
+    .section {
+      padding: 80px 0;
+    }
 
-    @media (max-width: 1000px){ .cards{ grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 640px){ .hero-grid{ grid-template-columns: 1fr; } .cards{ grid-template-columns: 1fr; } }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 48px;
+      text-align: center;
+      font-weight: 700;
+    }
 
-    /* ========== À propos ========== */
-    .about { display:grid; grid-template-columns: 1.1fr .9fr; gap: 30px; }
-    .about .panel { background: var(--panel); border:1px solid rgba(255,255,255,.06); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
-    .kpis { display:grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 12px; }
-    .kpi { background: #0c1326; border:1px solid rgba(255,255,255,.06); border-radius: 12px; padding: 16px; text-align:center; }
-    .kpi .num { font-size: 1.6rem; font-weight: 900; color: #cfe6ff; }
-    .kpi .lbl { color: var(--muted); font-size: .92rem; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
 
-    @media (max-width: 900px){ .about{ grid-template-columns: 1fr; } .kpis{ grid-template-columns: 1fr 1fr 1fr; } }
-    @media (max-width: 520px){ .kpis{ grid-template-columns: 1fr 1fr; } }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.3s;
+    }
 
-    /* ========== Témoignages ========== */
-    .testimonials { position: relative; }
-    .slider { display:flex; gap: 18px; overflow-x: auto; scroll-snap-type:x mandatory; padding-bottom: 6px; }
-    .slide { flex: 0 0 360px; scroll-snap-align: start; background: var(--panel); border:1px solid rgba(255,255,255,.06); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
-    .quote { font-size:1rem; }
-    .author { margin-top: 10px; color: var(--muted); font-weight:700; }
-    .dots { display:flex; gap:6px; justify-content:center; margin-top: 16px; }
-    .dot { width:10px; height:10px; border-radius:50%; background:#2b385a; }
-    .dot.active { background: var(--primary); }
+    .card:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+    }
 
-    /* ========== Calculateur ROI ========== */
-    .roi { display:grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .roi form, .roi .result { background: var(--panel); border:1px solid rgba(255,255,255,.06); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
-    .field { display:grid; gap:6px; margin-bottom:12px; }
-    .field label { font-weight:700; }
-    .field input, .field textarea { background:#0c1326; color:var(--text); border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:10px 12px; font-family: inherit; }
-    .result h3 { margin-top:0; }
-    .big { font-size: 2rem; font-weight: 900; color: #cfe6ff; }
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 20px;
+    }
 
-    @media (max-width: 900px){ .roi{ grid-template-columns: 1fr; } }
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
 
-    /* ========== Contact & Footer ========== */
-    .contact { display:grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .contact .panel { background: var(--panel); border:1px solid rgba(255,255,255,.06); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
-    .contact form .field textarea { min-height: 120px; resize: vertical; }
-    @media (max-width: 900px){ .contact{ grid-template-columns: 1fr; } }
+    .card p {
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
 
-    footer { margin-top: 60px; padding: 30px 0 60px; color: var(--muted); border-top: 1px solid rgba(255,255,255,.06); }
-    .foot { display:flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-    .foot small { opacity: .8; }
-    .social a{ margin-right: 12px; }
-    .to-top { position: fixed; right: 16px; bottom: 16px; background: var(--primary); color:#06101f; border:0; padding:10px 12px; border-radius:10px; box-shadow: var(--shadow); display:none; cursor:pointer; }
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: block;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+
+    .about-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .about-panel h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-panel ul {
+      list-style: none;
+    }
+
+    .about-panel li {
+      padding: 12px 0;
+      color: var(--text-muted);
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .about-panel li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    /* Testimonials */
+    .testimonials-slider {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 20px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--primary) var(--surface);
+    }
+
+    .testimonial {
+      flex: 0 0 400px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      scroll-snap-align: start;
+    }
+
+    .testimonial-text {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .testimonial-author {
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--text-muted);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .dot.active {
+      background: var(--primary);
+    }
+
+    /* ROI Calculator */
+    .roi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .roi-form,
+    .roi-result {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .roi-amount {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 20px 0;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .contact-form {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .contact-form textarea {
+      width: 100%;
+      min-height: 150px;
+      padding: 12px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 1rem;
+      resize: vertical;
+    }
+
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .contact-info {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .contact-info h3 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    .contact-info p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .contact-info a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      color: var(--accent);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 48px 0;
+      margin-top: 80px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-logo {
+      width: 36px;
+      height: 36px;
+      background: white;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+    }
+
+    .footer-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 24px;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .about-grid,
+      .roi-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .burger {
+        display: block;
+      }
+
+      .hero {
+        padding: 60px 0 40px;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonial {
+        flex: 0 0 300px;
+      }
+    }
+
+    /* Scroll to top */
+    .scroll-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--primary);
+      color: white;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      transition: all 0.3s;
+      z-index: 100;
+    }
+
+    .scroll-top:hover {
+      background: var(--primary-dark);
+      transform: translateY(-4px);
+    }
+
+    .scroll-top.show {
+      display: flex;
+    }
   </style>
 </head>
 <body>
-  <header aria-label="En-tête du site">
-    <div class="container nav">
-      <div class="brand" aria-label="Infotecline">
-        <div class="logo" aria-hidden="true">
-          <img src="ift.svg" alt="logo Infotecline" />
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo">
+            <img src="ift.svg" alt="logo Infotecline" />
+          </div>
+          <span>INFOTECLINE</span>
         </div>
-        <span>INFOTECLINE</span>
+        <nav>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#testimonials">Témoignages</a></li>
+            <li><a href="#contact" class="cta-btn">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="burger" onclick="toggleMenu()">☰</button>
       </div>
-      <nav aria-label="Navigation principale">
+      <div class="mobile-menu" id="mobileMenu">
         <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#testimonials">Témoignages</a></li>
-          <li><a href="#contact" class="cta">Contact</a></li>
+          <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+          <li><a href="#about" onclick="toggleMenu()">À propos</a></li>
+          <li><a href="#testimonials" onclick="toggleMenu()">Témoignages</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </ul>
-      </nav>
-      <button class="burger" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
-      <ul class="container">
-        <li><a href="#services" onclick="toggleMenu()">Services</a></li>
-        <li><a href="#about" onclick="toggleMenu()">À propos</a></li>
-        <li><a href="#testimonials" onclick="toggleMenu()">Témoignages</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </ul>
+      </div>
     </div>
   </header>
 
   <main>
     <!-- Hero -->
-    <section class="hero" id="accueil">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">Cabinet de conseil & intégration</div>
-          <h1>Votre copilote IT pour la transformation digitale</h1>
-          <p class="lead">Migration Microsoft 365, cybersécurité, automatisation des workflows et formation. <strong>Demandez votre audit gratuit</strong> et recevez un plan d'action priorisé sous 48&nbsp;h.</p>
-          <div class="hero-cta">
-            <a href="#contact" class="btn" aria-label="Aller au formulaire de contact">Commencer maintenant</a>
-            <a href="#services" class="btn secondary" aria-label="Découvrir nos services">Voir nos services</a>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <h1>Votre copilote IT pour la transformation digitale</h1>
+            <p class="hero-subtitle">Migration Microsoft 365, cybersécurité, automatisation des workflows et formation. Demandez votre audit gratuit et recevez un plan d'action priorisé sous 48h.</p>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Commencer maintenant</a>
+              <a href="#services" class="btn btn-secondary">Voir nos services</a>
+            </div>
           </div>
-        </div>
-        <div class="hero-card" aria-hidden="true">
-          <div class="robot"></div>
+          <div class="robot-container">
+            <svg class="robot" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Antenna Left -->
+              <line x1="140" y1="80" x2="140" y2="40" stroke="#60a5fa" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="140" cy="30" r="12" fill="#60a5fa"/>
+              
+              <!-- Antenna Right -->
+              <line x1="260" y1="80" x2="260" y2="40" stroke="#60a5fa" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="260" cy="30" r="12" fill="#60a5fa"/>
+              
+              <!-- Head -->
+              <rect x="120" y="80" width="160" height="120" rx="60" fill="#3b82f6"/>
+              <rect x="125" y="85" width="150" height="110" rx="55" fill="#2563eb"/>
+              
+              <!-- Eyes -->
+              <circle cx="165" cy="130" r="20" fill="#1e293b"/>
+              <circle cx="235" cy="130" r="20" fill="#1e293b"/>
+              <circle cx="170" cy="125" r="8" fill="#60a5fa"/>
+              <circle cx="240" cy="125" r="8" fill="#60a5fa"/>
+              
+              <!-- Smile -->
+              <path d="M 160 165 Q 200 180 240 165" stroke="#1e293b" stroke-width="6" stroke-linecap="round" fill="none"/>
+              
+              <!-- Body -->
+              <ellipse cx="200" cy="280" rx="80" ry="90" fill="#3b82f6"/>
+              <ellipse cx="200" cy="280" rx="70" ry="80" fill="#2563eb"/>
+              
+              <!-- Chest circle -->
+              <circle cx="200" cy="260" r="25" fill="#1e293b"/>
+              <circle cx="200" cy="260" r="18" fill="#60a5fa"/>
+              
+              <!-- Arms -->
+              <rect x="90" y="230" width="30" height="80" rx="15" fill="#3b82f6"/>
+              <circle cx="105" cy="320" r="20" fill="#2563eb"/>
+              
+              <rect x="280" y="230" width="30" height="80" rx="15" fill="#3b82f6"/>
+              <circle cx="295" cy="320" r="20" fill="#2563eb"/>
+              
+              <!-- Database (left hand) -->
+              <ellipse cx="105" cy="340" rx="15" ry="8" fill="#60a5fa"/>
+              <rect x="90" y="340" width="30" height="25" fill="#60a5fa"/>
+              <ellipse cx="105" cy="365" rx="15" ry="8" fill="#60a5fa"/>
+              <line x1="90" y1="348" x2="120" y2="348" stroke="#1e293b" stroke-width="2"/>
+              <line x1="90" y1="356" x2="120" y2="356" stroke="#1e293b" stroke-width="2"/>
+            </svg>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Services -->
-    <section class="section" id="services" aria-labelledby="titre-services">
+    <section class="section" id="services">
       <div class="container">
-        <h2 id="titre-services">Nos solutions pour votre transformation digitale</h2>
-        <div class="cards" role="list">
-          <article class="card" role="listitem">
-            <span class="chip">Migration Microsoft 365</span>
-            <h3>Passage au cloud sans friction</h3>
+        <h2 class="section-title">Nos solutions pour votre transformation digitale</h2>
+        <div class="cards">
+          <div class="card">
+            <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="16" width="32" height="24" rx="4" stroke="#3b82f6" stroke-width="3"/>
+              <path d="M16 16V12C16 9.79086 17.7909 8 20 8H28C30.2091 8 32 9.79086 32 12V16" stroke="#3b82f6" stroke-width="3"/>
+              <circle cx="24" cy="28" r="4" fill="#60a5fa"/>
+            </svg>
+            <h3>Migration Microsoft 365</h3>
             <p>Audit, inventaire, plan de migration, pilotes, bascule et accompagnement utilisateur. Messagerie, fichiers, Teams, SharePoint et sécurité.</p>
-          </article>
-          <article class="card" role="listitem">
-            <span class="chip">Cybersécurité</span>
-            <h3>Protégez vos identités & données</h3>
+          </div>
+          <div class="card">
+            <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="10" width="20" height="28" rx="4" stroke="#3b82f6" stroke-width="3"/>
+              <circle cx="24" cy="28" r="3" fill="#60a5fa"/>
+              <path d="M24 16V20" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <h3>Cybersécurité</h3>
             <p>MFA, gestion des identités Entra ID, durcissement M365, sauvegardes, supervision et réponse aux incidents pour PME/ETI.</p>
-          </article>
-          <article class="card" role="listitem">
-            <span class="chip">Automatisation Power Platform</span>
-            <h3>Moins de tâches manuelles, plus de valeur</h3>
+          </div>
+          <div class="card">
+            <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="24" r="4" fill="#60a5fa"/>
+              <circle cx="36" cy="24" r="4" fill="#60a5fa"/>
+              <circle cx="24" cy="12" r="4" fill="#60a5fa"/>
+              <circle cx="24" cy="36" r="4" fill="#60a5fa"/>
+              <line x1="15" y1="22" x2="21" y2="14" stroke="#3b82f6" stroke-width="3"/>
+              <line x1="27" y1="14" x2="33" y2="22" stroke="#3b82f6" stroke-width="3"/>
+              <line x1="15" y1="26" x2="21" y2="34" stroke="#3b82f6" stroke-width="3"/>
+              <line x1="27" y1="34" x2="33" y2="26" stroke="#3b82f6" stroke-width="3"/>
+            </svg>
+            <h3>Automatisation Power Platform</h3>
             <p>Workflows Power Automate, apps Canvas/Model-driven, intégrations Business Central et connecteurs personnalisés.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- À propos -->
-    <section class="section" id="about" aria-labelledby="titre-about">
-      <div class="container about">
-        <div>
-          <h2 id="titre-about">À propos d'Infotecline</h2>
-          <p>Infotecline accompagne les entreprises dans leur transformation digitale grâce à des solutions IT innovantes. Notre expertise garantit que votre organisation reste compétitive et performante dans un environnement technologique en constante évolution.</p>
-          <div class="kpis" aria-label="Indicateurs clés">
-            <div class="kpi"><div class="num">100+ </div><div class="lbl">Utilisateurs formés</div></div>
-            <div class="kpi"><div class="num">60% </div><div class="lbl">de tâches automatisées</div></div>
-            <div class="kpi"><div class="num">48h </div><div class="lbl">pour un plan d'action</div></div>
           </div>
         </div>
-        <div class="panel">
-          <h3>Pourquoi nous choisir&nbsp;?</h3>
-          <ul>
-            <li>Approche <strong>copilote</strong> : nous co-construisons avec vos équipes.</li>
-            <li>Livrables clairs : documentation, modèles et bonnes pratiques.</li>
-            <li>Focalisé <strong>résultats</strong> : gains mesurables de productivité et de sécurité.</li>
-          </ul>
-        </div>
       </div>
     </section>
 
-    <!-- Témoignages -->
-    <section class="section testimonials" id="testimonials" aria-labelledby="titre-temoins">
+    <!-- About -->
+    <section class="section" id="about">
       <div class="container">
-        <h2 id="titre-temoins">Témoignages</h2>
-        <div class="slider" id="slider">
-          <figure class="slide">
-            <blockquote class="quote">"Infotecline a transformé notre façon de travailler. La migration Microsoft 365 s'est déroulée sans interruption et les utilisateurs ont été très bien accompagnés."</blockquote>
-            <figcaption class="author">— ift, Industrie</figcaption>
-          </figure>
-          <figure class="slide">
-            <blockquote class="quote">"Grâce à l'automatisation Power Platform, nous avons réduit les tâches manuelles de <strong>60&nbsp;%</strong> en un trimestre."</blockquote>
-            <figcaption class="author">— ift, Services</figcaption>
-          </figure>
-          <figure class="slide">
-            <blockquote class="quote">"Une équipe réactive et experte en cybersécurité. Nous nous sentons enfin protégés."</blockquote>
-            <figcaption class="author">— ift, Distribution</figcaption>
-          </figure>
-        </div>
-        <div class="dots" id="dots" aria-hidden="true"></div>
-      </div>
-    </section>
-
-    <!-- Calculateur de ROI -->
-    <section class="section" id="roi" aria-labelledby="titre-roi">
-      <div class="container roi">
-        <form oninput="calcROI()" aria-describedby="desc-roi">
-          <h2 id="titre-roi">Estimatrice de ROI – Automatisation</h2>
-          <p id="desc-roi" class="lead">Estimez vos gains : indiquez le temps hebdomadaire économisable par employé, votre effectif et le coût horaire moyen.</p>
-          <div class="field">
-            <label for="time">Heures économisées / employé / semaine</label>
-            <input id="time" type="number" min="0" step="0.1" value="2" />
+        <h2 class="section-title">À propos d'Infotecline</h2>
+        <div class="about-grid">
+          <div>
+            <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 24px;">Infotecline accompagne les entreprises dans leur transformation digitale grâce à des solutions IT innovantes. Notre expertise garantit que votre organisation reste compétitive et performante dans un environnement technologique en constante évolution.</p>
+            <div class="stats">
+              <div class="stat">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Utilisateurs formés</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">60%</span>
+                <span class="stat-label">de tâches automatisées</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">48h</span>
+                <span class="stat-label">pour un plan d'action</span>
+              </div>
+            </div>
           </div>
-          <div class="field">
-            <label for="people">Nombre d'employés concernés</label>
-            <input id="people" type="number" min="1" step="1" value="25" />
+          <div class="about-panel">
+            <h3>Pourquoi nous choisir ?</h3>
+            <ul>
+              <li>Approche <strong>copilote</strong> : nous co-construisons avec vos équipes</li>
+              <li>Livrables clairs : documentation, modèles et bonnes pratiques</li>
+              <li>Focalisé <strong>résultats</strong> : gains mesurables de productivité et de sécurité</li>
+            </ul>
           </div>
-          <div class="field">
-            <label for="rate">Coût horaire moyen (€)</label>
-            <input id="rate" type="number" min="0" step="1" value="35" />
-          </div>
-          <div class="field">
-            <label for="weeks">Semaines / an</label>
-            <input id="weeks" type="number" min="1" max="52" step="1" value="46" />
-          </div>
-          <p class="muted">* Estimation indicative – à affiner lors de l'audit gratuit.</p>
-        </form>
-        <div class="result">
-          <h3>Résultat estimé</h3>
-          <p>Économies annuelles potentielles&nbsp;:</p>
-          <div class="big" id="savings">€&nbsp;0</div>
-          <p>Heures économisées par an&nbsp;: <strong id="hours">0 h</strong></p>
-          <p><em>Besoin d'une analyse détaillée&nbsp;?</em> <a href="#contact">Demandez votre audit gratuit</a>.</p>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section class="section" id="contact" aria-labelledby="titre-contact">
-      <div class="container contact">
-        <div class="panel">
-          <h2 id="titre-contact">Prêt à transformer votre entreprise&nbsp;?</h2>
-          <p>Expliquez-nous vos objectifs : nous revenons vers vous sous 24–48&nbsp;h avec des premières recommandations.</p>
-          <form onsubmit="sendForm(event)" aria-label="Formulaire de contact">
-            <div class="field">
-              <label for="name">Nom</label>
-              <input id="name" name="name" type="text" placeholder="Votre nom" required />
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="vous@entreprise.fr" required />
-            </div>
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Décrivez brièvement votre besoin"></textarea>
-            </div>
-            <button class="btn" type="submit">Envoyer</button>
-          </form>
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <h2 class="section-title">Témoignages</h2>
+        <div class="testimonials-slider">
+          <div class="testimonial">
+            <p class="testimonial-text">"Infotecline a transformé notre façon de travailler. La migration Microsoft 365 s'est déroulée sans interruption et les utilisateurs ont été très bien accompagnés."</p>
+            <p class="testimonial-author">— Société X, Industrie</p>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial-text">"Grâce à l'automatisation Power Platform, nous avons réduit les tâches manuelles de 60% en un trimestre."</p>
+            <p class="testimonial-author">— Entreprise Y, Services</p>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial-text">"Une équipe réactive et experte en cybersécurité. Nous nous sentons enfin protégés."</p>
+            <p class="testimonial-author">— Groupe Z, Distribution</p>
+          </div>
         </div>
-        <div class="panel">
-          <h3>Coordonnées</h3>
-          <p><strong>Infotecline</strong><br/>Conseil & intégration Microsoft 365</p>
-          <p>Email : <a href="mailto:eb@infotecline.com">eb@infotecline.com</a><br/>Téléphone : <a href="tel:+33XXXXXXXXX">+33 X XX XX XX XX</a></p>
-          <p>Disponibilité : du lundi au vendredi, 9h–18h.<br/>Intervention : France & Luxembourg (sur site ou à distance).</p>
-          <p class="muted">Nous protégeons vos données : aucune revente, utilisation limitée au traitement de votre demande.</p>
+        <div class="dots" id="dots"></div>
+      </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="section" id="roi">
+      <div class="container">
+        <h2 class="section-title">Estimez votre ROI</h2>
+        <div class="roi-grid">
+          <div class="roi-form">
+            <h3 style="margin-bottom: 24px;">Calculateur d'automatisation</h3>
+            <p style="color: var(--text-muted); margin-bottom: 24px;">Expliquez-nous vos objectifs : nous revenons vers vous sous 24–48h avec des premières recommandations.</p>
+            <form onsubmit="sendForm(event)">
+              <div class="form-group">
+                <label for="name">Nom</label>
+                <input id="name" type="text" placeholder="Votre nom" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="vous@entreprise.fr" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Décrivez brièvement votre besoin"></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">Envoyer</button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <h3>Coordonnées</h3>
+            <p><strong>Infotecline</strong><br/>Conseil & intégration Microsoft 365</p>
+            <p>Email : <a href="mailto:contact@infotecline.fr">contact@infotecline.fr</a><br/>Téléphone : <a href="tel:+33XXXXXXXXX">+33 X XX XX XX XX</a></p>
+            <p>Disponibilité : du lundi au vendredi, 9h–18h.<br/>Intervention : France & Luxembourg (sur site ou à distance).</p>
+            <p style="font-size: 0.9rem;">Nous protégeons vos données : aucune revente, utilisation limitée au traitement de votre demande.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer aria-label="Pied de page">
-    <div class="container foot">
-      <div>
-        <div class="brand">
-          <div class="logo" aria-hidden="true">
-            <img src="ift.svg" alt="logo Infotecline" />
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img src="ift.svg" alt="logo Infotecline" />
+            </div>
+            <span style="font-weight: 700; font-size: 1.1rem;">INFOTECLINE</span>
           </div>
-          <span>INFOTECLINE</span>
+          <small style="display: block; margin-top: 12px; color: var(--text-muted);">© <span id="year"></span> Infotecline. Tous droits réservés.</small>
         </div>
-        <small>© <span id="year"></span> Infotecline. Tous droits réservés.</small>
-      </div>
-      <div class="social">
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="YouTube">YouTube</a>
-        <a href="#" aria-label="GitHub">GitHub</a>
+        <div class="footer-links">
+          <a href="#">LinkedIn</a>
+          <a href="#">YouTube</a>
+          <a href="#">GitHub</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <button id="toTop" class="to-top" aria-label="Revenir en haut" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑ Haut</button>
-
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Infotecline",
-    "url": "https://www.infotecline.fr/",
-    "logo": "https://www.infotecline.fr/logo.png",
-    "sameAs": ["https://www.linkedin.com/company/infotecline"],
-    "description": "Conseil et intégration Microsoft 365, cybersécurité et automatisation Power Platform."
-  }
-  </script>
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
 
   <script>
     // Mobile menu toggle
-    function toggleMenu(){
-      const m = document.getElementById('mobileMenu');
-      m.style.display = (m.style.display === 'block') ? 'none' : 'block';
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     }
 
-    // Back to top visibility
-    const toTop = document.getElementById('toTop');
+    // Scroll to top button
+    const scrollTop = document.getElementById('scrollTop');
     window.addEventListener('scroll', () => {
-      toTop.style.display = window.scrollY > 600 ? 'block' : 'none';
+      if (window.scrollY > 600) {
+        scrollTop.classList.add('show');
+      } else {
+        scrollTop.classList.remove('show');
+      }
     });
 
-    // Year
+    // Update year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Testimonials dots (basic)
-    const slider = document.getElementById('slider');
-    const dots = document.getElementById('dots');
-    function buildDots(){
-      dots.innerHTML = '';
-      const slides = slider.querySelectorAll('.slide');
-      slides.forEach((_,i) => {
-        const d = document.createElement('div');
-        d.className = 'dot'+(i===0?' active':''); dots.appendChild(d);
-      });
-    }
-    buildDots();
-    slider.addEventListener('scroll', () => {
-      const idx = Math.round(slider.scrollLeft / (slider.firstElementChild.offsetWidth + 18));
-      Array.from(dots.children).forEach((d,i)=> d.classList.toggle('active', i===idx));
-    });
-
     // ROI Calculator
-    function calcROI(){
+    function calcROI() {
       const time = parseFloat(document.getElementById('time').value || 0);
       const people = parseInt(document.getElementById('people').value || 0, 10);
       const rate = parseFloat(document.getElementById('rate').value || 0);
@@ -451,15 +901,58 @@
     }
     calcROI();
 
-    // Contact form (demo only)
-    function sendForm(e){
+    // Contact form
+    function sendForm(e) {
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const message = document.getElementById('message').value.trim();
-      const mailto = `mailto:Adhonai.KOUKA@infotecline.com?subject=Demande%20site%20web%20-%20${encodeURIComponent(name)}&body=${encodeURIComponent(message)}%0A%0AEmail:%20${encodeURIComponent(email)}`;
+      const mailto = `mailto:contact@infotecline.fr?subject=Demande%20site%20web%20-%20${encodeURIComponent(name)}&body=${encodeURIComponent(message)}%0A%0AEmail:%20${encodeURIComponent(email)}`;
       window.location.href = mailto;
     }
+
+    // Testimonials slider
+    const slider = document.querySelector('.testimonials-slider');
+    const dotsContainer = document.getElementById('dots');
+    const testimonials = document.querySelectorAll('.testimonial');
+    let currentIndex = 0;
+
+    function createDots() {
+      dotsContainer.innerHTML = '';
+      testimonials.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    function updateDots() {
+      const dots = document.querySelectorAll('.dot');
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      const slideWidth = testimonials[0].offsetWidth + 24; // 24px gap
+      slider.scrollTo({
+        left: slideWidth * index,
+        behavior: 'smooth'
+      });
+      updateDots();
+    }
+
+    function updateCurrentIndex() {
+      const slideWidth = testimonials[0].offsetWidth + 24;
+      currentIndex = Math.round(slider.scrollLeft / slideWidth);
+      updateDots();
+    }
+
+    slider.addEventListener('scroll', updateCurrentIndex);
+    createDots();
   </script>
 </body>
 </html>
