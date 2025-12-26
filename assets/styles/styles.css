@@ -52,6 +52,13 @@
       font-weight: 700;
       font-size: 1.1rem;
       letter-spacing: 0.5px;
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.2s;
+    }
+
+    .brand:hover {
+      opacity: 0.8;
     }
 
     .logo {
@@ -527,6 +534,13 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.2s;
+    }
+
+    .footer-brand:hover {
+      opacity: 0.8;
     }
 
     .footer-logo {
@@ -582,14 +596,8 @@
         padding: 60px 0 40px;
       }
 
-      .robot {
-        max-width: 100%;
-        width: 100%;
-      }
-
       .robot-container {
-        max-width: 100%;
-        padding: 0;
+        display: none;
       }
 
       .hero-grid {
