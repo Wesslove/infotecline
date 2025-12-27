@@ -12,11 +12,16 @@
   <style>
     #analyse-section {
       padding: 80px 0;
+      position: relative;
+      z-index: 1;
+      background: var(--bg);
     }
     
     #analyse-section .section-header {
       text-align: center;
       margin-bottom: 48px;
+      position: relative;
+      z-index: 2;
     }
     
     #analyse-section .section-title {
@@ -166,8 +171,34 @@
               <a href="#services" class="btn btn-secondary">Voir nos services</a>
             </div>
           </div>
+          
+          <!-- Robot Animé -->
           <div class="robot-container">
-            <img src="assets/images/roboot.png" alt="Illustration du robot Infotecline" class="robot">
+            <!-- Lueur de fond -->
+            <div class="glow"></div>
+            
+            <!-- Cercles pulsants -->
+            <div class="pulse-circle"></div>
+            <div class="pulse-circle"></div>
+            <div class="pulse-circle"></div>
+            
+            <!-- Particules flottantes -->
+            <div class="particles">
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+            </div>
+            
+            <!-- Robot avec animation -->
+            <div class="robot-wrapper">
+              <img src="assets/images/roboot.png" alt="Robot Infotecline" class="robot">
+            </div>
+            
+            <!-- Badges flottants -->
+            <div class="floating-badge badge-1">🚀 Migration 365</div>
+            <div class="floating-badge badge-2">🔒 Cybersécurité</div>
+            <div class="floating-badge badge-3">⚡ Automatisation</div>
           </div>
         </div>
       </div>
