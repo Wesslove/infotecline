@@ -664,6 +664,13 @@ nav a:hover {
   border-color: var(--primary);
 }
 
+.fine-print {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
 .contact-info {
   background: var(--surface);
   border: 1px solid var(--border);
