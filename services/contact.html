@@ -15,155 +15,11 @@
     crossorigin=""
   />
   
+  <!-- Utilisation du CSS principal -->
+  <link rel="stylesheet" href="../assets/styles/styles.css" />
+  
   <style>
-    /* Reset */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    :root {
-      --bg: #0a0e17;
-      --surface: #111827;
-      --border: rgba(59, 130, 246, 0.1);
-      --text: #f9fafb;
-      --text-muted: #9ca3af;
-      --primary: #3b82f6;
-      --primary-dark: #2563eb;
-      --accent: #60a5fa;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-      width: 100%;
-    }
-
-    /* Header */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(10, 14, 23, 0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 0;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 700;
-      font-size: 1.1rem;
-      letter-spacing: 0.5px;
-      text-decoration: none;
-      color: inherit;
-      transition: opacity 0.2s;
-    }
-
-    .brand:hover {
-      opacity: 0.8;
-    }
-
-    .logo {
-      width: 36px;
-      height: 36px;
-      background: white;
-      border-radius: 8px;
-      display: grid;
-      place-items: center;
-    }
-
-    .logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 40px;
-      list-style: none;
-      align-items: center;
-    }
-
-    nav a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-      font-size: 0.95rem;
-    }
-
-    nav a:hover {
-      color: var(--text);
-    }
-
-    .cta-btn {
-      background: var(--primary);
-      color: white;
-      padding: 10px 24px;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
-
-    .cta-btn:hover {
-      background: var(--primary-dark);
-      transform: translateY(-1px);
-    }
-
-    .burger {
-      display: none;
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--text);
-      padding: 8px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 20px;
-    }
-
-    .mobile-menu {
-      display: none;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 100%;
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .mobile-menu ul {
-      list-style: none;
-      padding: 20px 24px;
-    }
-
-    .mobile-menu li {
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .mobile-menu a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    /* Main Content */
+    /* Styles spécifiques à la page contact */
     main {
       padding: 80px 0;
     }
@@ -216,37 +72,6 @@
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s;
-      display: inline-block;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--primary);
-      color: var(--primary);
     }
 
     /* Contact Grid */
@@ -306,79 +131,44 @@
       text-align: center;
     }
 
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 48px 0;
-      margin-top: 80px;
-    }
-
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
-
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      color: inherit;
-      transition: opacity 0.2s;
-    }
-
-    .footer-brand:hover {
-      opacity: 0.8;
-    }
-
-    .footer-logo {
-      width: 36px;
-      height: 36px;
-      background: white;
-      border-radius: 8px;
-      display: grid;
-      place-items: center;
-    }
-
-    .footer-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .footer-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin-left: 24px;
-    }
-
-    .footer-links a:hover {
+    .attribution a {
       color: var(--primary);
+      text-decoration: none;
+    }
+
+    .attribution a:hover {
+      color: var(--accent);
+    }
+
+    /* Leaflet custom styling pour dark theme */
+    .leaflet-popup-content-wrapper {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .leaflet-popup-tip {
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+
+    .leaflet-control-attribution {
+      background: rgba(17, 24, 39, 0.8) !important;
+      color: var(--text-muted) !important;
+    }
+
+    .leaflet-control-attribution a {
+      color: var(--primary) !important;
     }
 
     /* Responsive */
     @media (max-width: 768px) {
-      nav ul {
-        display: none;
-      }
-
-      .burger {
-        display: block;
-      }
-
       main {
         padding: 60px 0 40px;
       }
 
       #map {
         height: 360px;
-      }
-
-      .container {
-        padding: 0 16px;
       }
 
       .btn-group {
@@ -389,18 +179,6 @@
         width: 100%;
         text-align: center;
       }
-    }
-
-    /* Leaflet custom styling */
-    .leaflet-popup-content-wrapper {
-      background: var(--surface);
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-
-    .leaflet-popup-tip {
-      background: var(--surface);
-      border: 1px solid var(--border);
     }
   </style>
 </head>
@@ -416,18 +194,23 @@
         </a>
         <nav>
           <ul>
-            <li><a href="../index.html#services">Services</a></li>
-            <li><a href="../index.html#about">À propos</a></li>
-            <li><a href="../index.html#roi">Contact</a></li>
+            <li><a href="../infotecline-index.html" onclick="toggleMenu()">Accueil</a></li>
+            <li><a href="migration-microsoft-365.html" onclick="toggleMenu()">Migration M365</a></li>
+            <li><a href="cybersecurite.html" onclick="toggleMenu()">Cybersécurité</a></li>
+            <li><a href="power-platform.html" onclick="toggleMenu()">Automatisation</a></li>
+            <li><a href="/services/contact.html" onclick="toggleMenu()">Contact</a></li>
           </ul>
+      
         </nav>
         <button class="burger" onclick="toggleMenu()">☰</button>
       </div>
       <div class="mobile-menu" id="mobileMenu">
         <ul>
-          <li><a href="../index.html#services" onclick="toggleMenu()">Services</a></li>
-          <li><a href="../index.html#about" onclick="toggleMenu()">À propos</a></li>
-          <li><a href="../index.html#roi" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="../infotecline-index.html" onclick="toggleMenu()">Accueil</a></li>
+          <li><a href="migration-microsoft-365.html" onclick="toggleMenu()">Migration M365</a></li>
+          <li><a href="cybersecurite.html" onclick="toggleMenu()">Cybersécurité</a></li>
+          <li><a href="power-platform.html" onclick="toggleMenu()">Automatisation</a></li>
+          <li><a href="/services/contact.html" onclick="toggleMenu()">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -458,7 +241,7 @@
       </div>
 
       <p class="attribution">
-        Données cartographiques © <a href="https://www.openstreetmap.org/copyright" target="_blank" style="color: var(--primary);">OpenStreetMap</a> contributors
+        Données cartographiques © <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors
       </p>
 
       <!-- Informations de contact -->
@@ -529,14 +312,27 @@
     </div>
   </footer>
 
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
   <script>
     // Mobile menu toggle
     function toggleMenu() {
       const menu = document.getElementById('mobileMenu');
       menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     }
+
+    // Scroll to top button
+    const scrollTop = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) {
+        scrollTop.classList.add('show');
+      } else {
+        scrollTop.classList.remove('show');
+      }
+    });
 
     // Update year
     document.getElementById('year').textContent = new Date().getFullYear();
