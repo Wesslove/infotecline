@@ -1,247 +1,243 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INFOTECLINE - Site en construction.</title>
-    <link rel="icon" href="ift.svg" type="image/svg+xml">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.5;
-            color: #333;
-            background-color: #f5f5f5;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Header */
-        header {
-            background-color: #1e5fb1;
-            color: white;
-            padding: 25px 20px;
-            text-align: center;
-        }
-
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .logo {
-            width: 60px;
-            height: 60px;
-            background-color: white;
-            border-radius: 8px;
-            padding: 8px;
-        }
-
-        .header-text h1 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .header-text p {
-            font-size: 16px;
-            font-weight: 300;
-        }
-
-        /* Alert */
-        .alert {
-            background-color: #fff3cd;
-            border: 2px solid #ffc107;
-            border-radius: 6px;
-            padding: 12px 20px;
-            margin: 20px 20px 15px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .alert-icon {
-            font-size: 24px;
-            flex-shrink: 0;
-        }
-
-        .alert-text {
-            font-size: 15px;
-            font-weight: 500;
-            color: #856404;
-        }
-
-        /* Main Content */
-        main {
-            padding: 20px 20px 30px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        section {
-            margin-bottom: 25px;
-            width: 100%;
-            max-width: 900px;
-        }
-
-        h2 {
-            color: #0078D7;
-            font-size: 24px;
-            margin-bottom: 12px;
-            border-bottom: 3px solid #0078D7;
-            padding-bottom: 6px;
-        }
-
-        .presentation-text {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #444;
-        }
-
-        /* Services */
-        .services-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .services-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-size: 15px;
-            line-height: 1.5;
-        }
-
-        .checkmark {
-            color: #28a745;
-            font-size: 20px;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 15px 20px;
-            font-size: 14px;
-        }
-
-        footer a {
-            color: #4da6ff;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header-text h1 {
-                font-size: 28px;
-            }
-
-            .header-text p {
-                font-size: 14px;
-            }
-
-            .logo {
-                width: 50px;
-                height: 50px;
-                background-color: none;
-            }
-
-            h2 {
-                font-size: 20px;
-            }
-
-            .alert {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Infotecline – Votre copilote IT pour la transformation digitale</title>
+  <meta name="description" content="Infotecline : Migration Microsoft 365, Cybersécurité, Automatisation Power Platform, formation et conseil." />
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
+  <!-- Préchargement de l'image du robot -->
+  <link rel="preload" as="image" href="assets/images/roboot.png" fetchpriority="high" />
+  <link rel="stylesheet" href="assets/styles/styles.css" />
 </head>
 <body>
+  <header>
     <div class="container">
-        <!-- Header -->
-        <header>
-            <div class="header-content">
-                <img src="assets/images/logo.svg" alt="INFOTECLINE Logo" class="logo">
-                <div class="header-text">
-                    <h1>INFOTECLINE</h1>
-                    <p>Votre partenaire Cloud & Digitalisation</p>
-                </div>
-            </div>
-        </header>
-
-        <!-- Alert -->
-        <div class="alert">
-            <span class="alert-icon">🚧</span>
-            <p class="alert-text">Notre site est en cours de construction. Merci de votre patience !</p>
-        </div>
-
-        <!-- Main Content -->
-        <main>
-            <!-- Presentation -->
-            <section>
-                <h2>Présentation</h2>
-                <p class="presentation-text">
-                    INFOTECLINE est une société experte des outils collaboratifs du Cloud Microsoft. 
-                    Nous accompagnons les organisations dans leur transformation digitale en concevant 
-                    des solutions pragmatiques et innovantes qui optimisent l'efficacité opérationnelle.
-                </p>
-            </section>
-
-            <!-- Services -->
-            <section>
-                <h2>Nos services</h2>
-                <ul class="services-list">
-                    <li>
-                        <span class="checkmark">✓</span>
-                        <span>Conseil en transformation numérique : cadrage, cartographie des processus, feuille de route et gouvernance.</span>
-                    </li>
-                    <li>
-                        <span class="checkmark">✓</span>
-                        <span>Intégration de systèmes & services cloud : interopérabilité applicative, migrations, sécurité et souveraineté des données</span>
-                    </li>
-                    <li>
-                        <span class="checkmark">✓</span>
-                        <span>Intelligence artificielle & data : assistants Copilot/Studio, automatisation, tableaux de bord et décisions pilotées par la donnée.</span>
-                    </li>
-                    <li>
-                        <span class="checkmark">✓</span>
-                        <span>Accompagnement & formation : change management, ateliers, et montée en compétences des équipes.</span>
-                    </li>
-                </ul>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2025 INFOTECLINE. Contact : <a href="mailto:eb@infotecline.fr">eb@infotecline.fr</a></p>
-        </footer>
+      <div class="nav">
+        <a href="index.html" class="brand" style="text-decoration: none; color: inherit;">
+          <div class="logo">
+            <img src="assets/images/logo.svg" alt="logo Infotecline" />
+          </div>
+          <span>INFOTECLINE</span>
+        </a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">À propos</a></li>
+            <!-- <li><a href="#testimonials">Témoignages</a></li> -->
+            <li><a href="services/contact.html" class="cta-btn">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="burger" onclick="toggleMenu()">☰</button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <ul>
+          <li><a href="index.html" onclick="toggleMenu()">Accueil</a></li>
+          <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+          <li><a href="#about" onclick="toggleMenu()">À propos</a></li>
+          <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <h1>Votre copilote IT pour la transformation digitale</h1>
+            <p class="hero-subtitle">Migration Microsoft 365, cybersécurité M365, automatisation des workflows et formation. Demandez votre diagnostic express gratuit : répondez à quelques questions clés et recevez un plan d'action priorisé sous 48 h.</p>
+            <div class="hero-cta">
+              <a href="https://forms.office.com/pages/responsepage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUMjdEQ0FZUzZYSkRHWEJTVThKM0cyNzBEVi4u&route=shorturl" class="btn btn-primary">Commencer maintenant</a>
+              <a href="#services" class="btn btn-secondary">Voir nos services</a>
+            </div>
+          </div>
+          
+          <!-- Robot Animé -->
+          <div class="robot-container">
+            <!-- Lueur de fond -->
+            <div class="glow"></div>
+            
+            <!-- Cercles pulsants -->
+            <div class="pulse-circle"></div>
+            <div class="pulse-circle"></div>
+            <div class="pulse-circle"></div>
+            
+            <!-- Particules flottantes -->
+            <div class="particles">
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+            </div>
+            
+            <!-- Robot avec animation -->
+            <div class="robot-wrapper">
+              <img src="assets/images/roboot.png" 
+                   alt="Robot Infotecline" 
+                   class="robot"
+                   loading="eager"
+                   fetchpriority="high"
+                   width="700"
+                   height="700">
+            </div>
+            
+            <!-- Badges flottants -->
+            <div class="floating-badge badge-1">🚀 Migration M365</div>
+            <div class="floating-badge badge-2">🔒 Cybersécurité M365</div>
+            <div class="floating-badge badge-3">⚡ Automatisation <br> Power Platform</div>
+            <div class="floating-badge badge-4">📢 Microsoft Teams  </div>
+            <div class="floating-badge badge-5"> 📃 Ms SharePoint</div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section-title">Nos solutions pour votre transformation digitale</h2>
+        <div class="cards">
+          <div class="card">
+            <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="16" width="32" height="24" rx="4" stroke="#3b82f6" stroke-width="3"/>
+              <path d="M16 16V12C16 9.79086 17.7909 8 20 8H28C30.2091 8 32 9.79086 32 12V16" stroke="#3b82f6" stroke-width="3"/>
+              <circle cx="24" cy="28" r="4" fill="#60a5fa"/>
+            </svg>
+            <h3>Migration Microsoft 365</h3>
+            <p>Audit, inventaire, plan de migration, pilotes, bascule et accompagnement utilisateur. Messagerie, fichiers, Teams, SharePoint et sécurité.</p>
+            <a href="/services/migration-microsoft-365.html" class="btn btn-secondary">En savoir plus</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="10" width="20" height="28" rx="4" stroke="#3b82f6" stroke-width="3"/>
+              <circle cx="24" cy="28" r="3" fill="#60a5fa"/>
+              <path d="M24 16V20" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <h3>Cybersécurité M365</h3>
+            <p>MFA, gestion des identités Entra ID, durcissement M365, sauvegardes, supervision et réponse aux incidents pour PME/ETI.</p>
+              <a href="/services/cybersecurite.html" class="btn btn-secondary">En savoir plus</a>
+          </div>
+          <div class="card">
+            <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="24" r="4" fill="#60a5fa"/>
+              <circle cx="36" cy="24" r="4" fill="#60a5fa"/>
+              <circle cx="24" cy="12" r="4" fill="#60a5fa"/>
+              <circle cx="24" cy="36" r="4" fill="#60a5fa"/>
+              <line x1="15" y1="22" x2="21" y2="14" stroke="#3b82f6" stroke-width="3"/>
+              <line x1="27" y1="14" x2="33" y2="22" stroke="#3b82f6" stroke-width="3"/>
+              <line x1="15" y1="26" x2="21" y2="34" stroke="#3b82f6" stroke-width="3"/>
+              <line x1="27" y1="34" x2="33" y2="26" stroke="#3b82f6" stroke-width="3"/>
+            </svg>
+            <h3>Automatisation Power Platform</h3>
+            <p>Workflows Power Automate, apps Canvas/Model-driven, intégrations Business Central et connecteurs personnalisés.</p>
+            <a href="/services/power-platform.html" class="btn btn-secondary">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">À propos d'Infotecline</h2>
+        <div class="about-grid">
+          <div>
+            <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 24px;">Infotecline accompagne les entreprises dans leur transformation digitale grâce à des solutions IT innovantes. Notre expertise garantit que votre organisation reste compétitive et performante dans un environnement technologique en constante évolution.</p>
+            <div class="stats">
+              <div class="stat">
+                <span class="stat-number">+ 100</span>
+                <span class="stat-label">Utilisateurs formés</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">60%</span>
+                <span class="stat-label">de tâches automatisées</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">48h</span>
+                <span class="stat-label">pour un plan d'action</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-panel">
+            <h3>Pourquoi nous choisir ?</h3>
+            <ul>
+              <li>Approche <strong>copilote</strong> : nous co-construisons avec vos équipes</li>
+              <li>Livrables clairs : documentation, modèles et bonnes pratiques</li>
+              <li>Focalisé <strong>résultats</strong> : gains mesurables de productivité et de sécurité</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="section" id="roi">
+      <div class="container">
+        <h2 class="section-title">Analysez vos besoins en automatisation</h2>
+        <h3 class="section-subtitle">Expliquez-nous vos objectifs&nbsp;: nous vous proposons des recommandations personnalisées sous 24–48&nbsp;h
+          pour optimiser vos processus</h3>
+        <div class="roi-grid">
+          <div class="roi-form">
+            <h3 style="margin-bottom: 24px;">Demande d'analyse personnalisée</h3>
+            <p style="color: var(--text-muted); margin-bottom: 24px;">
+              Remplissez ce formulaire pour que nous puissions étudier vos besoins et vous proposer des pistes
+              concrètes d'automatisation adaptées à votre activité.</p>
+
+            <!-- Section diagnostic adaptée -->
+            <div class="card" style="margin-bottom: 24px;">
+              <h2 class="section-title" style="margin-top:0; font-size: 1.5rem;">Diagnostic automatisation pour un plan d'action sous 48 h.</h2>
+              <p>Obtenez un score, une maturité et un plan d'actions priorisé (PDF).</p>
+              <div style="display:flex; gap:.8rem; flex-wrap: wrap; margin-top: 16px;">
+                <a class="btn btn-primary" href="https://forms.office.com/pages/responsepage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUMjdEQ0FZUzZYSkRHWEJTVThKM0cyNzBEVi4u&route=shorturl">Lancer le questionnaire</a>
+                <a class="btn btn-secondary" href="#services">Voir nos services</a>
+              </div>
+            </div>
+
+            <p class="fine-print">
+              Nous protégeons vos données : aucune revente, utilisation limitée au traitement de votre demande.
+            </p>
+             <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-top: 16px;">
+              Les informations recueillies via ce formulaire sont nécessaires pour traiter votre demande et vous fournir un plan d'action personnalisé. Elles sont destinées à Infotecline et ne sont pas transmises à des tiers. Vous disposez d'un droit d'accès, de rectification et de suppression des données en écrivant à <a href="mailto:dpo@infotecline.com">dpo@infotecline.com</a>. Pour en savoir plus, consultez notre <a href="./services/politique-confidentialite.html">politique de confidentialité</a>.
+            </p>
+          </div>
+          <div class="contact-info">
+            <h3>Coordonnées</h3>
+            <p><strong>Infotecline</strong><br/>Conseil &amp; intégration Microsoft 365</p>
+            <p>Email : <a href="mailto:contact@infotecline.fr">contact@infotecline.fr</a><br/>Téléphone : <a href="tel:+33671637434">+33 6 71 63 74 34</a></p>
+            <p>Disponibilité : du lundi au vendredi, 9h–18h.<br/>Intervention : France &amp; Luxembourg (sur site ou à distance).</p>
+           
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <a href="index.html" class="footer-brand" style="text-decoration: none; color: inherit;">
+            <div class="footer-logo">
+              <img src="assets/images/logo.svg" alt="logo Infotecline" />
+            </div>
+            <span style="font-weight: 700; font-size: 1.1rem;">INFOTECLINE</span>
+          </a>
+          <small style="display: block; margin-top: 12px; color: var(--text-muted);">© <span id="year"></span> Infotecline. Tous droits réservés.</small>
+        </div>
+        <div class="footer-links">
+          <a href="./services/politique-confidentialite.html">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+
+  <script src="assets/js/ift.js"></script>
 </body>
 </html>
