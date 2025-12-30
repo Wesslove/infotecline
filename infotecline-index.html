@@ -182,27 +182,23 @@
         <div class="roi-grid">
           <div class="roi-form">
             <h3 style="margin-bottom: 24px;">Demande d'analyse personnalisée</h3>
-            <p style="color: var(--text-muted); margin-bottom: 24px;">        
+            <p style="color: var(--text-muted); margin-bottom: 24px;">
               Remplissez ce formulaire pour que nous puissions étudier vos besoins et vous proposer des pistes
-              concrètes d’automatisation adaptées à votre activité.</p>
-            <form onsubmit="sendForm(event)">
-              <div class="form-group">
-                <label for="name">Nom</label>
-                <input id="name" type="text" placeholder="Votre nom" required />
+              concrètes d'automatisation adaptées à votre activité.</p>
+
+            <!-- Section diagnostic adaptée -->
+            <div class="card" style="margin-bottom: 24px;">
+              <h2 class="section-title" style="margin-top:0; font-size: 1.5rem;">Diagnostic automatisation pour un plan d'action sous 48 h.</h2>
+              <p>Obtenez un score, une maturité et un plan d'actions priorisé (PDF).</p>
+              <div style="display:flex; gap:.8rem; flex-wrap: wrap; margin-top: 16px;">
+                <a class="btn btn-primary" href="https://forms.office.com/pages/responsepage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUMjdEQ0FZUzZYSkRHWEJTVThKM0cyNzBEVi4u&route=shorturl">Lancer le questionnaire</a>
+                <a class="btn btn-secondary" href="#services">Voir nos services</a>
               </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input id="email" type="email" placeholder="vous@entreprise.fr" required />
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" placeholder="Décrivez brièvement votre besoin"></textarea>
-              </div>
-              <button class="btn btn-primary" type="submit">Envoyer</button>
-              <p class="fine-print">
-                Nous protégeons vos données : aucune revente, utilisation limitée au traitement de votre demande.
-              </p>
-            </form>
+            </div>
+
+            <p class="fine-print">
+              Nous protégeons vos données : aucune revente, utilisation limitée au traitement de votre demande.
+            </p>
           </div>
           <div class="contact-info">
             <h3>Coordonnées</h3>
