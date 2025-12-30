@@ -353,6 +353,18 @@ nav a:hover {
   animation-delay: 2s;
 }
 
+.badge-4 {
+  bottom: 10%;
+  right: -5%;
+  animation-delay: 3s;
+}
+
+.badge-5 {
+  top: 30%;
+  left: -15%;
+  animation-delay: 4s;
+}
+
 /* Animations principales */
 @keyframes float {
   0%, 100% {
@@ -428,6 +440,14 @@ nav a:hover {
   margin-bottom: 48px;
   text-align: center;
   font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  line-height: 1.6;
+  text-align: center;
 }
 
 .cards {
