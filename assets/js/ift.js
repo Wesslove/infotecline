@@ -30,14 +30,89 @@ function calcROI() {
 }
 calcROI();
 
-// Contact form
-function sendForm(e) {
+// Contact form avec envoi vers Power Automate
+async function sendForm(e) {
   e.preventDefault();
+
+  const form = e.target;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn.textContent;
+
+  // Récupération des valeurs
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
   const message = document.getElementById('message').value.trim();
-  const mailto = `mailto:contact@infotecline.fr?subject=Demande%20site%20web%20-%20${encodeURIComponent(name)}&body=${encodeURIComponent(message)}%0A%0AEmail:%20${encodeURIComponent(email)}`;
-  window.location.href = mailto;
+
+  // Validation
+  if (!name || name.length < 2) {
+    alert('Veuillez entrer un nom valide (minimum 2 caractères).');
+    return;
+  }
+
+  if (!email || !isValidEmail(email)) {
+    alert('Veuillez entrer une adresse email valide.');
+    return;
+  }
+
+  if (!message || message.length < 10) {
+    alert('Veuillez entrer un message plus détaillé (minimum 10 caractères).');
+    return;
+  }
+
+  // Désactiver le bouton
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Envoi en cours...';
+
+  // Préparer les données
+  const data = {
+    name: name,
+    email: email,
+    message: message,
+    timestamp: new Date().toISOString(),
+    source: 'site_web_infotecline'
+  };
+
+  try {
+    // SOLUTION PROFESSIONNELLE : Power Automate HTTP Trigger sécurisé
+    const POWER_AUTOMATE_URL = 'VOTRE_URL_HTTP_POWER_AUTOMATE';
+    
+    // Clé API générée (changez-la pour votre sécurité)
+    const API_KEY = 'infotecline-contact-form-2025-secure-key-abc123xyz789';
+    
+    const response = await fetch(POWER_AUTOMATE_URL, {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        'X-API-Key': API_KEY
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      alert('✅ ' + (result.message || 'Merci ! Votre demande a été envoyée avec succès.'));
+      form.reset();
+    } else {
+      throw new Error(`Erreur HTTP: ${response.status}`);
+    }
+
+  } catch (error) {
+    console.error('Erreur:', error);
+    // Fallback sécurisé
+    const mailto = `mailto:contact@infotecline.fr?subject=Demande site web&body=${encodeURIComponent('Nom: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
+    window.location.href = mailto;
+    alert('⚠️ Envoi automatique impossible. Votre email s\'ouvre pour finaliser l\'envoi.');
+  } finally {
+    // Réactiver le bouton
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  }
+}
+
+// Fonction de validation email
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
 }
 
 // Testimonials slider
