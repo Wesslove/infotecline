@@ -365,6 +365,12 @@ nav a:hover {
   animation-delay: 4s;
 }
 
+.badge-6 {
+  bottom: 30%;
+  right: -15%;
+  animation-delay: 5s;
+}
+
 /* Animations principales */
 @keyframes float {
   0%, 100% {
