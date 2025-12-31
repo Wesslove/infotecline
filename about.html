@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>À propos d'Infotecline – Votre partenaire IT</title>
+  <meta name="description" content="Infotecline accompagne les entreprises dans leur transformation digitale avec expertise en Microsoft 365, cybersécurité et automatisation." />
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/styles/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a href="index.html" class="brand" style="text-decoration: none; color: inherit;">
+          <div class="logo">
+            <img src="assets/images/logo.svg" alt="logo Infotecline" />
+          </div>
+          <span>INFOTECLINE</span>
+        </a>
+        <nav>
+           <ul>
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="/Nos solutions/automatisation-processus-internes.html">Nos solutions</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <!-- <li><a href="#testimonials">Témoignages</a></li> -->
+            <li><a href="Nos solutions/contact.html" class="cta-btn">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="burger" onclick="toggleMenu()">☰</button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <ul>
+          <li><a href="index.html" onclick="toggleMenu()">Accueil</a></li>
+          <li><a href="/Nos solutions/automatisation-processus-internes.html" onclick="toggleMenu()">Nos solutions</a></li>
+          <li><a href="#about" onclick="toggleMenu()">À propos</a></li>
+          <li><a href="/Nos solutions/contact.html" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" style="padding: 80px 0;">
+      <div class="container">
+        <h1>À propos d'Infotecline</h1>
+        <p class="hero-subtitle">Votre partenaire de confiance pour la transformation digitale et l'excellence IT</p>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Notre mission</h2>
+        <div class="content-grid">
+          <div>
+            <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 24px; line-height: 1.8;">
+              Infotecline accompagne les PME et ETI dans leur <strong>transformation digitale</strong> en mettant à disposition une expertise reconnue en Microsoft 365, cybersécurité et automatisation des processus.
+            </p>
+            <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 24px; line-height: 1.8;">
+              Nous croyons que la technologie doit être un <strong>levier de croissance et de sérénité</strong>, et non une source de complexité. Notre approche "copilote" signifie que nous évoluons aux côtés de vos équipes, en les formant et en les responsabilisant.
+            </p>
+            <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.8;">
+              Nos solutions sont <strong>pragmatiques et mesurables</strong> : chaque engagement produit des résultats concrets, documentés et pérennes.
+            </p>
+          </div>
+          <div>
+            <div style="background: var(--surface); padding: 40px; border-radius: 12px; border: 1px solid var(--border); text-align: center;">
+              <div style="font-size: 56px; margin-bottom: 24px;">🎯</div>
+              <h3 style="margin-bottom: 16px;">Expertise & Proximité</h3>
+              <p style="color: var(--text-muted);">Une équipe passionnée, basée en France, accessible et orientée résultats.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Valeurs -->
+    <section class="section" style="background: var(--surface);">
+      <div class="container">
+        <h2 class="section-title">Nos valeurs</h2>
+        <div class="cards">
+          <div class="card">
+            <div style="font-size: 40px; margin-bottom: 16px;">🤝</div>
+            <h3>Partenariat</h3>
+            <p>Nous ne sommes pas des prestataires externes, mais des partenaires engagés aux côtés de vos équipes pour atteindre vos objectifs.</p>
+          </div>
+          <div class="card">
+            <div style="font-size: 40px; margin-bottom: 16px;">🎓</div>
+            <h3>Formation & Autonomie</h3>
+            <p>Nous transférons nos connaissances pour que vos collaborateurs gagnent en autonomie et confiance avec les technologies.</p>
+          </div>
+          <div class="card">
+            <div style="font-size: 40px; margin-bottom: 16px;">📊</div>
+            <h3>Résultats Mesurables</h3>
+            <p>Chaque projet est suivi par des KPI clairs : productivité gagnée, coûts évités, risques réduits.</p>
+          </div>
+          <div class="card">
+            <div style="font-size: 40px; margin-bottom: 16px;">🔐</div>
+            <h3>Sécurité & Conformité</h3>
+            <p>La protection de vos données et le respect des réglementations sont au cœur de chaque recommandation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Notre expertise</h2>
+        <div class="content-grid">
+          <div>
+            <h3 style="margin-bottom: 24px; font-size: 1.5rem;">Migration Microsoft 365</h3>
+            <ul style="list-style: none; margin-bottom: 32px;">
+              <li style="margin-bottom: 12px;">✓ Audit et inventaire informatique complet</li>
+              <li style="margin-bottom: 12px;">✓ Planification de migration progressive</li>
+              <li style="margin-bottom: 12px;">✓ Pilotes et bascule en production</li>
+              <li style="margin-bottom: 12px;">✓ Formation et accompagnement utilisateurs</li>
+              <li style="margin-bottom: 12px;">✓ Coexistence et intégration Exchange</li>
+            </ul>
+
+            <h3 style="margin-bottom: 24px; font-size: 1.5rem;">Cybersécurité M365</h3>
+            <ul style="list-style: none;">
+              <li style="margin-bottom: 12px;">✓ MFA et authentification multifacteur</li>
+              <li style="margin-bottom: 12px;">✓ Gestion des identités (Entra ID)</li>
+              <li style="margin-bottom: 12px;">✓ Durcissement et configuration sécurisée</li>
+              <li style="margin-bottom: 12px;">✓ Sauvegardes et plan de continuité</li>
+              <li style="margin-bottom: 12px;">✓ Supervision et réponse aux incidents</li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="margin-bottom: 24px; font-size: 1.5rem;">Automatisation & Power Platform</h3>
+            <ul style="list-style: none; margin-bottom: 32px;">
+              <li style="margin-bottom: 12px;">✓ Power Automate : workflows et RPA</li>
+              <li style="margin-bottom: 12px;">✓ Power Apps : applications Canvas & Model-driven</li>
+              <li style="margin-bottom: 12px;">✓ Power BI : tableaux de bord et analyses</li>
+              <li style="margin-bottom: 12px;">✓ Intégrations : connecteurs et APIs</li>
+              <li style="margin-bottom: 12px;">✓ Optimisation des processus métier</li>
+            </ul>
+
+            <h3 style="margin-bottom: 24px; font-size: 1.5rem;">Teams & SharePoint</h3>
+            <ul style="list-style: none;">
+              <li style="margin-bottom: 12px;">✓ Déploiement et configuration</li>
+              <li style="margin-bottom: 12px;">✓ Gouvernance et organisation</li>
+              <li style="margin-bottom: 12px;">✓ Communication unifiée</li>
+              <li style="margin-bottom: 12px;">✓ Gestion documentaire</li>
+              <li style="margin-bottom: 12px;">✓ Formation et adoption</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approche -->
+    <section class="section" style="background: var(--surface);">
+      <div class="container">
+        <h2 class="section-title">Notre approche</h2>
+        <div style="max-width: 900px; margin: 0 auto;">
+          <div style="background: var(--bg); padding: 32px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 24px;">
+            <h3 style="margin-bottom: 16px;">🔍 Phase 1 : Diagnostic</h3>
+            <p style="color: var(--text-muted);">Nous analysons votre infrastructure actuelle, identifions les besoins et les risques, puis proposons un plan d'action priorisé et réaliste.</p>
+          </div>
+          <div style="background: var(--bg); padding: 32px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 24px;">
+            <h3 style="margin-bottom: 16px;">📋 Phase 2 : Planification & Design</h3>
+            <p style="color: var(--text-muted);">Nous co-construisons avec vous la roadmap détaillée, en définissant les étapes, les équipes impliquées et les indicateurs de succès.</p>
+          </div>
+          <div style="background: var(--bg); padding: 32px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 24px;">
+            <h3 style="margin-bottom: 16px;">🚀 Phase 3 : Implémentation</h3>
+            <p style="color: var(--text-muted);">Nous exécutons la solution en mode agile, avec pilotes, tests et feedback régulier de vos utilisateurs finaux.</p>
+          </div>
+          <div style="background: var(--bg); padding: 32px; border-radius: 12px; border: 1px solid var(--border);">
+            <h3 style="margin-bottom: 16px;">📚 Phase 4 : Formation & Support</h3>
+            <p style="color: var(--text-muted);">Nous formons vos équipes, vous transférons la maîtrise de la solution et mettons en place un support proactif pour la pérennité.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chiffres -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Nos résultats</h2>
+        <div class="stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 48px;">
+          <div class="stat" style="text-align: center;">
+            <span class="stat-number">+ 100</span>
+            <span class="stat-label">Utilisateurs formés</span>
+          </div>
+          <div class="stat" style="text-align: center;">
+            <span class="stat-number">60%</span>
+            <span class="stat-label">de tâches automatisées</span>
+          </div>
+          <div class="stat" style="text-align: center;">
+            <span class="stat-number">48h</span>
+            <span class="stat-label">pour un diagnostic</span>
+          </div>
+          <div class="stat" style="text-align: center;">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">de satisfaction clients</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA
+    <section class="section" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(96, 165, 250, 0.05) 100%);">
+      <div class="container" style="text-align: center;">
+        <h2 class="section-title">Prêt à transformer votre infrastructure IT ?</h2>
+        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Contactez-nous pour un diagnostic express gratuit et découvrez comment Infotecline peut vous aider.
+        </p>
+        <a href="services/contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 40px;">Demander un diagnostic</a>
+      </div>
+    </section> -->
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <a href="index.html" class="footer-brand" style="text-decoration: none; color: inherit;">
+            <div class="footer-logo">
+              <img src="assets/images/logo.svg" alt="logo Infotecline" />
+            </div>
+            <span style="font-weight: 700; font-size: 1.1rem;">INFOTECLINE</span>
+          </a>
+          <small style="display: block; margin-top: 12px; color: var(--text-muted);">© <span id="year"></span> Infotecline. Tous droits réservés.</small>
+        </div>
+        <div class="footer-links">
+          <a href="services/politique-confidentialite.html">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+
+  <script src="assets/js/ift.js"></script>
+</body>
+</html>
