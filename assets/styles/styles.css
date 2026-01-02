@@ -535,6 +535,12 @@ nav a:hover {
   padding: 32px;
 }
 
+
+.about-panel:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
 .about-panel h3 {
   font-size: 1.5rem;
   margin-bottom: 20px;
