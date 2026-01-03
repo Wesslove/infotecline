@@ -2,12 +2,10 @@
 name: Deploy static content to Pages
 
 on:
-  # Déclenchement sur main (prod) et autres branches (preview)
   push:
     branches:
       - main
-      - "**"   # toutes les branches pour les previews
-  # Déclenchement aussi sur les Pull Requests
+      - "**"   # autres branches → previews
   pull_request:
     branches:
       - "**"
@@ -17,7 +15,6 @@ permissions:
   pages: write
   id-token: write
 
-# Une file d’attente par branche pour éviter les collisions
 concurrency:
   group: pages-${{ github.ref }}
   cancel-in-progress: true
@@ -33,26 +30,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 👉 Si tu as besoin de builder (React, Vite, Hugo, etc.), ajoute ici :
-      # - name: Setup Node
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     node-version: 20
-      # - run: npm ci
-      # - run: npm run build
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # ⚠️ Mets ici le dossier à publier (ex: 'dist', 'build', 'out')
-          path: '.'
+          path: '.'   # ✅ garde la racine car ton site est statique
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          # ✅ Prod si main, sinon Preview
           preview: ${{ github.ref != 'refs/heads/main' }}
