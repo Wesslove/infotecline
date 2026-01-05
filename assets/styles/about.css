@@ -350,15 +350,28 @@ nav a:hover {
 
 .microsoft-partner {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
 }
 
 .microsoft-logo {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  padding: 6px;
+  background: rgba(255,255,255,0.03);
+  display: grid;
+  place-items: center;
+}
+
+.microsoft-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .microsoft-text {
@@ -366,14 +379,24 @@ nav a:hover {
 }
 
 .microsoft-text .brand-name {
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 700;
   margin-bottom: 2px;
+  color: var(--text);
 }
 
 .microsoft-text .partner-type {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--text-muted);
+}
+
+.microsoft-description {
+  margin-top: 6px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 560px;
+  text-align: left;
 }
 
 .cta-section {
