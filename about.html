@@ -7,23 +7,24 @@
   <meta name="description" content="Infotecline accompagne les entreprises dans leur transformation digitale avec expertise en Microsoft 365, cybersécurité et automatisation." />
   <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles/styles.css" />
+  <link rel="stylesheet" href="assets/styles/about.css" />
+
 </head>
 <body>
   <header>
     <div class="container">
       <div class="nav">
-        <a href="index.html" class="brand" style="text-decoration: none; color: inherit;">
+        <a href="index.html" class="brand">
           <div class="logo">
             <img src="assets/images/logo.svg" alt="logo Infotecline" />
           </div>
           <span>INFOTECLINE</span>
         </a>
         <nav>
-           <ul>
+          <ul>
             <li><a href="./index.html">Accueil</a></li>
-            <li><a href="/Nos solutions/automatisation-processus-internes.html">Nos solutions</a></li>
+            <li><a href="/Nos solutions/nos_solutions.html">Nos solutions</a></li>
             <li><a href="about.html">À propos</a></li>
-            <!-- <li><a href="#testimonials">Témoignages</a></li> -->
             <li><a href="Nos solutions/contact.html" class="cta-btn">Contact</a></li>
           </ul>
         </nav>
@@ -33,7 +34,7 @@
         <ul>
           <li><a href="index.html" onclick="toggleMenu()">Accueil</a></li>
           <li><a href="/Nos solutions/automatisation-processus-internes.html" onclick="toggleMenu()">Nos solutions</a></li>
-          <li><a href="#about" onclick="toggleMenu()">À propos</a></li>
+          <li><a href="about.html" onclick="toggleMenu()">À propos</a></li>
           <li><a href="/Nos solutions/contact.html" onclick="toggleMenu()">Contact</a></li>
         </ul>
       </div>
@@ -41,7 +42,8 @@
   </header>
 
   <main>
-    <section class="section " id="about">
+    <!-- Section: Qui sommes-nous -->
+    <setion class="section" id="about">
       <div class="container">
         <h2 class="section-title">À propos d'Infotecline</h2>
         <div class="about-grid">
@@ -62,6 +64,7 @@
               </div>
             </div>
           </div>
+
           <div class="about-panel">
             <h3>Pourquoi nous choisir ?</h3>
             <ul>
@@ -71,16 +74,131 @@
             </ul>
           </div>
         </div>
+      
+      
+        
+  
+        <!-- Nos services -->
+        <div>
+          <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 40px; font-weight: 600;">Nos services</h3>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="28" height="28" fill="#f35325"/>
+                  <rect x="36" width="28" height="28" fill="#81bc06"/>
+                  <rect y="36" width="28" height="28" fill="#05a6f0"/>
+                  <rect x="36" y="36" width="28" height="28" fill="#ffba08"/>
+                </svg>
+              </div>
+              <h4>Microsoft<br/>365</h4>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 3L20 9M14 3V9H20M14 3H6C4.89543 3 4 3.89543 4 5V19C4 20.1046 4.89543 21 6 21H18C19.1046 21 20 20.1046 20 19V9" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M8 13L12 17L20 9" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h4>Migration</h4>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="9" stroke="#3b82f6" stroke-width="2"/>
+                  <path d="M12 6V12L16 14" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="12" cy="12" r="2" fill="#3b82f6"/>
+                </svg>
+              </div>
+              <h4>Sécurité</h4>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 12C21 16.9706 16.9706 21 12 21M21 12C21 7.02944 16.9706 3 12 3M21 12H3M12 21C7.02944 21 3 16.9706 3 12M12 21C13.6569 21 15 16.9706 15 12C15 7.02944 13.6569 3 12 3M12 21C10.3431 21 9 16.9706 9 12C9 7.02944 10.3431 3 12 3M3 12C3 7.02944 7.02944 3 12 3" stroke="#3b82f6" stroke-width="2"/>
+                  <path d="M12 8C14 8 16 9 16 10" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h4>Support<br/>N3</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nos engagements -->
+        <div class="engagements-section">
+          <h3>Nos engagements</h3>
+          <div class="engagements-grid">
+            <div class="engagement-item">
+              <div class="engagement-bullet"></div>
+              <span>Qualité</span>
+            </div>
+            <div class="engagement-item">
+              <div class="engagement-bullet"></div>
+              <span>Innovation</span>
+            </div>
+            <div class="engagement-item">
+              <div class="engagement-bullet"></div>
+              <span>Proximité</span>
+            </div>
+            <div class="engagement-item">
+              <div class="engagement-bullet"></div>
+              <span>Sécurité</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nos partenaires -->
+        <div class="partners-section">
+          <h3>Nos partenaires</h3>
+          <div class="partners-container">
+            <!-- Partenaire principal -->
+            <div class="partner-card">
+              <div class="partner-main">
+                <div class="partner-logo">
+                  <img src="assets/images/jdc groupe.png" alt="Logo Partenaire"  />
+                </div>
+                <div class="partner-info">
+                  <div class="partner-label">Partenaire principal</div>
+                  <div class="partner-name">JCD Groupe</div>
+                </div>
+              </div>
+              <p class="partner-description">JCD Groupe est une entreprise de services basée à Metz, qui accompagne les organisations dans leurs projets informatiques et professionnels. Elle propose des solutions globales en informatique, développement, impression, cybersécurité, télécommunication, formation et aménagement de bureaux, avec une approche sur-mesure. Grâce à sa proximité et à son sens du service, JCD Groupe s’impose comme un partenaire de confiance pour les entreprises du Grand Est.</p>
+            </div>
+
+            <!-- Microsoft Partner -->
+            <div class="partner-card">
+              <div class="microsoft-partner">
+                <svg class="microsoft-logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="28" height="28" fill="#f35325"/>
+                  <rect x="36" width="28" height="28" fill="#81bc06"/>
+                  <rect y="36" width="28" height="28" fill="#05a6f0"/>
+                  <rect x="36" y="36" width="28" height="28" fill="#ffba08"/>
+                </svg>
+                <div class="microsoft-text">
+                  <div class="brand-name">Microsoft</div>
+                  <div class="partner-type">Microsoft Network Partner</div>
+                </div>En tant que membre du Microsoft Partner Network, nous nous connectons à l’écosystème Microsoft pour vous offrir des solutions fiables et conformes aux standards technologiques.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+          <a href="https://forms.office.com/pages/responsepage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUMjdEQ0FZUzZYSkRHWEJTVThKM0cyNzBEVi4u&route=shorturlcl" class="cta-button">Discutons de votre projet</a>
+        </div>
       </div>
     </section>
-
-</main>
+  </main>
 
   <footer>
     <div class="container">
       <div class="footer-content">
         <div>
-          <a href="index.html" class="footer-brand" style="text-decoration: none; color: inherit;">
+          <a href="index.html" class="footer-brand">
             <div class="footer-logo">
               <img src="assets/images/logo.svg" alt="logo Infotecline" />
             </div>
