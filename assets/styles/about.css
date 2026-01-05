@@ -343,7 +343,7 @@ nav a:hover {
 }
 
 .partner-description {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: var(--text-muted);
   line-height: 1.5;
 }
@@ -393,7 +393,7 @@ nav a:hover {
 .microsoft-description {
   margin-top: 6px;
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   max-width: 560px;
   text-align: left; 
