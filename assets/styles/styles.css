@@ -335,6 +335,12 @@ nav a:hover {
   transition: all 0.3s;
 }
 
+.floating-badge a{
+  list-style: none;
+  text-decoration: none;
+  color: var(--text);
+}
+
 .badge-1 {
   top: 10%;
   left: -10%;
