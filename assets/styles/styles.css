@@ -162,7 +162,7 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 4vw, 3rem);
   line-height: 1.1;
   margin-bottom: 24px;
   font-weight: 700;
@@ -174,7 +174,12 @@ nav a:hover {
   margin-bottom: 32px;
   line-height: 1.6;
 }
-
+.hero-list{
+  line-height: 40px;
+}
+.hero-list-subtitle{
+  line-height: 40px;
+}
 .hero-cta {
   display: flex;
   gap: 16px;
