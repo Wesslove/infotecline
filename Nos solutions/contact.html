@@ -124,8 +124,22 @@
       color: var(--accent);
     }
 
+    .presentation {
+    padding: 100px 0;
+  }
   
-
+  .presentation .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .centered-image {
+      max-width: 900px; /* Taille fixe maximale */
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
 
 
     /* Leaflet custom styling pour dark theme */
@@ -211,8 +225,19 @@
         Nous sommes à votre disposition pour échanger sur vos projets de transformation digitale.
       </p>
 
+      <section class="presentation">
+        <div class="container" id="offre">
+          <img src="/assets/images/image.jpg" alt="Présentation de l'automatisation des processus internes" class="centered-image">
+        </div>
+      </section>
+
+
+    
+        <!-- Contenu -->
+       
+
       <!-- Carte -->
-      <div class="map-card">
+      <!-- <div class="map-card">
         <div id="map" role="application" aria-label="Carte interactive OpenStreetMap"></div>
         <div class="map-info">
           <h2>📍 Nous trouver</h2>
@@ -226,7 +251,7 @@
             </a>
           </div>
         </div>
-      </div>
+      </div> -->
 
     
       
