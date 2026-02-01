@@ -10,6 +10,13 @@
   <link rel="preload" as="image" href="assets/images/roboot.png" fetchpriority="high" />
   <link rel="stylesheet" href="assets/styles/styles.css" />
   <meta name="google-site-verification" content="xbCTfbbJaXqIN3J_OT5a6sQg20YbJDiksVmzDTfw2Rc" />
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Infotecline" />
 
 </head>
 <body>
@@ -277,5 +284,19 @@
   <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
 
   <script src="assets/js/ift.js"></script>
+  <!-- Enregistrement du Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then((registration) => {
+            console.log('Service Worker enregistré:', registration);
+          })
+          .catch((error) => {
+            console.error('Erreur lors de l\'enregistrement du Service Worker:', error);
+          });
+      });
+    }
+  </script>
 </body>
 </html>
