@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Packs Copilot Microsoft - Infotecline</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --bg: #0a0e17;
+      --surface: #111827;
+      --border: rgba(59, 130, 246, 0.1);
+      --text: #f9fafb;
+      --text-muted: #9ca3af;
+      --primary: #3b82f6;
+      --primary-dark: #2563eb;
+      --accent: #60a5fa;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      text-align: center;
+      padding: 60px 0 80px;
+    }
+
+    .hero-section h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .hero-section p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 16px 40px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 30px 0 10px;
+      transition: all 0.2s;
+      font-size: 1.1rem;
+    }
+
+    .cta-button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .subtext {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Two Column Layout */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin: 80px 0;
+      align-items: start;
+    }
+
+    .mini-agent-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .mini-agent-section p {
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+
+    .mini-agent-section h3 {
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .mini-agent-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .mini-agent-section ul li {
+      padding: 8px 0;
+      color: var(--text-muted);
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .mini-agent-section ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    /* Chat Card */
+    .chat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .chat-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .chat-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--primary);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .chat-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .chat-message {
+      margin-bottom: 24px;
+    }
+
+    .chat-message p {
+      margin-bottom: 16px;
+    }
+
+    .chat-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .chat-list li {
+      padding: 6px 0;
+      color: var(--text-muted);
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .chat-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+    }
+
+    .chat-footer {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .chat-footer h4 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .chat-footer p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Packs Section */
+    .packs-section {
+      margin-top: 80px;
+    }
+
+    .packs-section h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+
+    .packs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .pack-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.3s;
+    }
+
+    .pack-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+    }
+
+    .pack-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .pack-card > p {
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .pack-card ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+    }
+
+    .pack-card ul li {
+      padding: 8px 0;
+      color: var(--text-muted);
+      position: relative;
+      padding-left: 24px;
+      font-size: 0.95rem;
+    }
+
+    .pack-card ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    .pack-button {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .pack-button:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .two-column {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .packs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 40px 0 60px;
+      }
+
+      .two-column {
+        margin: 60px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <h1>Transformez votre intranet en assistant<br>intelligent avec nos Packs Copilot Microsoft</h1>
+      <p>Découvrez des agents prêts à l'usage : personnalisables et déployés en minutes</p>
+      <p>et profitez de notre offre de lancement exclusive.</p>
+      <a href="#" class="cta-button">Réserver mon offre maintenant</a>
+      <p class="subtext">Sans engagement démonstration gratuite possible</p>
+    </section>
+
+    <!-- Two Column Layout -->
+    <div class="two-column">
+      <!-- Left Column: Mini-Agent -->
+      <div class="mini-agent-section">
+        <h2>Mini-Agent Intranet (offert) –<br>Votre premier Copilot<br>opérationnel en 30 minutes</h2>
+        <p>Un petit agent intelligent connecté à votre intranet,<br>
+        qui lit 3 à 5 contenus internes et guide vos employés<br>
+        vers les bonnes informations. Idéal pour découvrir<br>
+        la puissance des agents Copilot.</p>
+
+        <h3>Fonctionnalités essentielles:</h3>
+        <ul>
+          <li>Recherche intelligente dans 3 contenus : SharePoint</li>
+          <li>Réponses instantanées aux questions internes</li>
+          <li>Suggestions de pages intranet, procédures, documents</li>
+          <li>Installation en moins de 50 minutes</li>
+          <li>Fonctionne dans Teams</li>
+          <li>Aucune licence supplémentaire requise</li>
+        </ul>
+      </div>
+
+      <!-- Right Column: Chat Card -->
+      <div class="chat-card">
+        <div class="chat-header">
+          <div class="chat-icon">+</div>
+          <div class="chat-title">Copilot — Intranet</div>
+        </div>
+
+        <div class="chat-message">
+          <p><strong>Bonjour !</strong></p>
+          <p>Vous avez récemment consulté vers<br>notre intranet :</p>
+          <ul class="chat-list">
+            <li>Procédure Télétravail</li>
+            <li>Note RH + Congés 2025</li>
+            <li>Fiche sécurité — Postes<br>de travail</li>
+          </ul>
+          <p> Que puis-je vous proposer ?</p>
+        </div>
+
+        <div class="chat-footer">
+          <h4>Pourquoi il est offert ?</h4>
+          <p>Le Mini-Agent est une version d'entrée de gamme.<br>
+          Vous testez la technologie...<br>
+          Vous voyez la valeur...<br>
+          Et vous choisissez ensuite les Copilot<br>
+          complets selon vos besoins.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Packs Section -->
+    <section class="packs-section">
+      <h2>Choisissez votre Pack Copilot</h2>
+      <div class="packs-grid">
+        <!-- Pack RH -->
+        <div class="pack-card">
+          <h3>Pack Copilot RH</h3>
+          <p>Assistant intelligent,<br>
+          FAQ interne, documents RH,<br>
+          procédures, formulaires...</p>
+          <ul>
+            <li>Réponses aux questions RH</li>
+            <li>Lecture des documents<br>SharePoint RH</li>
+            <li>Parcours employés</li>
+            <li>Scénarios RH multiples (congés,<br>maladie, avantages...)</li>
+          </ul>
+          <a href="#" class="pack-button">Découvrir le pack</a>
+        </div>
+
+        <!-- Pack IT -->
+        <div class="pack-card">
+          <h3>Pack Copilot IT /<br>Support N1</h3>
+          <p>Le premier niveau de<br>
+          support automatisé dans<br>
+          Teams</p>
+          <ul>
+            <li>Diagnostics Outlook Teams</li>
+            <li>FAQ IT interne</li>
+            <li>Création automatique de<br>ticket</li>
+            <li>Orientation des utilisateurs</li>
+          </ul>
+          <a href="#" class="pack-button">Découvrir le pack</a>
+        </div>
+
+        <!-- Pack QSE -->
+        <div class="pack-card">
+          <h3>Pack Copilot QSE</h3>
+          <p>Explique les règles, lit les<br>
+          documents QSE, aide aux<br>
+          déclarations</p>
+          <ul>
+            <li>Lecture procédures QSE</li>
+            <li>Guidage sécurité</li>
+            <li>Déclarations via SharePoint</li>
+            <li>Référentiel interne</li>
+          </ul>
+          <a href="#" class="pack-button">Découvrir le pack</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
