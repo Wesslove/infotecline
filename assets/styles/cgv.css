@@ -1,0 +1,389 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+    
+:root {
+  --bg: #0a0e17;
+  --surface: #111827;
+  --border: rgba(59, 130, 246, 0.1);
+  --text: #f9fafb;
+  --text-muted: #9ca3af;
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --accent: #60a5fa;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(10, 14, 23, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  background: white;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  align-items: center;
+}
+
+nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: var(--text);
+}
+
+.cta-btn {
+  background: var(--primary);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.cta-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.burger {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 20px 24px;
+}
+
+.mobile-menu li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.mobile-menu a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Hero CGV */
+.hero-cgv {
+  padding: 80px 0 60px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-cgv h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.hero-cgv .subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-top: 12px;
+}
+
+/* Pill badge */
+.pill {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* CGV Content */
+.cgv-content {
+  padding: 60px 0 80px;
+}
+
+.cgv-article {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cgv-section {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cgv-section:last-child {
+  border-bottom: none;
+}
+
+.cgv-section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.section-number {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.cgv-section h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  margin-top: 24px;
+  color: var(--accent);
+}
+
+.cgv-section p {
+  margin-bottom: 16px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.cgv-section p strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Highlight Box for important sections */
+.highlight-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 24px 0;
+}
+
+.highlight-box h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.highlight-box p {
+  color: var(--text-muted);
+}
+
+.highlight-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 48px 0;
+  margin-top: 80px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo {
+  width: 36px;
+  height: 36px;
+  background: white;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+}
+
+.footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-left: 24px;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+/* Scroll to top */
+.scroll-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--primary);
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: all 0.3s;
+  z-index: 100;
+}
+
+.scroll-top:hover {
+  background: var(--primary-dark);
+  transform: translateY(-4px);
+}
+
+.scroll-top.show {
+  display: flex;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .hero-cgv {
+    padding: 60px 0 40px;
+  }
+
+  .cgv-content {
+    padding: 40px 0 60px;
+  }
+
+  .cgv-section h2 {
+    font-size: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .cgv-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .highlight-box {
+    padding: 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-links a {
+    margin-left: 0;
+    margin-right: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero-cgv h1 {
+    font-size: 1.75rem;
+  }
+
+  .cgv-section {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+  }
+
+  .cgv-section h2 {
+    font-size: 1.35rem;
+  }
+}
