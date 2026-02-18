@@ -9,6 +9,38 @@
   <!-- Préchargement de l'image du robot -->
   <link rel="preload" as="image" href="assets/images/roboot.png" fetchpriority="high" />
   <link rel="stylesheet" href="assets/styles/styles.css" />
+  <style>
+    /* Promo slider */
+    .promo-slider {
+      background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
+      overflow: hidden;
+      padding: 12px 0;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: filter 0.2s ease, transform 0.2s ease;
+    }
+    a:has(.promo-slider):hover .promo-slider {
+      filter: brightness(1.15);
+      transform: translateY(-2px);
+    }
+    .promo-slider-content {
+      display: flex;
+      animation: slide 8s linear infinite;
+      white-space: nowrap;
+    }
+    .promo-slider-text {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: white;
+      padding: 0 100%;
+      display: inline-block;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
   <meta name="google-site-verification" content="xbCTfbbJaXqIN3J_OT5a6sQg20YbJDiksVmzDTfw2Rc" />
   <!-- PWA Manifest -->
   <link rel="manifest" href="manifest.json" />
@@ -54,17 +86,24 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container">
+        <!-- Bandeau promo pleine largeur, au-dessus de la grille -->
+        <a href="/Nos solutions/copilot_pack.html" style="text-decoration: none; display: block;">
+          <div class="promo-slider">
+            <div class="promo-slider-content">
+              <span class="promo-slider-text">🎉 Profitez de votre offre promo sur nos packs IA-copilotes !  &nbsp;&nbsp;&nbsp; 🎉 Profitez de votre offre promo sur nos packs IA-copilotes ! Voir ici 👉 &nbsp;&nbsp;&nbsp; 🎉</span>
+            </div>
+          </div>
+        </a>
+
         <div class="hero-grid">
           <div>
-            <h1>Votre copilote IT pour la transformation digitale</h1>
+              <h1>Votre copilote IT pour la transformation digitale</h1>
             
             <!-- ====================================== -->
             <!-- PANNEAU DE PRÉSENTATION STYLISÉ -->
             <!-- ====================================== -->
             
             <div class="hero-presentation-panel">
-              <!-- <h3 class="panel-title">Présentation de la solution</h3> -->
-              
               <!-- Expertise Microsoft 365 -->
               <p class="hero-subtitle">Infotecline est expert sur tous les composants Microsoft 365 :</p>
               <ul class="hero-list-styled">
