@@ -226,6 +226,29 @@ nav a:hover {
   font-weight: 600;
 }
 
+/* CGV list (for bullet points in sections) */
+.cgv-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.cgv-list li {
+  color: var(--text-muted);
+  line-height: 1.8;
+  padding: 4px 0 4px 24px;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.cgv-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 4px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
 /* Highlight Box for important sections */
 .highlight-box {
   background: var(--surface);
@@ -247,6 +270,17 @@ nav a:hover {
 
 .highlight-box p:last-child {
   margin-bottom: 0;
+}
+
+/* Warning variant for highlight box */
+.highlight-box--warning {
+  border-left-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.05);
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
+.highlight-box--warning h3 {
+  color: #fbbf24;
 }
 
 /* Footer */
