@@ -280,7 +280,7 @@ nav a:hover {
 }
 
 .highlight-box--warning h3 {
-  color: #fbbf24;
+  color: var(--accent);
 }
 
 /* Footer */
