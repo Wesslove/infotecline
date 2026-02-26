@@ -1,7 +1,6 @@
 /* ============================================
-   copilot_pack.css — styles spécifiques à la page Packs Copilot
-   Dépend de styles.css (chargé en premier)
-   NE PAS redéfinir body ni .container — gérés par styles.css
+   copilot_pack.css
+   Complète styles.css — ne redéfinit jamais body ni .container
    ============================================ */
 
 /* ─── Variables supplémentaires ─── */
@@ -11,6 +10,11 @@
   --text-dim: #6b7280;
 }
 
+/* ─── Fix débordement global ─── */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 /* ─── Promo Slider ─── */
 .promo-slider {
@@ -19,6 +23,7 @@
   padding: 12px 0;
   margin-bottom: 30px;
   border-radius: 8px;
+  width: 100%;
 }
 .promo-slider-content {
   display: flex;
@@ -37,7 +42,7 @@
   100% { transform: translateX(-100%); }
 }
 
-/* ─── Hero ─── */
+/* ─── Hero Section ─── */
 .hero-section {
   text-align: center;
   padding: 60px 0 40px;
@@ -49,7 +54,7 @@
   font-weight: 700;
 }
 
-/* ─── CTA Button ─── */
+/* ─── CTA Buttons ─── */
 .cta-button {
   display: inline-block;
   background: var(--primary);
@@ -66,6 +71,143 @@
   background: var(--primary-dark);
   transform: translateY(-2px);
 }
+.cta-button-final {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 20px 56px;
+  border-radius: 14px;
+  text-decoration: none;
+  box-shadow: 0 4px 24px rgba(59,130,246,0.35);
+  transition: all 0.2s;
+}
+.cta-button-final:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 32px rgba(59,130,246,0.45);
+}
+
+/* ─── Challenges Section ─── */
+.challenges-section {
+  margin-top: 20px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+  width: 100%;
+}
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+.challenge-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.3s;
+  min-height: 580px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.challenge-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(59,130,246,0.15);
+}
+.challenge-card-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+.challenge-icon { font-size: 48px; }
+.challenge-card-head h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text);
+  text-align: center;
+}
+.challenge-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.challenge-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #f59e0b;
+  background: rgba(245,158,11,0.12);
+  border: 1.5px solid rgba(245,158,11,0.3);
+  border-radius: 20px;
+  padding: 5px 14px;
+  margin-bottom: 20px;
+}
+.challenge-problems {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.challenge-problems li {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  padding-left: 28px;
+  position: relative;
+  line-height: 1.5;
+}
+.challenge-problems li::before {
+  content: "▸";
+  position: absolute;
+  left: 8px;
+  color: #f59e0b;
+  font-weight: 700;
+}
+.challenge-solution {
+  background: rgba(59,130,246,0.06);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 24px;
+}
+.challenge-solution-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #22c55e;
+  background: rgba(34,197,94,0.12);
+  border: 1.5px solid rgba(34,197,94,0.3);
+  border-radius: 20px;
+  padding: 4px 12px;
+  margin-bottom: 10px;
+}
+.challenge-solution-tag {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.challenge-solution p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
 
 /* ─── Two Column ─── */
 .two-column {
@@ -74,9 +216,16 @@
   gap: 60px;
   margin: 80px 0;
   align-items: start;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* ─── Mini Agent Section ─── */
+.mini-agent-section {
+  width: 100%;
+  min-width: 0;
+}
 .mini-agent-section h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;
@@ -120,9 +269,9 @@
 }
 .option-block h3 { margin-bottom: 14px; }
 .option-block .alt-list {
-  margin-top: 8px;
-  padding-left: 4px;
   list-style: none;
+  padding-left: 4px;
+  margin-top: 8px;
 }
 .option-block .alt-list li {
   color: var(--text-dim);
@@ -143,6 +292,9 @@
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 10px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 .chat-header {
   display: flex;
@@ -153,8 +305,7 @@
   border-bottom: 1px solid var(--border);
 }
 .chat-icon {
-  width: 28px;
-  height: 28px;
+  width: 28px; height: 28px;
   background: var(--primary);
   border-radius: 6px;
   display: flex;
@@ -163,6 +314,7 @@
   color: white;
   font-weight: bold;
   font-size: 1rem;
+  flex-shrink: 0;
 }
 .chat-title { font-weight: 600; font-size: 0.9rem; }
 .demo-mockup {
@@ -170,8 +322,7 @@
   border: 1px solid var(--border-subtle);
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 4px 24px rgba(0,0,0,0.35);
-  max-width: 500px;
+  max-width: 100%;
   margin: 23px auto;
 }
 .demo-topbar {
@@ -201,21 +352,21 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 6px;
-  box-shadow: 0 0 18px rgba(59,130,246,0.35);
 }
 .copilot-logo svg { width: 28px; height: 28px; fill: white; }
-.demo-greeting h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 2px; color: var(--text); }
-.demo-greeting p  { font-size: 0.8rem; font-weight: 600; color: var(--text); margin-bottom: 10px; }
+.demo-greeting h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 2px; }
+.demo-greeting p  { font-size: 0.8rem; font-weight: 600; margin-bottom: 10px; }
 .demo-actions {
   display: flex;
   flex-direction: column;
   gap: 6px;
   margin: 6px auto 4px;
   align-items: center;
+  width: 100%;
 }
 .demo-btn {
-  width: 400px;
-  max-width: 90%;
+  width: 100%;
+  max-width: 400px;
   padding: 6px 10px;
   border-radius: 6px;
   border: 1px solid var(--primary);
@@ -225,13 +376,13 @@
   font-weight: 600;
   text-align: center;
   cursor: pointer;
-  transition: background 0.2s, border-color 0.2s, transform 0.15s;
-  line-height: 1.2;
+  transition: all 0.2s;
+  box-sizing: border-box;
 }
 .demo-btn:hover { background: rgba(59,130,246,0.16); border-color: var(--accent); transform: translateY(-1px); }
 .demo-input-bar {
   margin-top: 8px;
-  width: 80%;
+  width: 90%;
   display: flex;
   align-items: center;
   background: #161d2e;
@@ -239,115 +390,51 @@
   border-radius: 8px;
   padding: 5px 7px;
   gap: 5px;
+  box-sizing: border-box;
 }
 .demo-input-bar span { flex: 1; color: var(--text-dim); font-size: 0.68rem; }
-.demo-send { width: 20px; height: 20px; border-radius: 4px; background: var(--primary); display: flex; align-items: center; justify-content: center; }
+.demo-send {
+  width: 20px; height: 20px;
+  border-radius: 4px;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
 .demo-send svg { width: 14px; height: 14px; fill: white; }
 .demo-disclaimer { text-align: right; margin-top: 8px; font-size: 0.78rem; color: var(--text-dim); font-style: italic; }
 .chat-footer { margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--border); }
 .chat-footer h4 { font-size: 0.82rem; margin-bottom: 4px; font-weight: 600; }
 .chat-footer p  { color: var(--text-muted); font-size: 0.72rem; line-height: 1.35; }
 
-/* ─── Challenges Section ─── */
-.challenges-section {
-  margin-top: 20px;
-  padding-top: 40px;
-  border-top: 1px solid var(--border);
-}
-.challenges-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-.challenge-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 36px 32px;
-  transition: all 0.3s ease;
-  min-height: 580px;
-}
-.challenge-card:hover {
-  border-color: rgba(59,130,246,0.4);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 32px rgba(59,130,246,0.15);
-}
-.challenge-card-head {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 28px;
-  width: 100%;
-  text-align: center;
-}
-.challenge-icon { font-size: 48px; filter: drop-shadow(0 2px 8px rgba(59,130,246,0.3)); }
-.challenge-card-head h3 { font-size: 1.25rem; font-weight: 700; line-height: 1.3; color: var(--text); }
-.challenge-card-body { width: 100%; display: flex; flex-direction: column; align-items: flex-start; flex: 1; }
-.challenge-label {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #f59e0b;
-  background: rgba(245,158,11,0.12);
-  border: 1.5px solid rgba(245,158,11,0.3);
-  border-radius: 20px;
-  padding: 5px 14px;
-  margin-bottom: 20px;
-}
-.challenge-problems { list-style: none; padding: 0; margin: 0 0 auto 0; width: 100%; display: flex; flex-direction: column; gap: 12px; }
-.challenge-problems li { color: var(--text-muted); font-size: 0.92rem; padding: 0 0 0 28px; position: relative; line-height: 1.5; }
-.challenge-problems li::before { content: "▸"; position: absolute; left: 8px; color: #f59e0b; font-weight: 700; }
-.challenge-solution {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  background: linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(99,102,241,0.05) 100%);
-  border: 1.5px solid rgba(59,130,246,0.25);
-  border-radius: 14px;
-  padding: 20px 22px;
-  margin-top: 24px;
-  width: 100%;
-}
-.challenge-solution-label {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #22c55e;
-  background: rgba(34,197,94,0.12);
-  border: 1.5px solid rgba(34,197,94,0.3);
-  border-radius: 20px;
-  padding: 4px 12px;
-  margin-bottom: 6px;
-}
-.challenge-solution-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
-.challenge-solution p { color: var(--text); font-size: 0.9rem; line-height: 1.6; margin: 0; }
-
 /* ─── Packs Section ─── */
 .packs-section { margin-top: 80px; }
 .packs-section h2 { font-size: 2rem; margin-bottom: 40px; font-weight: 700; }
-.packs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.packs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
 .pack-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 32px;
   transition: all 0.3s;
+  box-sizing: border-box;
 }
 .pack-card:hover { border-color: var(--primary); transform: translateY(-4px); }
 .pack-card h3 { font-size: 1.4rem; margin-bottom: 16px; font-weight: 600; }
 .pack-card > p { color: var(--text-muted); margin-bottom: 24px; line-height: 1.6; }
 .pack-card ul { list-style: none; padding: 0; margin-bottom: 30px; }
-.pack-card ul li { padding: 8px 0 8px 24px; color: var(--text-muted); position: relative; font-size: 0.95rem; }
+.pack-card ul li {
+  padding: 8px 0 8px 24px;
+  color: var(--text-muted);
+  position: relative;
+  font-size: 0.95rem;
+}
 .pack-card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
 .pack-button {
   display: inline-block;
@@ -361,26 +448,9 @@
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s;
+  box-sizing: border-box;
 }
 .pack-button:hover { background: var(--primary); color: white; }
-
-/* ─── CTA Final ─── */
-.cta-final-section { margin-top: 100px; padding: 80px 0; text-align: center; }
-.cta-final-section h2 { font-size: 1.9rem; font-weight: 700; margin-bottom: 12px; }
-.cta-final-section p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 36px; }
-.cta-button-final {
-  display: inline-block;
-  background: var(--primary);
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 700;
-  padding: 20px 56px;
-  border-radius: 14px;
-  text-decoration: none;
-  box-shadow: 0 4px 24px rgba(59,130,246,0.35);
-  transition: all 0.2s;
-}
-.cta-button-final:hover { background: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 6px 32px rgba(59,130,246,0.45); }
 
 /* ─── FAQ ─── */
 .faq-section { margin-top: 100px; padding-top: 80px; border-top: 1px solid var(--border); }
@@ -388,56 +458,96 @@
 .faq-section-head h2 { font-size: 2rem; font-weight: 700; margin-bottom: 10px; }
 .faq-section-head p { color: var(--text-muted); font-size: 1.05rem; }
 .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
-.faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: border-color 0.25s; }
-.faq-item:hover { border-color: rgba(59,130,246,0.28); }
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.25s;
+}
+.faq-item:hover { border-color: var(--primary); }
 .faq-item[open] { border-color: var(--primary); }
-.faq-item summary { display: flex; align-items: center; gap: 16px; padding: 20px 24px; cursor: pointer; list-style: none; user-select: none; }
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
 .faq-item summary::-webkit-details-marker { display: none; }
-.faq-badge { width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; }
+.faq-badge {
+  width: 36px; height: 36px; min-width: 36px;
+  border-radius: 10px;
+  background: rgba(59,130,246,0.1);
+  border: 1px solid rgba(59,130,246,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .faq-badge svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; }
 .faq-question { flex: 1; font-size: 1rem; font-weight: 600; color: var(--text); }
-.faq-chevron { width: 20px; height: 20px; stroke: var(--text-dim); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.3s ease, stroke 0.25s; }
+.faq-chevron {
+  width: 20px; height: 20px;
+  stroke: var(--text-muted);
+  fill: none;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
 .faq-item[open] .faq-chevron { transform: rotate(180deg); stroke: var(--primary); }
-.faq-answer { padding: 0 24px 20px 76px; color: var(--text-muted); font-size: 0.94rem; line-height: 1.7; animation: faqSlide 0.28s ease; }
-@keyframes faqSlide { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+.faq-answer {
+  padding: 0 24px 20px 76px;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+/* ─── CTA Final ─── */
+.cta-final-section {
+  margin-top: 100px;
+  padding: 80px 0;
+  text-align: center;
+}
+.cta-final-section h2 { font-size: 1.9rem; font-weight: 700; margin-bottom: 12px; }
+.cta-final-section p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 36px; }
 
 /* ============================================
    RESPONSIVE
    ============================================ */
 
 @media (max-width: 1024px) {
-  .two-column      { grid-template-columns: 1fr; gap: 40px; }
-  .packs-grid      { grid-template-columns: 1fr; }
-  .challenges-grid { grid-template-columns: 1fr; }
+  .challenges-grid      { grid-template-columns: 1fr; }
+  .packs-grid           { grid-template-columns: 1fr; }
+  .two-column           { grid-template-columns: 1fr !important; gap: 40px; }
 }
 
 @media (max-width: 768px) {
-  .hero-section { padding: 12px 0 16px; }
-  .hero-section h1 { font-size: 1.6rem; }
+  .hero-section         { padding: 20px 0; }
+  .hero-section h1      { font-size: 1.6rem; }
 
-  .promo-slider { margin-bottom: 12px; }
+  .promo-slider         { margin-bottom: 12px; }
 
-  .challenges-section {
-    margin-top: 0;
-    padding-top: 12px;
-    border-top: none;
-  }
-  .challenges-grid { gap: 16px; }
-  .challenge-card { min-height: unset; padding: 20px 16px; }
+  .challenges-section   { margin-top: 0; padding-top: 12px; border-top: none; }
+  .challenges-grid      { gap: 16px; }
+  .challenge-card       { min-height: unset; padding: 20px 16px; }
 
-  .pack-card { padding: 20px 16px; }
+  .two-column           { grid-template-columns: 1fr !important; margin: 32px 0; gap: 24px; }
+  .mini-agent-section,
+  .chat-card            { width: 100%; max-width: 100%; overflow: hidden; }
 
-  .cta-button, .cta-button-final {
-    padding: 14px 20px;
-    font-size: 1rem;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
+  .demo-btn             { max-width: 100%; }
 
-  .faq-answer { padding: 0 16px 16px 16px; }
-  .faq-item summary { padding: 16px; gap: 10px; }
+  .pack-card            { padding: 20px 16px; }
 
-  .two-column { margin: 40px 0; gap: 24px; }
+  .cta-button,
+  .cta-button-final     { padding: 14px 20px; font-size: 1rem; max-width: 100%; }
 
-  .cta-final-section { margin-top: 60px; padding: 40px 0; }
+  .faq-answer           { padding: 0 16px 16px 16px; }
+  .faq-item summary     { padding: 16px; }
+
+  .cta-final-section    { margin-top: 60px; padding: 40px 0; }
 }
