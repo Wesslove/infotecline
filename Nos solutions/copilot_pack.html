@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml" />
   <title>Packs Copilot Microsoft - Infotecline</title>
-  <style>
+   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -57,12 +57,8 @@
       display: inline-block;
     }
     @keyframes slide {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
     }
 
     /* ─── Hero ─── */
@@ -143,6 +139,35 @@
       font-weight: bold;
     }
 
+    /* ─── Option block ─── */
+    .option-block {
+      margin-top: 28px;
+      background: rgba(59,130,246,0.05);
+      border: 1px solid rgba(59,130,246,0.18);
+      border-radius: 12px;
+      padding: 20px 22px;
+    }
+    .option-block h3 {
+      margin-bottom: 14px;
+    }
+    .option-block .alt-list {
+      margin-top: 8px;
+      padding-left: 4px;
+      list-style: none;
+    }
+    .option-block .alt-list li {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      padding: 4px 0 4px 20px;
+      position: relative;
+    }
+    .option-block .alt-list li::before {
+      content: "–";
+      position: absolute;
+      left: 4px;
+      color: var(--accent);
+    }
+
     /* ─── Chat Card ─── */
     .chat-card {
       background: var(--surface);
@@ -191,10 +216,7 @@
       align-items: center;
       gap: 8px;
     }
-    .demo-topbar .dot {
-      width: 10px; height: 10px;
-      border-radius: 50%;
-    }
+    .demo-topbar .dot { width: 10px; height: 10px; border-radius: 50%; }
     .dot-red   { background: #ef4444; }
     .dot-yellow{ background: #eab308; }
     .dot-green { background: #22c55e; }
@@ -215,22 +237,9 @@
       margin-bottom: 6px;
       box-shadow: 0 0 18px rgba(59,130,246,0.35);
     }
-    .copilot-logo svg {
-      width: 28px; height: 28px;
-      fill: white;
-    }
-    .demo-greeting h3 {
-      font-size: 0.97rem;
-      font-weight: 700;
-      margin-bottom: 2px;
-      color: var(--text);
-    }
-    .demo-greeting p {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 10px;
-    }
+    .copilot-logo svg { width: 28px; height: 28px; fill: white; }
+    .demo-greeting h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 2px; color: var(--text); }
+    .demo-greeting p  { font-size: 0.8rem; font-weight: 600; color: var(--text); margin-bottom: 10px; }
     .demo-actions {
       width: auto;
       display: flex;
@@ -239,7 +248,6 @@
       margin: 6px auto 4px;
       align-items: center;
     }
-    .demo-actions.row { flex-direction: row; gap: 8px; }
     .demo-btn {
       width: 400px;
       max-width: 90%;
@@ -256,11 +264,6 @@
       line-height: 1.2;
     }
     .demo-btn:hover { background: rgba(59,130,246,0.16); border-color: var(--accent); transform: translateY(-1px); }
-    .demo-btn:hover {
-      background: rgba(59,130,246,0.16);
-      border-color: var(--accent);
-      transform: translateY(-1px);
-    }
     .demo-input-bar {
       margin-top: 8px;
       width: 80%;
@@ -272,61 +275,18 @@
       padding: 5px 7px;
       gap: 5px;
     }
-    .demo-input-bar span {
-      flex: 1;
-      color: var(--text-dim);
-      font-size: 0.68rem;
-    }
-    .demo-send {
-      width: 20px; height: 20px;
-      border-radius: 4px;
-      background: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .demo-send svg {
-      width: 14px; height: 14px;
-      fill: white;
-    }
-    .demo-disclaimer {
-      text-align: right;
-      margin-top: 8px;
-      font-size: 0.78rem;
-      color: var(--text-dim);
-      font-style: italic;
-      padding-right: 2px;
-    }
-    .chat-footer {
-      margin-top: 8px;
-      padding-top: 6px;
-      border-top: 1px solid var(--border);
-    }
-    .chat-footer h4 {
-      font-size: 0.82rem;
-      margin-bottom: 4px;
-      font-weight: 600;
-    }
-    .chat-footer p {
-      color: var(--text-muted);
-      font-size: 0.72rem;
-      line-height: 1.35;
-    }
+    .demo-input-bar span { flex: 1; color: var(--text-dim); font-size: 0.68rem; }
+    .demo-send { width: 20px; height: 20px; border-radius: 4px; background: var(--primary); display: flex; align-items: center; justify-content: center; }
+    .demo-send svg { width: 14px; height: 14px; fill: white; }
+    .demo-disclaimer { text-align: right; margin-top: 8px; font-size: 0.78rem; color: var(--text-dim); font-style: italic; padding-right: 2px; }
+    .chat-footer { margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--border); }
+    .chat-footer h4 { font-size: 0.82rem; margin-bottom: 4px; font-weight: 600; }
+    .chat-footer p  { color: var(--text-muted); font-size: 0.72rem; line-height: 1.35; }
 
     /* ─── Packs Section ─── */
-    .packs-section {
-      margin-top: 80px;
-    }
-    .packs-section h2 {
-      font-size: 2rem;
-      margin-bottom: 40px;
-      font-weight: 700;
-    }
-    .packs-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
+    .packs-section { margin-top: 80px; }
+    .packs-section h2 { font-size: 2rem; margin-bottom: 40px; font-weight: 700; }
+    .packs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
     .pack-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -334,39 +294,12 @@
       padding: 32px;
       transition: all 0.3s;
     }
-    .pack-card:hover {
-      border-color: var(--primary);
-      transform: translateY(-4px);
-    }
-    .pack-card h3 {
-      font-size: 1.4rem;
-      margin-bottom: 16px;
-      font-weight: 600;
-    }
-    .pack-card > p {
-      color: var(--text-muted);
-      margin-bottom: 24px;
-      line-height: 1.6;
-    }
-    .pack-card ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 30px;
-    }
-    .pack-card ul li {
-      padding: 8px 0;
-      color: var(--text-muted);
-      position: relative;
-      padding-left: 24px;
-      font-size: 0.95rem;
-    }
-    .pack-card ul li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--primary);
-      font-weight: bold;
-    }
+    .pack-card:hover { border-color: var(--primary); transform: translateY(-4px); }
+    .pack-card h3 { font-size: 1.4rem; margin-bottom: 16px; font-weight: 600; }
+    .pack-card > p { color: var(--text-muted); margin-bottom: 24px; line-height: 1.6; }
+    .pack-card ul { list-style: none; padding: 0; margin-bottom: 30px; }
+    .pack-card ul li { padding: 8px 0; color: var(--text-muted); position: relative; padding-left: 24px; font-size: 0.95rem; }
+    .pack-card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
     .pack-button {
       display: inline-block;
       width: 100%;
@@ -380,23 +313,11 @@
       text-decoration: none;
       transition: all 0.2s;
     }
-    .pack-button:hover {
-      background: var(--primary);
-      color: white;
-    }
+    .pack-button:hover { background: var(--primary); color: white; }
 
     /* ─── Challenges Section ─── */
-    .challenges-section {
-      margin-top: 20px;
-      padding-top: 40px;
-      border-top: 1px solid var(--border);
-    }
-    .challenges-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin: 0 auto;
-    }
+    .challenges-section { margin-top: 20px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .challenges-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin: 0 auto; }
     .challenge-card {
       display: flex;
       flex-direction: column;
@@ -409,11 +330,7 @@
       transition: all 0.3s ease;
       min-height: 580px;
     }
-    .challenge-card:hover {
-      border-color: rgba(59,130,246,0.4);
-      transform: translateY(-4px);
-      box-shadow: 0 8px 32px rgba(59,130,246,0.15);
-    }
+    .challenge-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-4px); box-shadow: 0 8px 32px rgba(59,130,246,0.15); }
     .challenge-card-head {
       display: flex;
       flex-direction: column;
@@ -421,31 +338,12 @@
       justify-content: center;
       gap: 16px;
       margin-bottom: 28px;
-      padding: 0;
-      background: transparent;
-      border: none;
       width: 100%;
       text-align: center;
     }
-    .challenge-icon {
-      font-size: 48px;
-      filter: drop-shadow(0 2px 8px rgba(59,130,246,0.3));
-    }
-    .challenge-card-head h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      line-height: 1.3;
-      color: var(--text);
-      text-align: center;
-    }
-    .challenge-card-body {
-      width: 100%;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      flex: 1;
-    }
+    .challenge-icon { font-size: 48px; filter: drop-shadow(0 2px 8px rgba(59,130,246,0.3)); }
+    .challenge-card-head h3 { font-size: 1.25rem; font-weight: 700; line-height: 1.3; color: var(--text); text-align: center; }
+    .challenge-card-body { width: 100%; display: flex; flex-direction: column; align-items: flex-start; flex: 1; }
     .challenge-label {
       display: inline-block;
       font-size: 0.75rem;
@@ -459,30 +357,9 @@
       padding: 5px 14px;
       margin-bottom: 20px;
     }
-    .challenge-problems {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 auto 0;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .challenge-problems li {
-      color: var(--text-muted);
-      font-size: 0.92rem;
-      padding: 0 0 0 28px;
-      position: relative;
-      line-height: 1.5;
-    }
-    .challenge-problems li::before {
-      content: "▸";
-      position: absolute;
-      left: 8px;
-      color: #f59e0b;
-      font-weight: 700;
-      font-size: 1rem;
-    }
+    .challenge-problems { list-style: none; padding: 0; margin: 0 0 auto 0; width: 100%; display: flex; flex-direction: column; gap: 12px; }
+    .challenge-problems li { color: var(--text-muted); font-size: 0.92rem; padding: 0 0 0 28px; position: relative; line-height: 1.5; }
+    .challenge-problems li::before { content: "▸"; position: absolute; left: 8px; color: #f59e0b; font-weight: 700; font-size: 1rem; }
     .challenge-solution {
       display: flex;
       flex-direction: column;
@@ -508,38 +385,13 @@
       padding: 4px 12px;
       margin-bottom: 6px;
     }
-    .challenge-solution-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 6px;
-    }
-    .challenge-solution p {
-      color: var(--text);
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin: 0;
-    }
+    .challenge-solution-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
+    .challenge-solution p { color: var(--text); font-size: 0.9rem; line-height: 1.6; margin: 0; }
 
     /* ─── CTA Final ─── */
-    .cta-final-section {
-      margin-top: 100px;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .cta-final-section h2 {
-      font-size: 1.9rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-    .cta-final-section p {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      margin-bottom: 36px;
-    }
+    .cta-final-section { margin-top: 100px; padding: 80px 20px; text-align: center; }
+    .cta-final-section h2 { font-size: 1.9rem; font-weight: 700; margin-bottom: 12px; }
+    .cta-final-section p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 36px; }
     .cta-button-final {
       display: inline-block;
       background: var(--primary);
@@ -552,111 +404,26 @@
       box-shadow: 0 4px 24px rgba(59,130,246,0.35);
       transition: all 0.2s;
     }
-    .cta-button-final:hover {
-      background: var(--primary-dark);
-      transform: translateY(-3px);
-      box-shadow: 0 6px 32px rgba(59,130,246,0.45);
-    }
+    .cta-button-final:hover { background: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 6px 32px rgba(59,130,246,0.45); }
 
     /* ─── FAQ ─── */
-    .faq-section {
-      margin-top: 100px;
-      padding-top: 80px;
-      border-top: 1px solid var(--border);
-    }
-    .faq-section-head {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-    .faq-section-head h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .faq-section-head p {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-    }
-    .faq-list {
-      max-width: 780px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .faq-item {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      overflow: hidden;
-      transition: border-color 0.25s;
-    }
-    .faq-item:hover {
-      border-color: rgba(59,130,246,0.28);
-    }
-    .faq-item[open] {
-      border-color: var(--primary);
-    }
-    .faq-item summary {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 20px 24px;
-      cursor: pointer;
-      list-style: none;
-      user-select: none;
-    }
+    .faq-section { margin-top: 100px; padding-top: 80px; border-top: 1px solid var(--border); }
+    .faq-section-head { text-align: center; margin-bottom: 56px; }
+    .faq-section-head h2 { font-size: 2rem; font-weight: 700; margin-bottom: 10px; }
+    .faq-section-head p { color: var(--text-muted); font-size: 1.05rem; }
+    .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: border-color 0.25s; }
+    .faq-item:hover { border-color: rgba(59,130,246,0.28); }
+    .faq-item[open] { border-color: var(--primary); }
+    .faq-item summary { display: flex; align-items: center; gap: 16px; padding: 20px 24px; cursor: pointer; list-style: none; user-select: none; }
     .faq-item summary::-webkit-details-marker { display: none; }
-    .faq-badge {
-      width: 36px;
-      height: 36px;
-      min-width: 36px;
-      border-radius: 10px;
-      background: rgba(59,130,246,0.1);
-      border: 1px solid rgba(59,130,246,0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .faq-badge svg {
-      width: 18px;
-      height: 18px;
-      stroke: var(--accent);
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-    }
-    .faq-question {
-      flex: 1;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text);
-    }
-    .faq-chevron {
-      width: 20px;
-      height: 20px;
-      stroke: var(--text-dim);
-      fill: none;
-      stroke-width: 2.2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: transform 0.3s ease, stroke 0.25s;
-    }
-    .faq-item[open] .faq-chevron {
-      transform: rotate(180deg);
-      stroke: var(--primary);
-    }
-    .faq-answer {
-      padding: 0 24px 20px 76px;
-      color: var(--text-muted);
-      font-size: 0.94rem;
-      line-height: 1.7;
-      animation: faqSlide 0.28s ease;
-    }
-    @keyframes faqSlide {
-      from { opacity: 0; transform: translateY(-6px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+    .faq-badge { width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; }
+    .faq-badge svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; }
+    .faq-question { flex: 1; font-size: 1rem; font-weight: 600; color: var(--text); }
+    .faq-chevron { width: 20px; height: 20px; stroke: var(--text-dim); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.3s ease, stroke 0.25s; }
+    .faq-item[open] .faq-chevron { transform: rotate(180deg); stroke: var(--primary); }
+    .faq-answer { padding: 0 24px 20px 76px; color: var(--text-muted); font-size: 0.94rem; line-height: 1.7; animation: faqSlide 0.28s ease; }
+    @keyframes faqSlide { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
 
     /* ─── Responsive ─── */
     @media (max-width: 1024px) {
@@ -679,9 +446,7 @@
     <div class="container">
       <div class="nav">
         <a href="../index.html" class="brand" style="text-decoration: none; color: inherit;">
-          <div class="logo">
-            <img src="../assets/images/logo.svg" alt="logo Infotecline" />
-          </div>
+          <div class="logo"><img src="../assets/images/logo.svg" alt="logo Infotecline" /></div>
           <span>INFOTECLINE</span>
         </a>
         <nav>
@@ -719,7 +484,6 @@
         </div>
       </div>
       <h1>Les défis que vos équipes vivent au quotidien</h1>
-      <p>et comment nos Packs Copilot y répondent immédiatement</p>
     </section>
 
     <!-- ─── Défis & Solutions ─── -->
@@ -861,15 +625,30 @@
       <div class="mini-agent-section">
         <h2>Mini-Agent Intranet (offert) –<br>Votre premier Copilot<br>opérationnel en 60 minutes</h2>
         <p>Un petit agent intelligent connecté à votre intranet, qui lit 3 à 5 contenus internes et guide vos employés vers les bonnes informations. Idéal pour découvrir la puissance des agents Copilot.</p>
-        <h3>Fonctionnalités essentielles :</h3>
+
+        <!-- Édition Teams -->
+        <h3>Fonctionnalités essentielles <span style="font-size:0.85rem; font-weight:400; color:var(--text-dim)">(édition Teams)</span> :</h3>
         <ul>
-          <li>Recherche intelligente dans 3 contenus : SharePoint</li>
+          <li>Recherche intelligente sur 3 contenus (SharePoint / OneDrive)</li>
           <li>Réponses instantanées aux questions internes</li>
           <li>Suggestions de pages intranet, procédures, documents</li>
-          <li>Installation en moins de 60 minutes</li>
-          <li>Fonctionne dans Teams</li>
-          <li>Aucune licence supplémentaire requise</li>
+          <li>Déploiement Teams en moins de 60 minutes <span style="font-size:0.88rem; color:var(--text-dim)">(application épinglée dans la barre latérale)</span></li>
+          <li>Aucune licence Microsoft 365 Copilot requise pour les utilisateurs finaux <span style="font-size:0.88rem; color:var(--text-dim)">(consommation couverte par les Copilot Credits du tenant)</span></li>
         </ul>
+
+        <!-- Option SharePoint -->
+        <div class="option-block">
+          <h3>Option Intranet SharePoint <span style="font-size:0.85rem; font-weight:400; color:var(--text-dim)">(facultative)</span> :</h3>
+          <ul>
+            <li style="padding-bottom:10px;">Nécessite une licence <strong style="color:var(--text)">Microsoft 365 Copilot par utilisateur</strong> pour l'usage du WebPart AI Agent sur SharePoint Online</li>
+            <li>Sans ces licences, deux alternatives sont disponibles <strong style="color:var(--text)">sans surcoût</strong> :
+              <ul class="alt-list">
+                <li>Lien / CTA vers l'agent dans Teams depuis l'intranet (deep-link Teams)</li>
+                <li>Vignette / tuile Intranet qui ouvre l'agent dans Teams, avec retour possible à la page source</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div class="chat-card">
@@ -999,75 +778,53 @@
       <div class="faq-list">
         <details class="faq-item">
           <summary>
-            <div class="faq-badge">
-              <svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            </div>
+            <div class="faq-badge"><svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
             <span class="faq-question">Ai‑je besoin d'une licence Copilot pour utiliser un agent ?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
           </summary>
           <div class="faq-answer">
-            Non. Les utilisateurs n'ont besoin d'aucune licence pour utiliser un agent Copilot dans Teams ou SharePoint. Seule l'administration requiert une licence.
+            Non. Les utilisateurs finaux n'ont besoin d'aucune licence Microsoft 365 Copilot pour utiliser un agent dans Teams ou SharePoint. L'usage est couvert par les Copilot Credits du tenant. Seule l'option WebPart AI Agent sur SharePoint Online nécessite une licence par utilisateur — dans ce cas, nous proposons deux alternatives gratuites (deep-link Teams ou vignette Intranet).
           </div>
         </details>
         <details class="faq-item">
           <summary>
-            <div class="faq-badge">
-              <svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            </div>
+            <div class="faq-badge"><svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
             <span class="faq-question">Combien de temps faut-il pour installer un Pack ?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
           </summary>
-          <div class="faq-answer">
-            Entre 3 et 7 jours, selon le pack choisi.
-          </div>
+          <div class="faq-answer">Entre 3 et 7 jours, selon le pack choisi.</div>
         </details>
         <details class="faq-item">
           <summary>
-            <div class="faq-badge">
-              <svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            </div>
+            <div class="faq-badge"><svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
             <span class="faq-question">Le Mini‑Agent offert est-il réellement utilisable ?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
           </summary>
-          <div class="faq-answer">
-            Oui. C'est un agent léger qui lit jusqu'à 5 contenus de votre intranet et vous donne un aperçu concret de ce que peut faire un agent Copilot.
-          </div>
+          <div class="faq-answer">Oui. C'est un agent léger qui lit jusqu'à 5 contenus de votre intranet et vous donne un aperçu concret de ce que peut faire un agent Copilot.</div>
         </details>
         <details class="faq-item">
           <summary>
-            <div class="faq-badge">
-              <svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            </div>
+            <div class="faq-badge"><svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
             <span class="faq-question">Puis-je ajouter mes propres documents ?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
           </summary>
-          <div class="faq-answer">
-            Oui. Chaque pack intègre vos propres pages SharePoint, documents, FAQ internes et procédures.
-          </div>
+          <div class="faq-answer">Oui. Chaque pack intègre vos propres pages SharePoint, documents, FAQ internes et procédures.</div>
         </details>
         <details class="faq-item">
           <summary>
-            <div class="faq-badge">
-              <svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            </div>
+            <div class="faq-badge"><svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
             <span class="faq-question">Pouvons-nous faire évoluer l'agent ensuite ?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
           </summary>
-          <div class="faq-answer">
-            Oui. Trois options sont disponibles : évolution ponctuelle, maintenance mensuelle, ou internalisation complète.
-          </div>
+          <div class="faq-answer">Oui. Trois options sont disponibles : évolution ponctuelle, maintenance mensuelle, ou internalisation complète.</div>
         </details>
         <details class="faq-item">
           <summary>
-            <div class="faq-badge">
-              <svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            </div>
+            <div class="faq-badge"><svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
             <span class="faq-question">Y a‑t‑il des coûts cachés ?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
           </summary>
-          <div class="faq-answer">
-            Non. Tout est clairement défini dans l'offre. Et vous gardez la propriété de votre agent.
-          </div>
+          <div class="faq-answer">Non. Tout est clairement défini dans l'offre. Et vous gardez la propriété de votre agent.</div>
         </details>
       </div>
     </section>
@@ -1086,9 +843,7 @@
       <div class="footer-content">
         <div>
           <a href="../index.html" class="footer-brand" style="text-decoration: none; color: inherit;">
-            <div class="footer-logo">
-              <img src="../assets/images/logo.svg" alt="logo Infotecline" />
-            </div>
+            <div class="footer-logo"><img src="../assets/images/logo.svg" alt="logo Infotecline" /></div>
             <span style="font-weight: 700; font-size: 1.1rem;">INFOTECLINE</span>
           </a>
           <small style="display: block; margin-top: 12px; color: var(--text-muted);">© <span id="year"></span> Infotecline. Tous droits réservés.</small>
@@ -1099,6 +854,7 @@
       </div>
     </div>
   </footer>
+
 
   <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
 
