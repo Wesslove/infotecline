@@ -168,6 +168,9 @@ nav a:hover {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  text-align: center;
+  margin-top: 50px;
+  justify-content: center;
 }
 
 .btn {
@@ -242,8 +245,10 @@ nav a:hover {
   
   .presentation .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 24px;
   }
   
   .centered-image {
