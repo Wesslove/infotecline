@@ -1,9 +1,110 @@
-/* ========================================
-   POWER-PLATFORM.CSS - STYLES SPÉCIFIQUES
-   À charger APRÈS styles.css
-   ======================================== */
+/* Power Platform — chargé après styles.css */
+/* Hero */
+.hero {
+  padding: 100px 0 80px;
+  position: relative;
+}
 
-/* Grilles spécifiques Power Platform */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+ 
+/* Services */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 48px;
+  text-align: center;
+  font-weight: 700;
+}
+
+  
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+   
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Grid layouts */
 .grid {
   display: grid;
   gap: 24px;
@@ -17,7 +118,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-/* Badge pill */
+/* Pill badge */
 .pill {
   display: inline-block;
   padding: 0.4rem 0.8rem;
@@ -32,7 +133,7 @@
   letter-spacing: 0.5px;
 }
 
-/* Styles de listes dans les cards */
+/* Card list styles */
 .card ul {
   list-style: none;
   padding: 0;
@@ -75,8 +176,22 @@
   flex: 1;
 }
 
-/* Responsive spécifique */
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
+  .hero {
+    padding: 60px 0 40px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
   .grid.cols-2,
   .grid.cols-3 {
     grid-template-columns: 1fr;

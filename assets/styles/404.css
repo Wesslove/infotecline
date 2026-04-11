@@ -1,0 +1,85 @@
+/* Pages 404 — chargé après styles.css */
+
+.hero.hero--error {
+  padding: 100px 0 80px;
+  position: relative;
+}
+
+.hero--error {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero--error .container {
+  width: 100%;
+}
+
+.hero--error-inner {
+  text-align: center;
+}
+
+.hero-code {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.hero--error h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero--error p {
+  font-size: 1.2rem;
+  margin: 2rem 0;
+  color: var(--text-muted);
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.cta-row {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-btn--ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.cta-btn--ghost:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
