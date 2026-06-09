@@ -7,14 +7,13 @@
   <meta name="description" content="Contactez Infotecline pour vos projets de transformation digitale." />
   <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" 
           content="default-src 'self'; 
-                   script-src 'self' 'unsafe-inline'; 
-                   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+                   script-src 'self' 'unsafe-inline' https://unpkg.com; 
+                   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; 
                    font-src 'self' https://fonts.gstatic.com; 
                    img-src 'self' data: https:; 
                    frame-src https://forms.office.com;">
@@ -75,7 +74,25 @@
 
       <section class="presentation">
         <div class="container" id="offre">
-          <img src="/assets/images/image.jpg" alt="Présentation de l'automatisation des processus internes" class="centered-image">
+              <!-- Carte -->
+      <div class="map-card">
+        <div id="map" class="map-frame" role="application" aria-label="Carte interactive OpenStreetMap"></div>
+        <div class="map-info">
+          <p class="map-label">Visitez notre bureau</p>
+          <h2>📍 Nous trouver</h2>
+          <p class="map-address">16 Rue Lenz, 3509 Dudelange, Luxembourg</p>
+          <p class="map-note">Un accompagnement humain, rapide et proche de vos équipes sur site ou à distance.</p>
+          <div class="btn-group">
+            <a class="btn btn-primary" href="https://www.openstreetmap.org/directions?from=&to=49.36091%2C6.13911" target="_blank" rel="noopener">
+              🗺️ Itinéraire
+            </a>
+            <a class="btn btn-secondary" href="mailto:contact@infotecline.com">
+              ✉️ Nous écrire
+            </a>
+          </div>
+        </div>
+      </div> 
+
         </div>
       </section>
 
@@ -84,22 +101,7 @@
         <!-- Contenu -->
        
 
-      <!-- Carte -->
-      <!-- <div class="map-card">
-        <div id="map" role="application" aria-label="Carte interactive OpenStreetMap"></div>
-        <div class="map-info">
-          <h2>📍 Nous trouver</h2>
-          <p><strong>Adresse :</strong> 27 route des Romains, 57100 Thionville, France</p>
-          <div class="btn-group">
-            <a class="btn btn-primary" href="https://www.openstreetmap.org/directions?from=&to=49.36091%2C6.13911" target="_blank" rel="noopener">
-              🗺️ Itinéraire
-            </a>
-            <a class="btn btn-secondary" href="mailto:contact@infotecline.fr">
-              ✉️ Nous écrire
-            </a>
-          </div>
-        </div>
-      </div> -->
+  
 
     
       
@@ -112,8 +114,8 @@
             </svg>
             Email
           </h3>
-          <p>Email principal : <a href="mailto:contact@infotecline.fr">contact@infotecline.fr</a></p>
-          <p>DPO : <a href="mailto:dpo@infotecline.fr">dpo@infotecline.fr</a></p>
+          <p>Email principal : <a href="mailto:contact@infotecline.com">contact@infotecline.com</a></p>
+          <p>DPO : <a href="mailto:dpo@infotecline.com">dpo@infotecline.com</a></p>
         </div>
 
         <div class="contact-card">
@@ -198,8 +200,8 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Map initialization
-    const LAT = 49.36091;
-    const LNG = 6.13911;
+    const LAT = 49.479876;
+    const LNG = 6.084361;
 
     const map = L.map('map').setView([LAT, LNG], 16);
 
@@ -210,7 +212,7 @@
     tiles.addTo(map);
 
     const marker = L.marker([LAT, LNG]).addTo(map);
-    marker.bindPopup('<strong>Infotecline</strong><br/>27 route des Romains<br/>57100 Thionville').openPopup();
+    marker.bindPopup('<strong>Infotecline</strong><br/>16 Rue Lenz<br/>3509 Dudelange, Luxembourg');
 
     // Accessibility
     window.addEventListener('load', () => {
