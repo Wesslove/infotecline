@@ -18,6 +18,18 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="Infotecline" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; 
+                   script-src 'self' 'unsafe-inline'; 
+                   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+                   font-src 'self' https://fonts.gstatic.com; 
+                   img-src 'self' data: https:; 
+                   frame-src https://forms.office.com;">
 
 </head>
 <body>
@@ -33,9 +45,9 @@
         <nav>
           <ul>
             <li><a href="./index.html">Accueil</a></li>
-            <li><a href="/Nos solutions/nos_solutions.html">Nos solutions</a></li>
+            <li><a href="/nos-solutions/nos_solutions.html">Nos solutions</a></li>
             <li><a href="about.html">À propos</a></li>
-            <li><a href="Nos solutions/contact.html" class="cta-btn">Contact</a></li>
+            <li><a href="/nos-solutions/contact.html" class="cta-btn">Contact</a></li>
           </ul>
         </nav>
         <button class="burger" onclick="toggleMenu()">☰</button>
@@ -43,9 +55,9 @@
       <div class="mobile-menu" id="mobileMenu">
         <ul>
           <li><a href="index.html" onclick="toggleMenu()">Accueil</a></li>
-          <li><a href="/Nos solutions/nos_solutions.html" onclick="toggleMenu()">Nos solutions</a></li>
+          <li><a href="/nos-solutions/nos_solutions.html" onclick="toggleMenu()">Nos solutions</a></li>
           <li><a href="about.html" onclick="toggleMenu()">À propos</a></li>
-          <li><a href="/Nos solutions/contact.html" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="/nos-solutions/contact.html" onclick="toggleMenu()">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -56,7 +68,7 @@
     <section class="hero">
       <div class="container">
         <!-- Bandeau promo pleine largeur, au-dessus de la grille -->
-        <a href="/Nos solutions/copilot_pack.html" style="text-decoration: none; display: block;">
+        <a href="/nos-solutions/copilot_pack.html" style="text-decoration: none; display: block;">
           <div class="promo-slider">
             <div class="promo-slider-content">
               <span class="promo-slider-text">🎉 Profitez de votre offre promo sur nos packs IA-copilotes !  &nbsp;&nbsp;&nbsp; 🎉 Profitez de votre offre promo sur nos packs IA-copilotes ! Voir ici 👉 &nbsp;&nbsp;&nbsp; 🎉</span>
@@ -103,7 +115,7 @@
             
             <div class="hero-cta">
               <a href="https://forms.office.com/pages/responsepage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUMjdEQ0FZUzZYSkRHWEJTVThKM0cyNzBEVi4u&route=shorturl" class="btn btn-primary">Commencer maintenant</a>
-              <a href="Nos solutions/nos_solutions.html" class="btn btn-secondary">Nos solutions</a>
+              <a href="/nos-solutions/nos_solutions.html" class="btn btn-secondary">Nos solutions</a>
             </div>
           </div>
           
@@ -137,12 +149,12 @@
             </div>
             
             <!-- Badges flottants -->
-            <div class="floating-badge badge-1"><a href="/Nos solutions/migration-microsoft-365.html">🚀 Migration M365</a></div>
-            <div class="floating-badge badge-2"><a href="/Nos solutions/cybersecurite.html">🔒 Cybersécurité M365</a></div>
-            <div class="floating-badge badge-3"><a href="/Nos solutions/power-platform.html">⚡ Automatisation <br> Power Platform</a></div>
-            <div class="floating-badge badge-4"><a href="/Nos solutions/microsoft-teams.html"> 📢 Microsoft Teams  </a></div>
-            <div class="floating-badge badge-5"><a href="/Nos solutions/microsoft-sharepoint.html"> 📜 Ms SharePoint</a></div>
-            <div class="floating-badge badge-6"><a href="/Nos solutions/copilot-studio.html"> 🤖 Copilot studio </a></div>
+            <div class="floating-badge badge-1"><a href="/nos-solutions/migration-microsoft-365.html">🚀 Migration M365</a></div>
+            <div class="floating-badge badge-2"><a href="/nos-solutions/cybersecurite.html">🔒 Cybersécurité M365</a></div>
+            <div class="floating-badge badge-3"><a href="/nos-solutions/power-platform.html">⚡ Automatisation <br> Power Platform</a></div>
+            <div class="floating-badge badge-4"><a href="/nos-solutions/microsoft-teams.html"> 📢 Microsoft Teams  </a></div>
+            <div class="floating-badge badge-5"><a href="/nos-solutions/microsoft-sharepoint.html"> 📜 Ms SharePoint</a></div>
+            <div class="floating-badge badge-6"><a href="/nos-solutions/copilot-studio.html"> 🤖 Copilot studio </a></div>
 
           </div>
         </div>
@@ -162,7 +174,7 @@
             </svg>
             <h3>Migration Microsoft 365</h3>
             <p>Audit, inventaire, plan de migration, pilotes, bascule et accompagnement utilisateur. Messagerie, fichiers, Teams, SharePoint et sécurité.</p>
-            <a href="/Nos solutions/migration-microsoft-365.html" class="btn btn-secondary">En savoir plus</a>
+            <a href="/nos-solutions/migration-microsoft-365.html" class="btn btn-secondary">En savoir plus</a>
           </div>
           <div class="card">
             <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -172,7 +184,7 @@
             </svg>
             <h3>Cybersécurité M365</h3>
             <p>MFA, gestion des identités Entra ID, durcissement M365, sauvegardes, supervision et réponse aux incidents pour PME/ETI.</p>
-              <a href="/Nos solutions/cybersecurite.html" class="btn btn-secondary">En savoir plus</a>
+              <a href="/nos-solutions/cybersecurite.html" class="btn btn-secondary">En savoir plus</a>
           </div>
           <div class="card">
             <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -187,7 +199,7 @@
             </svg>
             <h3>Automatisation Power Platform</h3>
             <p>Workflows Power Automate, apps Canvas/Model-driven, intégrations Business Central et connecteurs personnalisés.</p>
-            <a href="/Nos solutions/power-platform.html" class="btn btn-secondary">En savoir plus</a>
+            <a href="/nos-solutions/power-platform.html" class="btn btn-secondary">En savoir plus</a>
           </div>
      
         </div>
@@ -247,7 +259,7 @@
               <p>Obtenez un score, une maturité et un plan d'actions priorisé (PDF).</p>
               <div style="display:flex; gap:.8rem; flex-wrap: wrap; margin-top: 16px;">
                 <a class="btn btn-primary" href="https://forms.office.com/pages/responsepage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUMjdEQ0FZUzZYSkRHWEJTVThKM0cyNzBEVi4u&route=shorturl">Lancer le questionnaire</a>
-                <a class="btn btn-secondary" href="/Nos solutions/nos_solutions.html">Voir nos services</a>
+                <a class="btn btn-secondary" href="/nos-solutions/nos_solutions.html">Voir nos services</a>
               </div>
             </div>
 
@@ -255,7 +267,7 @@
               Nous protégeons vos données : aucune revente, utilisation limitée au traitement de votre demande.
             </p>
              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-top: 16px;">
-              Les informations recueillies via ce formulaire sont nécessaires pour traiter votre demande et vous fournir un plan d'action personnalisé. Elles sont destinées à Infotecline et ne sont pas transmises à des tiers. Vous disposez d'un droit d'accès, de rectification et de suppression des données en écrivant à <a href="mailto:dpo@infotecline.fr">dpo@infotecline.fr</a>. Pour en savoir plus, consultez notre <a href="/Nos solutions/politique-confidentialite.html">politique de confidentialité</a>.
+              Les informations recueillies via ce formulaire sont nécessaires pour traiter votre demande et vous fournir un plan d'action personnalisé. Elles sont destinées à Infotecline et ne sont pas transmises à des tiers. Vous disposez d'un droit d'accès, de rectification et de suppression des données en écrivant à <a href="mailto:dpo@infotecline.fr">dpo@infotecline.fr</a>. Pour en savoir plus, consultez notre <a href="/nos-solutions/politique-confidentialite.html">politique de confidentialité</a>.
             </p>
           </div>
           <div class="contact-info">
@@ -283,7 +295,7 @@
           <small style="display: block; margin-top: 12px; color: var(--text-muted);">© <span id="year"></span> Infotecline. Tous droits réservés.</small>
         </div>
         <div class="footer-links">
-          <a href="/Nos solutions/politique-confidentialite.html">Politique de confidentialité</a>
+          <a href="/nos-solutions/politique-confidentialite.html">Politique de confidentialité</a>
         </div>
       </div>
     </div>

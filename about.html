@@ -8,6 +8,18 @@
   <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles/styles.css" />
   <link rel="stylesheet" href="assets/styles/about.css" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; 
+                   script-src 'self' 'unsafe-inline'; 
+                   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+                   font-src 'self' https://fonts.gstatic.com; 
+                   img-src 'self' data: https:; 
+                   frame-src https://forms.office.com;">
 
 </head>
 <body>
@@ -24,7 +36,7 @@
           <!-- <li><a href="#testimonials">Témoignages</a></li> -->
           <ul>
             <li><a href="./index.html">Accueil</a></li>
-            <li><a href="/Nos solutions/nos_solutions.html">Nos solutions</a></li>
+            <li><a href="/nos-solutions/nos_solutions.html">Nos solutions</a></li>
             <li><a href="about.html">À propos</a></li>
             <li><a href="Nos solutions/contact.html" class="cta-btn">Contact</a></li>
           </ul>
@@ -34,9 +46,9 @@
       <div class="mobile-menu" id="mobileMenu">
         <ul>
           <li><a href="index.html" onclick="toggleMenu()">Accueil</a></li>
-          <li><a href="/Nos solutions/automatisation-processus-internes.html" onclick="toggleMenu()">Nos solutions</a></li>
+          <li><a href="/nos-solutions/automatisation-processus-internes.html" onclick="toggleMenu()">Nos solutions</a></li>
           <li><a href="about.html" onclick="toggleMenu()">À propos</a></li>
-          <li><a href="/Nos solutions/contact.html" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="/nos-solutions/contact.html" onclick="toggleMenu()">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -211,7 +223,7 @@
           <small style="display: block; margin-top: 12px; color: var(--text-muted);">© <span id="year"></span> Infotecline. Tous droits réservés.</small>
         </div>
         <div class="footer-links">
-          <a href="/Nos solutions/politique-confidentialite.html">Politique de confidentialité</a>
+          <a href="/nos-solutions/politique-confidentialite.html">Politique de confidentialité</a>
         </div>
       </div>
     </div>
