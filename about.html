@@ -11,16 +11,13 @@
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-
-    <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" 
-          content="default-src 'self'; 
-                   script-src 'self' 'unsafe-inline'; 
-                   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
-                   font-src 'self' https://fonts.gstatic.com; 
-                   img-src 'self' data: https:; 
-                   frame-src https://forms.office.com;">
-
+  <meta http-equiv="Content-Security-Policy" 
+        content="default-src 'self'; 
+                 script-src 'self' 'unsafe-inline'; 
+                 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+                 font-src 'self' https://fonts.gstatic.com; 
+                 img-src 'self' data: https:; 
+                 frame-src https://forms.office.com;">
 </head>
 <body>
   <header>
@@ -33,12 +30,11 @@
           <span>INFOTECLINE</span>
         </a>
         <nav>
-          <!-- <li><a href="#testimonials">Témoignages</a></li> -->
           <ul>
             <li><a href="./index.html">Accueil</a></li>
             <li><a href="/nos-solutions/nos_solutions.html">Nos solutions</a></li>
             <li><a href="about.html">À propos</a></li>
-            <li><a href="Nos solutions/contact.html" class="cta-btn">Contact</a></li>
+            <li><a href="/nos-solutions/contact.html" class="cta-btn">Contact</a></li>
           </ul>
         </nav>
         <button class="burger" onclick="toggleMenu()">☰</button>
@@ -55,43 +51,78 @@
   </header>
 
   <main>
-    <!-- Section: Qui sommes-nous -->
     <section class="section" id="about">
       <div class="container">
+
+        <!-- ── À propos + stats + pourquoi ── -->
         <h2 class="section-title">À propos d'Infotecline</h2>
-        <div class="about-grid">
-          <div>
-            <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 24px;">Infotecline accompagne les entreprises dans leur transformation digitale grâce à des solutions IT innovantes. Notre expertise garantit que votre organisation reste compétitive et performante dans un environnement technologique en constante évolution.</p>
-            <div class="stats">
-              <div class="stat">
-                <span class="stat-number">+ 100</span>
-                <span class="stat-label">Utilisateurs formés</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">60%</span>
-                <span class="stat-label">de tâches automatisées</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">48 h</span>
-                <span class="stat-label">pour un plan d'action</span>
-              </div>
+
+        <div class="about-intro">
+          <p>Infotecline accompagne les entreprises dans leur transformation digitale grâce à des solutions IT innovantes. Notre expertise garantit que votre organisation reste compétitive et performante dans un environnement technologique en constante évolution.</p>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-card">
+            <span class="stat-number">+100</span>
+            <span class="stat-label">Utilisateurs formés</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">60%</span>
+            <span class="stat-label">de tâches automatisées</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">48h</span>
+            <span class="stat-label">pour un plan d'action</span>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <h3 class="why-title">Pourquoi nous choisir ?</h3>
+
+          <div class="why-item">
+            <div class="why-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="why-text">
+              <strong>Approche copilote</strong>
+              <span>Nous co-construisons avec vos équipes, pas à leur place.</span>
             </div>
           </div>
 
-          <div class="about-panel">
-            <h3>Pourquoi nous choisir ?</h3>
-            <ul>
-              <li>Approche <strong>copilote</strong> : nous co-construisons avec vos équipes</li>
-              <li>Livrables clairs : documentation, modèles et bonnes pratiques</li>
-              <li>Focalisé <strong>résultats</strong> : gains mesurables de productivité et de sécurité</li>
-            </ul>
+          <div class="why-item">
+            <div class="why-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <polyline points="9 15 11 17 15 13"/>
+              </svg>
+            </div>
+            <div class="why-text">
+              <strong>Livrables clairs</strong>
+              <span>Documentation, modèles et bonnes pratiques à chaque étape.</span>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="why-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                <polyline points="17 6 23 6 23 12"/>
+              </svg>
+            </div>
+            <div class="why-text">
+              <strong>Focalisé résultats</strong>
+              <span>Gains mesurables de productivité et de sécurité.</span>
+            </div>
           </div>
         </div>
-      
-      
-        
-  
-        <!-- Nos services -->
+
+        <!-- ── Nos services ── -->
         <div>
           <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 40px; font-weight: 600;">Nos services</h3>
           <div class="services-grid">
@@ -140,7 +171,7 @@
           </div>
         </div>
 
-        <!-- Nos engagements -->
+        <!-- ── Nos engagements ── -->
         <div class="engagements-section">
           <h3>Nos engagements</h3>
           <div class="engagements-grid">
@@ -163,49 +194,48 @@
           </div>
         </div>
 
-        <!-- Nos partenaires -->
+        <!-- ── Nos partenaires ── -->
         <div class="partners-section">
           <h3>Nos partenaires</h3>
           <div class="partners-container">
-            <!-- Partenaire principal -->
             <div class="partner-card">
               <div class="partner-main">
                 <div class="partner-logo">
-                  <img src="assets/images/jdc groupe.png" alt="Logo Partenaire"  />
+                  <img src="assets/images/jdc groupe.png" alt="Logo Partenaire" />
                 </div>
                 <div class="partner-info">
                   <div class="partner-label">Partenaire principal</div>
                   <div class="partner-name">JCD Groupe</div>
                 </div>
               </div>
-              <p class="partner-description">JCD Groupe est une entreprise de services basée à Metz, qui accompagne les organisations dans leurs projets informatiques et professionnels. Elle propose des solutions globales en informatique, développement, impression, cybersécurité, télécommunication, formation et aménagement de bureaux, avec une approche sur-mesure. Grâce à sa proximité et à son sens du service, JCD Groupe s’impose comme un partenaire de confiance pour les entreprises du Grand Est.</p>
+              <p class="partner-description">JCD Groupe est une entreprise de services basée à Metz, qui accompagne les organisations dans leurs projets informatiques et professionnels. Elle propose des solutions globales en informatique, développement, impression, cybersécurité, télécommunication, formation et aménagement de bureaux, avec une approche sur-mesure. Grâce à sa proximité et à son sens du service, JCD Groupe s'impose comme un partenaire de confiance pour les entreprises du Grand Est.</p>
             </div>
 
-            <!-- Microsoft Partner -->
             <div class="partner-card">
               <div class="microsoft-partner">
-                  <svg class="microsoft-logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="28" height="28" fill="#f35325"/>
-                    <rect x="36" width="28" height="28" fill="#81bc06"/>
-                    <rect y="36" width="28" height="28" fill="#05a6f0"/>
-                    <rect x="36" y="36" width="28" height="28" fill="#ffba08"/>
-                  </svg>
-                  <div class="microsoft-body">
-                    <div class="microsoft-text">
-                      <div class="brand-name">Microsoft</div>
-                      <div class="partner-type">Microsoft Network Partner</div>
-                    </div>
-                    <p class="microsoft-description">En tant que membre du Microsoft Partner Network, nous nous connectons à l’écosystème Microsoft pour vous offrir des solutions fiables et conformes aux standards technologiques.</p>
+                <svg class="microsoft-logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="28" height="28" fill="#f35325"/>
+                  <rect x="36" width="28" height="28" fill="#81bc06"/>
+                  <rect y="36" width="28" height="28" fill="#05a6f0"/>
+                  <rect x="36" y="36" width="28" height="28" fill="#ffba08"/>
+                </svg>
+                <div class="microsoft-body">
+                  <div class="microsoft-text">
+                    <div class="brand-name">Microsoft</div>
+                    <div class="partner-type">Microsoft Network Partner</div>
                   </div>
+                  <p class="microsoft-description">En tant que membre du Microsoft Partner Network, nous nous connectons à l'écosystème Microsoft pour vous offrir des solutions fiables et conformes aux standards technologiques.</p>
                 </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- CTA -->
+        <!-- ── CTA ── -->
         <div class="cta-section">
           <a href="https://forms.office.com/pages/responsepage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUMjdEQ0FZUzZYSkRHWEJTVThKM0cyNzBEVi4u&route=shorturlcl" class="cta-button">Discutons de votre projet</a>
         </div>
+
       </div>
     </section>
   </main>
@@ -230,7 +260,6 @@
   </footer>
 
   <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
-
   <script src="assets/js/ift.js"></script>
 </body>
 </html>
