@@ -3,6 +3,130 @@
   padding: 60px 0;
 }
 
+/* ── Titre principal ── */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Intro ── */
+.about-intro p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+}
+
+/* ── Stats ── */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.stat-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* ── Pourquoi nous choisir ── */
+.why-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 60px;
+  transition: border-color 0.3s;
+}
+
+.why-card:hover {
+  border-color: var(--primary);
+}
+
+.why-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.why-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.why-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(59, 130, 246, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--primary);
+  transition: background 0.3s;
+}
+
+.why-card:hover .why-icon {
+  background: rgba(59, 130, 246, 0.18);
+}
+
+.why-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.why-text strong {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.why-text span {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── Nos services ── */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -31,7 +155,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
 }
 
 .service-card h4 {
@@ -40,6 +163,7 @@
   font-weight: 600;
 }
 
+/* ── Nos engagements ── */
 .engagements-section {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -93,6 +217,7 @@
   color: var(--text);
 }
 
+/* ── Nos partenaires ── */
 .partners-section {
   text-align: center;
 }
@@ -131,7 +256,6 @@
   margin-bottom: 16px;
 }
 
-/* Design amélioré du logo partenaire */
 .partner-logo {
   width: 118px;
   height: 118px;
@@ -249,9 +373,10 @@
   font-size: 1.1rem;
   line-height: 1.5;
   max-width: 560px;
-  text-align: left; 
+  text-align: left;
 }
 
+/* ── CTA ── */
 .cta-section {
   text-align: center;
   margin-top: 60px;
@@ -275,13 +400,21 @@
   box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
 }
 
-/* Responsive */
+/* ── Responsive ── */
 @media (max-width: 768px) {
   .section {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
-  /* About page responsive */
+  .stats-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .why-card {
+    padding: 24px 20px;
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
   }
@@ -312,4 +445,3 @@
     height: 70px;
   }
 }
-
