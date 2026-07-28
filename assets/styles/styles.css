@@ -203,6 +203,13 @@ footer {
   color: var(--primary);
 }
 
+
+.footer-links a:not(:last-child)::after {
+  content: "|";
+  margin-left: 24px;
+  color: var(--border);
+}
+
 /* Retour en haut (présent sur la plupart des pages) */
 .scroll-top {
   position: fixed;

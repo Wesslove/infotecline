@@ -1,440 +1,704 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../assets/styles/styles.css" />
-  <link rel="stylesheet" href="../assets/styles/copilot_pack.css" />
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
+    <link rel="stylesheet" href="../assets/styles/copilot_pack.css" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
 
     <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" 
-          content="default-src 'self'; 
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; 
                    script-src 'self' 'unsafe-inline'; 
                    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
                    font-src 'self' https://fonts.gstatic.com; 
                    img-src 'self' data: https:; 
-                   frame-src https://forms.office.com;">
-  <title>Packs Copilot Microsoft - Infotecline</title>
-</head>
-<body>
-
-  <header>
-    <div class="container">
-      <div class="nav">
-        <a href="../index.html" class="brand" style="text-decoration: none; color: inherit;">
-          <div class="logo"><img src="../assets/images/logo.svg" alt="logo Infotecline" /></div>
-          <span>INFOTECLINE</span>
-        </a>
-        <nav>
+                   frame-src https://forms.office.com;"
+    />
+    <title>Packs Copilot Microsoft - Infotecline</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="nav">
+          <a
+            href="../index.html"
+            class="brand"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="logo">
+              <img src="../assets/images/logo.svg" alt="logo Infotecline" />
+            </div>
+            <span>INFOTECLINE</span>
+          </a>
+          <nav>
+            <ul>
+              <li><a href="../index.html">Accueil</a></li>
+              <li><a href="migration-microsoft-365.html">Migration M365</a></li>
+              <li><a href="cybersecurite.html">Cybersécurité</a></li>
+              <li><a href="power-platform.html">Automatisation</a></li>
+              <li><a href="copilot_pack.html">Nos Packs Copilot</a></li>
+              <li><a href="contact.html" class="cta-btn">Contact</a></li>
+            </ul>
+          </nav>
+          <button class="burger" onclick="toggleMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
           <ul>
-            <li><a href="../index.html">Accueil</a></li>
-            <li><a href="migration-microsoft-365.html">Migration M365</a></li>
-            <li><a href="cybersecurite.html">Cybersécurité</a></li>
-            <li><a href="power-platform.html">Automatisation</a></li>
-            <li><a href="copilot_pack.html">Nos Packs Copilot</a></li>
-            <li><a href="contact.html" class="cta-btn">Contact</a></li>
-          </ul>
-        </nav>
-        <button class="burger" onclick="toggleMenu()">☰</button>
-      </div>
-      <div class="mobile-menu" id="mobileMenu">
-        <ul>
-          <li><a href="../index.html" onclick="toggleMenu()">Accueil</a></li>
-          <li><a href="migration-microsoft-365.html" onclick="toggleMenu()">Migration M365</a></li>
-          <li><a href="cybersecurite.html" onclick="toggleMenu()">Cybersécurité</a></li>
-          <li><a href="power-platform.html" onclick="toggleMenu()">Automatisation</a></li>
-          <li><a href="copilot_pack.html" onclick="toggleMenu()">Nos Packs Copilot</a></li>
-          <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
-
-  <div class="container">
-
-    <!-- ─── Hero ─── -->
-    <section class="hero-section">
-      <div class="promo-slider">
-        <div class="promo-slider-content">
-          <span class="promo-slider-text">🎉Profitez de votre offre promo sur nos packs IA-copilotes  ! 🎉 Profitez de votre offre promo sur nos packs IA-copilotes  ! 🎉</span>
-        </div>
-      </div>
-      <h1>Les défis que vos équipes vivent au quotidien</h1>
-    </section>
-
-    <!-- ─── Défis & Solutions ─── -->
-    <section class="challenges-section">
-      <div class="challenges-grid">
-
-        <!-- RH -->
-        <div class="challenge-card">
-          <div class="challenge-card-head">
-            <span class="challenge-icon">🧑‍💼</span>
-            <h3>Ressources Humaines – RH submergé par les demandes répétitives</h3>
-          </div>
-          <div class="challenge-card-body">
-            <span class="challenge-label">Problème majeur</span>
-            <ul class="challenge-problems">
-              <li>Questions récurrentes : congés, arrêts, télétravail</li>
-              <li>Documents introuvables</li>
-              <li>Sollicitations urgentes et non priorisées</li>
-              <li>Manque d'autonomie des collaborateurs</li>
-            </ul>
-            <div class="challenge-solution">
-              <div class="challenge-solution-label">Solution →</div>
-              <div class="challenge-solution-tag">👉 Pack Copilot RH</div>
-              <p>Votre agent RH intelligent répond automatiquement aux questions, fournit les bons documents et réduit jusqu'à <strong style="color:var(--accent)">40 %</strong> des sollicitations.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- IT -->
-        <div class="challenge-card">
-          <div class="challenge-card-head">
-            <span class="challenge-icon">💻</span>
-            <h3>Support IT – Une avalanche de tickets simples</h3>
-          </div>
-          <div class="challenge-card-body">
-            <span class="challenge-label">Problème majeur</span>
-            <ul class="challenge-problems">
-              <li>Tickets N1 récurrents (Teams, Outlook, mot de passe…)</li>
-              <li>Trop de temps perdu sur du support basique</li>
-              <li>Saturation du Helpdesk</li>
-            </ul>
-            <div class="challenge-solution">
-              <div class="challenge-solution-label">Solution →</div>
-              <div class="challenge-solution-tag">👉 Pack Copilot IT / Support N1</div>
-              <p>Un agent IT intelligent qui diagnostique, résout les incidents simples et crée les tickets complexes automatiquement.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- QSE -->
-        <div class="challenge-card">
-          <div class="challenge-card-head">
-            <span class="challenge-icon">🛡️</span>
-            <h3>QSE – Conformité et procédures mal comprises</h3>
-          </div>
-          <div class="challenge-card-body">
-            <span class="challenge-label">Problème majeur</span>
-            <ul class="challenge-problems">
-              <li>Procédures longues et complexes</li>
-              <li>Risques de mauvaise interprétation</li>
-              <li>Difficulté à trouver la bonne information rapidement</li>
-            </ul>
-            <div class="challenge-solution">
-              <div class="challenge-solution-label">Solution →</div>
-              <div class="challenge-solution-tag">👉 Pack Copilot QSE</div>
-              <p>L'agent lit les procédures, explique la bonne démarche et guide les employés dans les déclarations.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Achats -->
-        <div class="challenge-card">
-          <div class="challenge-card-head">
-            <span class="challenge-icon">💼</span>
-            <h3>Achats – Des demandes incomplètes ou non conformes</h3>
-          </div>
-          <div class="challenge-card-body">
-            <span class="challenge-label">Problème majeur</span>
-            <ul class="challenge-problems">
-              <li>Mauvais fournisseurs</li>
-              <li>Demandes imprécises</li>
-              <li>Processus d'approbation ralentis</li>
-            </ul>
-            <div class="challenge-solution">
-              <div class="challenge-solution-label">Solution →</div>
-              <div class="challenge-solution-tag">👉 Pack Copilot Achats</div>
-              <p>Votre assistant Achats structure les demandes et garantit la conformité dès la saisie.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Onboarding -->
-        <div class="challenge-card">
-          <div class="challenge-card-head">
-            <span class="challenge-icon">🚀</span>
-            <h3>Onboarding – Arrivées qui manquent de cohérence</h3>
-          </div>
-          <div class="challenge-card-body">
-            <span class="challenge-label">Problème majeur</span>
-            <ul class="challenge-problems">
-              <li>Informations dispersées</li>
-              <li>Parcours d'accueil différent selon les équipes</li>
-              <li>Trop de questions pendant les 3 premières semaines</li>
-            </ul>
-            <div class="challenge-solution">
-              <div class="challenge-solution-label">Solution →</div>
-              <div class="challenge-solution-tag">👉 Pack Copilot Onboarding</div>
-              <p>Un parcours d'intégration guidé et un assistant personnel pour les nouveaux employés.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Intranet -->
-        <div class="challenge-card">
-          <div class="challenge-card-head">
-            <span class="challenge-icon">🌐</span>
-            <h3>Intranet – Documents introuvables pour les équipes</h3>
-          </div>
-          <div class="challenge-card-body">
-            <span class="challenge-label">Problème majeur</span>
-            <ul class="challenge-problems">
-              <li>Les collaborateurs ne trouvent pas les contenus internes</li>
-              <li>Trop de pages, trop de PDF, structure incohérente</li>
-              <li>Perte de temps quotidienne</li>
-            </ul>
-            <div class="challenge-solution">
-              <div class="challenge-solution-label">Solution →</div>
-              <div class="challenge-solution-tag">👉 Pack Copilot Intranet</div>
-              <p>Votre intranet devient un moteur de réponse intelligent, capable de retrouver instantanément les bonnes informations.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ─── Two Column ─── -->
-    <div class="two-column">
-      <div class="mini-agent-section">
-        <h2>Mini-Agent Intranet (offert) –<br>Votre premier Copilot<br>opérationnel en 60 minutes</h2>
-        <p>Un petit agent intelligent connecté à votre intranet, qui lit 3 à 5 contenus internes et guide vos employés vers les bonnes informations. Idéal pour découvrir la puissance des agents Copilot.</p>
-
-        <h3>Fonctionnalités essentielles <span style="font-size:0.85rem; font-weight:400; color:var(--text-dim)">(édition Teams)</span> :</h3>
-        <ul>
-          <li>Recherche intelligente sur 3 contenus (SharePoint / OneDrive)</li>
-          <li>Réponses instantanées aux questions internes</li>
-          <li>Suggestions de pages intranet, procédures, documents</li>
-          <li>Déploiement Teams en moins de 60 minutes <span style="font-size:0.88rem; color:var(--text-dim)">(application épinglée dans la barre latérale)</span></li>
-          <li>Aucune licence Microsoft 365 Copilot requise pour les utilisateurs finaux <span style="font-size:0.88rem; color:var(--text-dim)">(consommation couverte par les Copilot Credits du tenant)</span></li>
-        </ul>
-
-        <div class="option-block">
-          <h3>Option Intranet SharePoint <span style="font-size:0.85rem; font-weight:400; color:var(--text-dim)">(facultative)</span> :</h3>
-          <ul>
-            <li style="padding-bottom:10px;">Nécessite une licence <strong style="color:var(--text)">Microsoft 365 Copilot par utilisateur</strong> pour l'usage du WebPart AI Agent sur SharePoint Online</li>
-            <li>Sans ces licences, deux alternatives sont disponibles <strong style="color:var(--text)">sans surcoût</strong> :
-              <ul class="alt-list">
-                <li>Lien / CTA vers l'agent dans Teams depuis l'intranet (deep-link Teams)</li>
-                <li>Vignette / tuile Intranet qui ouvre l'agent dans Teams, avec retour possible à la page source</li>
-              </ul>
+            <li><a href="../index.html" onclick="toggleMenu()">Accueil</a></li>
+            <li>
+              <a href="migration-microsoft-365.html" onclick="toggleMenu()"
+                >Migration M365</a
+              >
             </li>
+            <li>
+              <a href="cybersecurite.html" onclick="toggleMenu()"
+                >Cybersécurité</a
+              >
+            </li>
+            <li>
+              <a href="power-platform.html" onclick="toggleMenu()"
+                >Automatisation</a
+              >
+            </li>
+            <li>
+              <a href="copilot_pack.html" onclick="toggleMenu()"
+                >Nos Packs Copilot</a
+              >
+            </li>
+            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
           </ul>
         </div>
       </div>
+    </header>
 
-      <div class="chat-card">
-        <div class="chat-header">
-          <div class="chat-icon">+</div>
-          <div class="chat-title">Copilot — Intranet</div>
-        </div>
-        <div class="demo-mockup">
-          <div class="demo-topbar">
-            <div class="dot dot-red"></div>
-            <div class="dot dot-yellow"></div>
-            <div class="dot dot-green"></div>
+    <div class="container">
+      <!-- ─── Hero ─── -->
+      <section class="hero-section">
+        <div class="promo-slider">
+          <div class="promo-slider-content">
+            <span class="promo-slider-text"
+              >🎉Profitez de votre offre promo sur nos packs IA-copilotes ! 🎉
+              Profitez de votre offre promo sur nos packs IA-copilotes !
+              🎉</span
+            >
           </div>
-          <div class="demo-body">
-            <div class="copilot-logo">
-              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+        </div>
+        <h1>Les défis que vos équipes vivent au quotidien</h1>
+      </section>
+
+      <!-- ─── Défis & Solutions ─── -->
+      <section class="challenges-section">
+        <div class="challenges-grid">
+          <!-- RH -->
+          <div class="challenge-card">
+            <div class="challenge-card-head">
+              <span class="challenge-icon">🧑‍💼</span>
+              <h3>
+                Ressources Humaines – RH submergé par les demandes répétitives
+              </h3>
             </div>
-            <div class="demo-greeting">
-              <h3>Bonjour !</h3>
-              <p>Que souhaitez-vous faire ?</p>
+            <div class="challenge-card-body">
+              <span class="challenge-label">Problème majeur</span>
+              <ul class="challenge-problems">
+                <li>Questions récurrentes : congés, arrêts, télétravail</li>
+                <li>Documents introuvables</li>
+                <li>Sollicitations urgentes et non priorisées</li>
+                <li>Manque d'autonomie des collaborateurs</li>
+              </ul>
+              <div class="challenge-solution">
+                <div class="challenge-solution-label">Solution →</div>
+                <div class="challenge-solution-tag">👉 Pack Copilot RH</div>
+                <p>
+                  Votre agent RH intelligent répond automatiquement aux
+                  questions, fournit les bons documents et réduit jusqu'à
+                  <strong style="color: var(--accent)">40 %</strong> des
+                  sollicitations.
+                </p>
+              </div>
             </div>
-            <div class="demo-actions">
-              <div class="demo-btn">Créer un ticket IT</div>
-              <div class="demo-btn">Poser des congés</div>
-              <div class="demo-btn">Suivre ma demande</div>
+          </div>
+
+          <!-- IT -->
+          <div class="challenge-card">
+            <div class="challenge-card-head">
+              <span class="challenge-icon">💻</span>
+              <h3>Support IT – Une avalanche de tickets simples</h3>
             </div>
-            <div class="demo-input-bar">
-              <span>Entrez un message …</span>
-              <div class="demo-send">
-                <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            <div class="challenge-card-body">
+              <span class="challenge-label">Problème majeur</span>
+              <ul class="challenge-problems">
+                <li>Tickets N1 récurrents (Teams, Outlook, mot de passe…)</li>
+                <li>Trop de temps perdu sur du support basique</li>
+                <li>Saturation du Helpdesk</li>
+              </ul>
+              <div class="challenge-solution">
+                <div class="challenge-solution-label">Solution →</div>
+                <div class="challenge-solution-tag">
+                  👉 Pack Copilot IT / Support N1
+                </div>
+                <p>
+                  Un agent IT intelligent qui diagnostique, résout les incidents
+                  simples et crée les tickets complexes automatiquement.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- QSE -->
+          <div class="challenge-card">
+            <div class="challenge-card-head">
+              <span class="challenge-icon">🛡️</span>
+              <h3>QSE – Conformité et procédures mal comprises</h3>
+            </div>
+            <div class="challenge-card-body">
+              <span class="challenge-label">Problème majeur</span>
+              <ul class="challenge-problems">
+                <li>Procédures longues et complexes</li>
+                <li>Risques de mauvaise interprétation</li>
+                <li>Difficulté à trouver la bonne information rapidement</li>
+              </ul>
+              <div class="challenge-solution">
+                <div class="challenge-solution-label">Solution →</div>
+                <div class="challenge-solution-tag">👉 Pack Copilot QSE</div>
+                <p>
+                  L'agent lit les procédures, explique la bonne démarche et
+                  guide les employés dans les déclarations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achats -->
+          <div class="challenge-card">
+            <div class="challenge-card-head">
+              <span class="challenge-icon">💼</span>
+              <h3>Achats – Des demandes incomplètes ou non conformes</h3>
+            </div>
+            <div class="challenge-card-body">
+              <span class="challenge-label">Problème majeur</span>
+              <ul class="challenge-problems">
+                <li>Mauvais fournisseurs</li>
+                <li>Demandes imprécises</li>
+                <li>Processus d'approbation ralentis</li>
+              </ul>
+              <div class="challenge-solution">
+                <div class="challenge-solution-label">Solution →</div>
+                <div class="challenge-solution-tag">👉 Pack Copilot Achats</div>
+                <p>
+                  Votre assistant Achats structure les demandes et garantit la
+                  conformité dès la saisie.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Onboarding -->
+          <div class="challenge-card">
+            <div class="challenge-card-head">
+              <span class="challenge-icon">🚀</span>
+              <h3>Onboarding – Arrivées qui manquent de cohérence</h3>
+            </div>
+            <div class="challenge-card-body">
+              <span class="challenge-label">Problème majeur</span>
+              <ul class="challenge-problems">
+                <li>Informations dispersées</li>
+                <li>Parcours d'accueil différent selon les équipes</li>
+                <li>Trop de questions pendant les 3 premières semaines</li>
+              </ul>
+              <div class="challenge-solution">
+                <div class="challenge-solution-label">Solution →</div>
+                <div class="challenge-solution-tag">
+                  👉 Pack Copilot Onboarding
+                </div>
+                <p>
+                  Un parcours d'intégration guidé et un assistant personnel pour
+                  les nouveaux employés.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Intranet -->
+          <div class="challenge-card">
+            <div class="challenge-card-head">
+              <span class="challenge-icon">🌐</span>
+              <h3>Intranet – Documents introuvables pour les équipes</h3>
+            </div>
+            <div class="challenge-card-body">
+              <span class="challenge-label">Problème majeur</span>
+              <ul class="challenge-problems">
+                <li>
+                  Les collaborateurs ne trouvent pas les contenus internes
+                </li>
+                <li>Trop de pages, trop de PDF, structure incohérente</li>
+                <li>Perte de temps quotidienne</li>
+              </ul>
+              <div class="challenge-solution">
+                <div class="challenge-solution-label">Solution →</div>
+                <div class="challenge-solution-tag">
+                  👉 Pack Copilot Intranet
+                </div>
+                <p>
+                  Votre intranet devient un moteur de réponse intelligent,
+                  capable de retrouver instantanément les bonnes informations.
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <p class="demo-disclaimer">Image non contractuelle</p>
-        <div class="chat-footer">
-          <h4>Pourquoi il est offert ?</h4>
-          <p>Le Mini-Agent est une version d'entrée de gamme.<br>Vous testez la technologie …<br>Vous voyez la valeur …<br>Et vous choisissez ensuite les Copilot<br>complets selon vos besoins.</p>
-        </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- ─── CTA intermédiaire ─── -->
-    <div style="text-align: center; margin: 60px 0;">
-      <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUQlpLVDZIOFZCNEMxUTdMMlMzMDNCRkQ2TC4u" class="cta-button">Réserver mon offre maintenant</a>
-    </div>
+      <!-- ─── Two Column ─── -->
+      <div class="two-column">
+        <div class="mini-agent-section">
+          <h2>
+            Mini-Agent Intranet (offert) –<br />Votre premier Copilot<br />opérationnel
+            en 60 minutes
+          </h2>
+          <p>
+            Un petit agent intelligent connecté à votre intranet, qui lit 3 à 5
+            contenus internes et guide vos employés vers les bonnes
+            informations. Idéal pour découvrir la puissance des agents Copilot.
+          </p>
 
-    <!-- ─── Packs Section ─── -->
-    <section class="packs-section">
-      <h2>Choisissez votre Pack Copilot</h2>
-      <div class="packs-grid">
-        <div class="pack-card">
-          <h3>Pack Copilot RH</h3>
-          <p>Assistant intelligent,<br>FAQ interne, documents RH,<br>procédures, formulaires …</p>
+          <h3>
+            Fonctionnalités essentielles
+            <span
+              style="
+                font-size: 0.85rem;
+                font-weight: 400;
+                color: var(--text-dim);
+              "
+              >(édition Teams)</span
+            >
+            :
+          </h3>
           <ul>
-            <li>Réponses aux questions RH</li>
-            <li>Lecture des documents SharePoint RH</li>
-            <li>Parcours employés</li>
-            <li>Scénarios RH multiples (congés, maladie, avantages …)</li>
+            <li>
+              Recherche intelligente sur 3 contenus (SharePoint / OneDrive)
+            </li>
+            <li>Réponses instantanées aux questions internes</li>
+            <li>Suggestions de pages intranet, procédures, documents</li>
+            <li>
+              Déploiement Teams en moins de 60 minutes
+              <span style="font-size: 0.88rem; color: var(--text-dim)"
+                >(application épinglée dans la barre latérale)</span
+              >
+            </li>
+            <li>
+              Aucune licence Microsoft 365 Copilot requise pour les utilisateurs
+              finaux
+              <span style="font-size: 0.88rem; color: var(--text-dim)"
+                >(consommation couverte par les Copilot Credits du tenant)</span
+              >
+            </li>
           </ul>
-          <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUQlpLVDZIOFZCNEMxUTdMMlMzMDNCRkQ2TC4u" class="pack-button">RESERVER MON OFFRE</a>
-        </div>
-        <div class="pack-card">
-          <h3>Pack Copilot IT /<br>Support N1</h3>
-          <p>Le premier niveau de<br>support automatisé dans<br>Teams</p>
-          <ul>
-            <li>Diagnostics Outlook Teams</li>
-            <li>FAQ IT interne</li>
-            <li>Création automatique de ticket</li>
-            <li>Orientation des utilisateurs</li>
-          </ul>
-          <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUQlpLVDZIOFZCNEMxUTdMMlMzMDNCRkQ2TC4u" class="pack-button">RESERVER MON OFFRE</a>
-        </div>
-        <div class="pack-card">
-          <h3>Pack Copilot QSE</h3>
-          <p>Explique les règles, lit les<br>documents QSE, aide aux<br>déclarations</p>
-          <ul>
-            <li>Lecture procédures QSE</li>
-            <li>Guidage sécurité</li>
-            <li>Déclarations via SharePoint</li>
-            <li>Référentiel interne</li>
-          </ul>
-          <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUQlpLVDZIOFZCNEMxUTdMMlMzMDNCRkQ2TC4u" class="pack-button">RESERVER MON OFFRE</a>
-        </div>
-        <div class="pack-card">
-          <h3>Pack Copilot Achats</h3>
-          <p>Structure les demandes et<br>garantit la conformité dès<br>la saisie</p>
-          <ul>
-            <li>Validation des fournisseurs</li>
-            <li>Structuration des demandes</li>
-            <li>Conformité automatique</li>
-            <li>Accélération des approbations</li>
-          </ul>
-          <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUQlpLVDZIOFZCNEMxUTdMMlMzMDNCRkQ2TC4u" class="pack-button">RESERVER MON OFFRE</a>
-        </div>
-        <div class="pack-card">
-          <h3>Pack Copilot Onboarding</h3>
-          <p>Parcours d'intégration guidé<br>et assistant personnel pour<br>les nouveaux employés</p>
-          <ul>
-            <li>Parcours d'accueil structuré</li>
-            <li>Assistant personnel dédié</li>
-            <li>Centralisation des informations</li>
-            <li>Suivi des 3 premières semaines</li>
-          </ul>
-          <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUQlpLVDZIOFZCNEMxUTdMMlMzMDNCRkQ2TC4u" class="pack-button">RESERVER MON OFFRE</a>
-        </div>
-        <div class="pack-card">
-          <h3>Pack Copilot Intranet</h3>
-          <p>Moteur de réponse intelligent<br>pour retrouver instantanément<br>les bonnes informations</p>
-          <ul>
-            <li>Recherche intelligente multi-sources</li>
-            <li>Navigation simplifiée</li>
-            <li>Accès rapide aux documents</li>
-            <li>Réponses contextualisées</li>
-          </ul>
-          <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUQlpLVDZIOFZCNEMxUTdMMlMzMDNCRkQ2TC4u" class="pack-button">RESERVER MON OFFRE</a>
-        </div>
-      </div>
-    </section>
 
-    <!-- ─── FAQ ─── -->
-    <section class="faq-section">
-      <div class="faq-section-head">
-        <h2>Questions fréquentes</h2>
-        <p>Tout ce que vous devez savoir avant de démarrer</p>
-      </div>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>
-            <div class="faq-badge"><svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-            <span class="faq-question">Ai‑je besoin d'une licence Copilot pour utiliser un agent ?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
-          </summary>
-          <div class="faq-answer">
-            Non. Les utilisateurs finaux n'ont besoin d'aucune licence Microsoft 365 Copilot pour utiliser un agent dans Teams. L'usage est couvert par les Copilot Credits du tenant. Seule l'option WebPart AI Agent sur SharePoint Online nécessite une licence par utilisateur — dans ce cas, nous proposons deux alternatives gratuites (deep-link Teams ou vignette Intranet).
+          <div class="option-block">
+            <h3>
+              Option Intranet SharePoint
+              <span
+                style="
+                  font-size: 0.85rem;
+                  font-weight: 400;
+                  color: var(--text-dim);
+                "
+                >(facultative)</span
+              >
+              :
+            </h3>
+            <ul>
+              <li style="padding-bottom: 10px">
+                Nécessite une licence
+                <strong style="color: var(--text)"
+                  >Microsoft 365 Copilot par utilisateur</strong
+                >
+                pour l'usage du WebPart AI Agent sur SharePoint Online
+              </li>
+              <li>
+                Sans ces licences, deux alternatives sont disponibles
+                <strong style="color: var(--text)">sans surcoût</strong> :
+                <ul class="alt-list">
+                  <li>
+                    Lien / CTA vers l'agent dans Teams depuis l'intranet
+                    (deep-link Teams)
+                  </li>
+                  <li>
+                    Vignette / tuile Intranet qui ouvre l'agent dans Teams, avec
+                    retour possible à la page source
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
-        </details>
-        <details class="faq-item">
-          <summary>
-            <div class="faq-badge"><svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-            <span class="faq-question">Combien de temps faut-il pour installer un Pack ?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
-          </summary>
-          <div class="faq-answer">Entre 3 et 7 jours, selon le pack choisi.</div>
-        </details>
-        <details class="faq-item">
-          <summary>
-            <div class="faq-badge"><svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-            <span class="faq-question">Le Mini‑Agent offert est-il réellement utilisable ?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
-          </summary>
-          <div class="faq-answer">Oui. C'est un agent léger qui lit jusqu'à 5 contenus de votre intranet et vous donne un aperçu concret de ce que peut faire un agent Copilot.</div>
-        </details>
-        <details class="faq-item">
-          <summary>
-            <div class="faq-badge"><svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-            <span class="faq-question">Puis-je ajouter mes propres documents ?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
-          </summary>
-          <div class="faq-answer">Oui. Chaque pack intègre vos propres pages SharePoint, documents, FAQ internes et procédures.</div>
-        </details>
-        <details class="faq-item">
-          <summary>
-            <div class="faq-badge"><svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-            <span class="faq-question">Pouvons-nous faire évoluer l'agent ensuite ?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
-          </summary>
-          <div class="faq-answer">Oui. Trois options sont disponibles : évolution ponctuelle, maintenance mensuelle, ou internalisation complète.</div>
-        </details>
-        <details class="faq-item">
-          <summary>
-            <div class="faq-badge"><svg viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-            <span class="faq-question">Y a‑t‑il des coûts cachés ?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg>
-          </summary>
-          <div class="faq-answer">Non. Tout est clairement défini dans l'offre. Et vous gardez la propriété de votre agent.</div>
-        </details>
-      </div>
-    </section>
-
-    <!-- ─── CTA Final ─── -->
-    <section class="cta-final-section">
-      <h2>Prêt à transformer votre quotidien ?</h2>
-      <p>Démarrez avec le Mini-Agent offert et explorez les Packs Copilot adaptés à vos besoins.</p>
-      <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUQlpLVDZIOFZCNEMxUTdMMlMzMDNCRkQ2TC4u" class="cta-button-final">Réserver mon offre maintenant</a>
-    </section>
-
-  </div>
-
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div>
-          <a href="../index.html" class="footer-brand" style="text-decoration: none; color: inherit;">
-            <div class="footer-logo"><img src="../assets/images/logo.svg" alt="logo Infotecline" /></div>
-            <span style="font-weight: 700; font-size: 1.1rem;">INFOTECLINE</span>
-          </a>
-          <small style="display: block; margin-top: 12px; color: var(--text-muted);">© <span id="year"></span> Infotecline. Tous droits réservés.</small>
         </div>
-        <div class="footer-links">
-          <a href="./politique-confidentialite.html">Politique de confidentialité</a>
+
+        <div class="chat-card">
+          <div class="chat-header">
+            <div class="chat-icon">+</div>
+            <div class="chat-title">Copilot — Intranet</div>
+          </div>
+          <div class="demo-mockup">
+            <div class="demo-topbar">
+              <div class="dot dot-red"></div>
+              <div class="dot dot-yellow"></div>
+              <div class="dot dot-green"></div>
+            </div>
+            <div class="demo-body">
+              <div class="copilot-logo">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"
+                  />
+                </svg>
+              </div>
+              <div class="demo-greeting">
+                <h3>Bonjour !</h3>
+                <p>Que souhaitez-vous faire ?</p>
+              </div>
+              <div class="demo-actions">
+                <div class="demo-btn">Créer un ticket IT</div>
+                <div class="demo-btn">Poser des congés</div>
+                <div class="demo-btn">Suivre ma demande</div>
+              </div>
+              <div class="demo-input-bar">
+                <span>Entrez un message …</span>
+                <div class="demo-send">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="demo-disclaimer">Image non contractuelle</p>
+          <div class="chat-footer">
+            <h4>Pourquoi il est offert ?</h4>
+            <p>
+              Le Mini-Agent est une version d'entrée de gamme.<br />Vous testez
+              la technologie …<br />Vous voyez la valeur …<br />Et vous
+              choisissez ensuite les Copilot<br />complets selon vos besoins.
+            </p>
+          </div>
         </div>
       </div>
+
+      <!-- ─── CTA intermédiaire ─── -->
+      <div style="text-align: center; margin: 60px 0">
+        <a
+          href="https://forms.office.com/Pages/ResponsePage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUQlpLVDZIOFZCNEMxUTdMMlMzMDNCRkQ2TC4u"
+          class="cta-button"
+          >Réserver mon offre maintenant</a
+        >
+      </div>
+
+      <!-- ─── Packs Section ─── -->
+      <section class="packs-section">
+        <h2>Choisissez votre Pack Copilot</h2>
+        <div class="packs-grid">
+          <div class="pack-card">
+            <h3>Pack Copilot RH</h3>
+            <p>
+              Assistant intelligent,<br />FAQ interne, documents RH,<br />procédures,
+              formulaires …
+            </p>
+            <ul>
+              <li>Réponses aux questions RH</li>
+              <li>Lecture des documents SharePoint RH</li>
+              <li>Parcours employés</li>
+              <li>Scénarios RH multiples (congés, maladie, avantages …)</li>
+            </ul>
+            <a
+              href="https://forms.office.com/Pages/ResponsePage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUQlpLVDZIOFZCNEMxUTdMMlMzMDNCRkQ2TC4u"
+              class="pack-button"
+              >RESERVER MON OFFRE</a
+            >
+          </div>
+          <div class="pack-card">
+            <h3>Pack Copilot IT /<br />Support N1</h3>
+            <p>Le premier niveau de<br />support automatisé dans<br />Teams</p>
+            <ul>
+              <li>Diagnostics Outlook Teams</li>
+              <li>FAQ IT interne</li>
+              <li>Création automatique de ticket</li>
+              <li>Orientation des utilisateurs</li>
+            </ul>
+            <a
+              href="https://forms.office.com/Pages/ResponsePage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUQlpLVDZIOFZCNEMxUTdMMlMzMDNCRkQ2TC4u"
+              class="pack-button"
+              >RESERVER MON OFFRE</a
+            >
+          </div>
+          <div class="pack-card">
+            <h3>Pack Copilot QSE</h3>
+            <p>
+              Explique les règles, lit les<br />documents QSE, aide aux<br />déclarations
+            </p>
+            <ul>
+              <li>Lecture procédures QSE</li>
+              <li>Guidage sécurité</li>
+              <li>Déclarations via SharePoint</li>
+              <li>Référentiel interne</li>
+            </ul>
+            <a
+              href="https://forms.office.com/Pages/ResponsePage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUQlpLVDZIOFZCNEMxUTdMMlMzMDNCRkQ2TC4u"
+              class="pack-button"
+              >RESERVER MON OFFRE</a
+            >
+          </div>
+          <div class="pack-card">
+            <h3>Pack Copilot Achats</h3>
+            <p>
+              Structure les demandes et<br />garantit la conformité dès<br />la
+              saisie
+            </p>
+            <ul>
+              <li>Validation des fournisseurs</li>
+              <li>Structuration des demandes</li>
+              <li>Conformité automatique</li>
+              <li>Accélération des approbations</li>
+            </ul>
+            <a
+              href="https://forms.office.com/Pages/ResponsePage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUQlpLVDZIOFZCNEMxUTdMMlMzMDNCRkQ2TC4u"
+              class="pack-button"
+              >RESERVER MON OFFRE</a
+            >
+          </div>
+          <div class="pack-card">
+            <h3>Pack Copilot Onboarding</h3>
+            <p>
+              Parcours d'intégration guidé<br />et assistant personnel pour<br />les
+              nouveaux employés
+            </p>
+            <ul>
+              <li>Parcours d'accueil structuré</li>
+              <li>Assistant personnel dédié</li>
+              <li>Centralisation des informations</li>
+              <li>Suivi des 3 premières semaines</li>
+            </ul>
+            <a
+              href="https://forms.office.com/Pages/ResponsePage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUQlpLVDZIOFZCNEMxUTdMMlMzMDNCRkQ2TC4u"
+              class="pack-button"
+              >RESERVER MON OFFRE</a
+            >
+          </div>
+          <div class="pack-card">
+            <h3>Pack Copilot Intranet</h3>
+            <p>
+              Moteur de réponse intelligent<br />pour retrouver
+              instantanément<br />les bonnes informations
+            </p>
+            <ul>
+              <li>Recherche intelligente multi-sources</li>
+              <li>Navigation simplifiée</li>
+              <li>Accès rapide aux documents</li>
+              <li>Réponses contextualisées</li>
+            </ul>
+            <a
+              href="https://forms.office.com/Pages/ResponsePage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUQlpLVDZIOFZCNEMxUTdMMlMzMDNCRkQ2TC4u"
+              class="pack-button"
+              >RESERVER MON OFFRE</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── FAQ ─── -->
+      <section class="faq-section">
+        <div class="faq-section-head">
+          <h2>Questions fréquentes</h2>
+          <p>Tout ce que vous devez savoir avant de démarrer</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>
+              <div class="faq-badge">
+                <svg viewBox="0 0 24 24">
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                  <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+              </div>
+              <span class="faq-question"
+                >Ai‑je besoin d'une licence Copilot pour utiliser un agent
+                ?</span
+              >
+              <svg class="faq-chevron" viewBox="0 0 24 24">
+                <polyline points="6,9 12,15 18,9" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              Non. Les utilisateurs finaux n'ont besoin d'aucune licence
+              Microsoft 365 Copilot pour utiliser un agent dans Teams. L'usage
+              est couvert par les Copilot Credits du tenant. Seule l'option
+              WebPart AI Agent sur SharePoint Online nécessite une licence par
+              utilisateur — dans ce cas, nous proposons deux alternatives
+              gratuites (deep-link Teams ou vignette Intranet).
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <div class="faq-badge">
+                <svg viewBox="0 0 24 24">
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                  <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+              </div>
+              <span class="faq-question"
+                >Combien de temps faut-il pour installer un Pack ?</span
+              >
+              <svg class="faq-chevron" viewBox="0 0 24 24">
+                <polyline points="6,9 12,15 18,9" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              Entre 3 et 7 jours, selon le pack choisi.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <div class="faq-badge">
+                <svg viewBox="0 0 24 24">
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                  <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+              </div>
+              <span class="faq-question"
+                >Le Mini‑Agent offert est-il réellement utilisable ?</span
+              >
+              <svg class="faq-chevron" viewBox="0 0 24 24">
+                <polyline points="6,9 12,15 18,9" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              Oui. C'est un agent léger qui lit jusqu'à 5 contenus de votre
+              intranet et vous donne un aperçu concret de ce que peut faire un
+              agent Copilot.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <div class="faq-badge">
+                <svg viewBox="0 0 24 24">
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                  <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+              </div>
+              <span class="faq-question"
+                >Puis-je ajouter mes propres documents ?</span
+              >
+              <svg class="faq-chevron" viewBox="0 0 24 24">
+                <polyline points="6,9 12,15 18,9" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              Oui. Chaque pack intègre vos propres pages SharePoint, documents,
+              FAQ internes et procédures.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <div class="faq-badge">
+                <svg viewBox="0 0 24 24">
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                  <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+              </div>
+              <span class="faq-question"
+                >Pouvons-nous faire évoluer l'agent ensuite ?</span
+              >
+              <svg class="faq-chevron" viewBox="0 0 24 24">
+                <polyline points="6,9 12,15 18,9" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              Oui. Trois options sont disponibles : évolution ponctuelle,
+              maintenance mensuelle, ou internalisation complète.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <div class="faq-badge">
+                <svg viewBox="0 0 24 24">
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                  <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+              </div>
+              <span class="faq-question">Y a‑t‑il des coûts cachés ?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24">
+                <polyline points="6,9 12,15 18,9" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              Non. Tout est clairement défini dans l'offre. Et vous gardez la
+              propriété de votre agent.
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ─── CTA Final ─── -->
+      <section class="cta-final-section">
+        <h2>Prêt à transformer votre quotidien ?</h2>
+        <p>
+          Démarrez avec le Mini-Agent offert et explorez les Packs Copilot
+          adaptés à vos besoins.
+        </p>
+        <a
+          href="https://forms.office.com/Pages/ResponsePage.aspx?id=bap8KQa2v0aA_dvUGyC8aRC5qvxVHW5MoaAu2mRlaoNUQlpLVDZIOFZCNEMxUTdMMlMzMDNCRkQ2TC4u"
+          class="cta-button-final"
+          >Réserver mon offre maintenant</a
+        >
+      </section>
     </div>
-  </footer>
 
-  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <a
+              href="../index.html"
+              class="footer-brand"
+              style="text-decoration: none; color: inherit"
+            >
+              <div class="footer-logo">
+                <img src="../assets/images/logo.svg" alt="logo Infotecline" />
+              </div>
+              <span style="font-weight: 700; font-size: 1.1rem"
+                >INFOTECLINE</span
+              >
+            </a>
+            <small
+              style="display: block; margin-top: 12px; color: var(--text-muted)"
+              >© <span id="year"></span> Infotecline. Tous droits
+              réservés.</small
+            >
+          </div>
+        <div class="footer-links">
+             <a href="/mentions-legales.html">Mentions légales</a>
+            <a href="/nos-solutions/politique-confidentialite.html">Politique de confidentialité</a>
+            <a href="/cgv.html">CGV</a>
+        </div>
+        </div>
+      </div>
+    </footer>
 
-  <script src="../assets/js/ift.js"></script>
-</body>
+    <button
+      class="scroll-top"
+      id="scrollTop"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      ↑
+    </button>
+
+    <script src="../assets/js/ift.js"></script>
+  </body>
 </html>
