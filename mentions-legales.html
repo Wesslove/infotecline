@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales</title>
+<meta name="description" content="Mentions légales et informations de contact d'Infotecline." />
+<link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="assets/styles/styles.css" />
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --surface: #11162a;
+    --border: rgba(255, 255, 255, 0.08);
+    --text: #f1f5f9;
+    --text-muted: #94a3b8;
+    --accent: #60a5fa;
+    --primary: #3b82f6;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  a { color: var(--accent); }
+
+  /* Hero CGV */
+  .hero-cgv {
+    padding: 80px 0 60px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 100%);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero-cgv h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+
+  .hero-cgv .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-top: 12px;
+  }
+
+  /* Pill badge */
+  .pill {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* CGV Content */
+  .cgv-content { padding: 60px 0 80px; }
+
+  .cgv-article { max-width: 900px; margin: 0 auto; }
+
+  .cgv-section {
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cgv-section:last-child { border-bottom: none; }
+
+  .cgv-section h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text);
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .section-number { color: var(--primary); font-weight: 700; }
+
+  .cgv-section h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    margin-top: 24px;
+    color: var(--accent);
+  }
+
+  .cgv-section p {
+    margin-bottom: 16px;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  .cgv-section p strong { color: var(--text); font-weight: 600; }
+
+  .cgv-list { list-style: none; padding: 0; margin: 0 0 16px 0; }
+
+  .cgv-list li {
+    color: var(--text-muted);
+    line-height: 1.8;
+    padding: 4px 0 4px 24px;
+    position: relative;
+    font-size: 0.95rem;
+  }
+
+  .cgv-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 4px;
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  .highlight-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+  }
+
+  .highlight-box h3 { margin-top: 0; font-size: 1.25rem; }
+  .highlight-box p { color: var(--text-muted); }
+  .highlight-box p:last-child { margin-bottom: 0; }
+
+  .highlight-box--warning {
+    border-left-color: #f59e0b;
+    background: rgba(245, 158, 11, 0.05);
+    border-color: rgba(245, 158, 11, 0.2);
+  }
+
+  .highlight-box--warning h3 { color: var(--accent); }
+
+  /* Identity table used inside "Éditeur du site" */
+  .identity-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+  }
+
+  .identity-table tr { border-bottom: 1px solid var(--border); }
+  .identity-table tr:last-child { border-bottom: none; }
+
+  .identity-table td {
+    padding: 12px 0;
+    line-height: 1.6;
+  }
+
+  .identity-table td:first-child {
+    color: var(--text-muted);
+    width: 42%;
+    padding-right: 16px;
+  }
+
+  .identity-table td:last-child { color: var(--text); font-weight: 500; }
+
+  @media (max-width: 768px) {
+    .hero-cgv { padding: 60px 0 40px; }
+    .cgv-content { padding: 40px 0 60px; }
+    .cgv-section h2 { font-size: 1.5rem; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .cgv-section h3 { font-size: 1.2rem; }
+    .highlight-box { padding: 20px; }
+    .identity-table td { display: block; padding: 4px 0; }
+    .identity-table td:first-child { width: auto; }
+    .identity-table tr { display: block; padding: 12px 0; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-cgv h1 { font-size: 1.75rem; }
+    .cgv-section { margin-bottom: 32px; padding-bottom: 24px; }
+    .cgv-section h2 { font-size: 1.35rem; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a href="index.html" class="brand" style="text-decoration: none; color: inherit;">
+          <div class="logo">
+            <img src="assets/images/logo.svg" alt="logo Infotecline" />
+          </div>
+          <span>INFOTECLINE</span>
+        </a>
+        <nav>
+          <ul>
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="/nos-solutions/nos_solutions.html">Nos solutions</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="/nos-solutions/contact.html" class="cta-btn">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="burger" onclick="toggleMenu()">☰</button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <ul>
+          <li><a href="index.html" onclick="toggleMenu()">Accueil</a></li>
+          <li><a href="/nos-solutions/nos_solutions.html" onclick="toggleMenu()">Nos solutions</a></li>
+          <li><a href="about.html" onclick="toggleMenu()">À propos</a></li>
+          <li><a href="/nos-solutions/contact.html" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-cgv">
+      <div class="container">
+        <span class="pill">Informations légales</span>
+        <h1>Mentions légales</h1>
+        <p class="subtitle">Éditeur, hébergement, propriété intellectuelle et données personnelles</p>
+      </div>
+    </section>
+
+    <section class="cgv-content">
+      <div class="container">
+        <div class="cgv-article">
+
+          <div class="cgv-section">
+            <h2><span class="section-number">01</span> Éditeur du site</h2>
+            <table class="identity-table">
+              <tr><td>Raison sociale</td><td>Infotecline SARL</td></tr>
+              <tr><td>Adresse</td><td>16 Rue Lentz 3509 Dudelange-Luxembourg</td></tr>
+              <tr><td>RCS Luxembourg</td><td>B307853</td></tr>
+              <tr><td>TVA intracommunautaire</td><td>LU37521782</td></tr>
+              <tr><td>Email</td><td><a href="mailto:contact@infotecline.com">contact@infotecline.com</a></td></tr>
+              <tr><td>Directeur de la publication</td><td>Edgard BELOLO</td></tr>
+            </table>
+          </div>
+
+          <div class="cgv-section">
+            <h2><span class="section-number">02</span> Hébergement</h2>
+            <p>Le site <a href="https://www.infotecline.com/index.html" target="_blank" rel="noopener">www.infotecline.com</a> est hébergé par <strong>IONOS</strong>.</p>
+          </div>
+
+          <div class="cgv-section">
+            <h2><span class="section-number">03</span> Propriété intellectuelle</h2>
+            <p>L'ensemble des contenus présents sur ce site (textes, images, logos, documents, supports de formation, méthodologies, agents IA et éléments graphiques) est protégé par les lois relatives à la propriété intellectuelle.</p>
+
+            <div class="highlight-box highlight-box--warning">
+              <h3>Reproduction interdite</h3>
+              <p>Toute reproduction, représentation, modification ou exploitation, totale ou partielle, sans autorisation écrite préalable d'I est interdite.</p>
+            </div>
+          </div>
+
+          <div class="cgv-section">
+            <h2><span class="section-number">04</span> Protection des données personnelles</h2>
+            <p>Le traitement des données personnelles est décrit dans la <strong>Politique de confidentialité</strong> accessible sur le présent site.</p>
+          </div>
+
+          <div class="cgv-section">
+            <h2><span class="section-number">05</span> Conditions Générales de Vente</h2>
+            <p>Les prestations proposées par Infotecline sont soumises aux <strong>Conditions Générales de Vente</strong> accessibles sur le présent site.</p>
+          </div>
+
+          <div class="cgv-section">
+            <h2><span class="section-number">06</span> Contact</h2>
+            <p>Pour toute question relative au site ou à ses contenus :</p>
+            <ul class="cgv-list">
+              <li><a href="mailto:contact@infotecline.com">contact@infotecline.com</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <a href="index.html" class="footer-brand">
+            <div class="footer-logo">
+              <img src="assets/images/logo.svg" alt="logo Infotecline" />
+            </div>
+            <span style="font-weight: 700; font-size: 1.1rem;">INFOTECLINE</span>
+          </a>
+          <small style="display: block; margin-top: 12px; color: var(--text-muted);">© <span id="year"></span> Infotecline. Tous droits réservés.</small>
+        </div>
+        <div class="footer-links">
+          <a href="./mentions-legales.html">Mentions légales</a>
+          <a href="/nos-solutions/politique-confidentialite.html">Politique de confidentialité</a>
+          <a href="./cgv.html">CGV</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+  <script src="assets/js/ift.js"></script>
+</body>
+</html>
