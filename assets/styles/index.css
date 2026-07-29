@@ -270,7 +270,7 @@ a:has(.promo-slider):hover .promo-slider {
 }
 
 .robot {
-  width: min(100%, 300px);
+  width: min(100%, 200px);
   max-width: 500px;
   height: auto;
   object-fit: contain;
