@@ -253,19 +253,29 @@ a:has(.promo-slider):hover .promo-slider {
   max-width: 600px;
   margin: 0 auto;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .robot-wrapper {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 360px;
   animation: float 3s ease-in-out infinite;
   z-index: 10;
 }
 
 .robot {
-  width: 100%;
-  max-width: 700px;
+  width: min(100%, 300px);
+  max-width: 500px;
   height: auto;
   object-fit: contain;
+  display: block;
+  margin: 0 auto;
   transition: transform 0.3s ease;
 }
 
